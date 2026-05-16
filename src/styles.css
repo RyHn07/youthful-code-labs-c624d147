@@ -309,3 +309,11 @@
   font-display: swap;
   src: url("https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj62UXskPMBBSSJLm2E.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: "Saans SemiMono TRIAL";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/SaansSemiMono-TRIAL-Regular.otf") format("opentype");
+}
