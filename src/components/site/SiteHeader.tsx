@@ -28,21 +28,27 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-background/70 backdrop-blur-xl"
+          ? "bg-background/80 backdrop-blur-xl border-b border-[color:var(--hairline)]"
           : "bg-transparent",
       )}
     >
-      <Container className="relative flex h-20 items-center justify-between">
+      <Container className="relative flex h-16 items-center justify-between">
         <Logo />
         <nav
-          className="pointer-events-auto absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-1 rounded-full border border-[color:var(--hairline)] bg-white/70 px-2 py-1.5 backdrop-blur md:flex"
+          className="pointer-events-auto absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 md:flex"
           aria-label="Primary"
         >
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-5 py-2 text-sm text-[color:var(--text-soft)] transition-colors hover:bg-black/[0.05] hover:text-foreground"
+              className="transition-colors hover:opacity-70"
+              style={{
+                fontSize: "14px",
+                fontWeight: 400,
+                letterSpacing: "-0.01em",
+                color: "#252525",
+              }}
             >
               {item.label}
             </a>
@@ -51,7 +57,12 @@ export function SiteHeader() {
         <div className="hidden items-center gap-2 md:flex">
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white/70 px-5 py-2 text-sm font-medium text-foreground backdrop-blur transition-all hover:bg-white"
+            className="inline-flex items-center rounded-full border border-[color:var(--hairline-strong)] bg-white px-5 py-2 transition-all hover:bg-black hover:text-white"
+            style={{
+              fontSize: "14px",
+              fontWeight: 500,
+              letterSpacing: "-0.01em",
+            }}
           >
             Let's Talk
           </Link>
