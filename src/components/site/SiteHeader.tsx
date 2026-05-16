@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { Container } from "./Container";
-import { LiveClock } from "./LiveClock";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -29,31 +28,32 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
-          ? "border-b border-[color:var(--hairline)] bg-background/70 backdrop-blur-xl"
+          ? "bg-background/70 backdrop-blur-xl"
           : "bg-transparent",
       )}
     >
-      <Container className="flex h-16 items-center justify-between">
+      <Container className="relative flex h-20 items-center justify-between">
         <Logo />
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav
+          className="pointer-events-auto absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-1 rounded-full border border-[color:var(--hairline)] bg-white/70 px-2 py-1.5 backdrop-blur md:flex"
+          aria-label="Primary"
+        >
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-3.5 py-1.5 text-sm text-[color:var(--text-soft)] transition-colors hover:bg-black/[0.05] hover:text-foreground"
+              className="rounded-full px-5 py-2 text-sm text-[color:var(--text-soft)] transition-colors hover:bg-black/[0.05] hover:text-foreground"
             >
               {item.label}
             </a>
           ))}
         </nav>
         <div className="hidden items-center gap-2 md:flex">
-          <LiveClock />
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-1.5 text-sm font-medium text-background transition-all hover:opacity-90"
+            className="group inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white/70 px-5 py-2 text-sm font-medium text-foreground backdrop-blur transition-all hover:bg-white"
           >
             Let's Talk
-            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
           </Link>
         </div>
         <button
