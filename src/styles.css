@@ -240,6 +240,13 @@
     color: oklch(0.97 0.01 270);
   }
   .section-dark .text-foreground { color: oklch(0.98 0.005 270); }
+  .section-dark h2,
+  .section-dark h3 { color: oklch(0.98 0.005 270); }
+  .section-dark [class*="text-[color:var(--text-soft)]"] { color: oklch(0.78 0.04 270) !important; }
+  .section-dark [class*="text-[color:var(--text-mute)]"] { color: oklch(0.7 0.04 270) !important; }
+  .section-dark [class*="border-[color:var(--hairline)]"] { border-color: oklch(1 0 0 / 0.14) !important; }
+  .section-dark [class*="border-[color:var(--hairline-strong)]"] { border-color: oklch(1 0 0 / 0.22) !important; }
+  .section-dark [class*="bg-black/"] { background-color: oklch(1 0 0 / 0.05) !important; }
   .text-on-dark { color: oklch(0.98 0.005 270); }
   .text-on-dark-soft { color: oklch(0.78 0.04 270); }
   .text-on-dark-mute { color: oklch(0.65 0.04 270); }
