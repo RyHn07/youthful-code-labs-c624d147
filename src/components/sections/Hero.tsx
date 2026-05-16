@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Container } from "@/components/site/Container";
 
 const mono =
-  '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
+  '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
 const sans =
   '"Saans TRIAL Regular", "Saans TRIAL Regular Placeholder", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
 
@@ -16,7 +16,7 @@ function LocalTime() {
         hour: "2-digit",
         minute: "2-digit",
         hour12: true,
-        timeZone: "Asia/Colombo",
+        timeZone: "Asia/Dhaka",
       }).format(new Date());
     setNow(fmt());
     const id = setInterval(() => setNow(fmt()), 1000 * 30);
@@ -35,10 +35,9 @@ export function Hero() {
             className="flex items-center justify-between py-3"
             style={{
               fontFamily: mono,
-              fontSize: "12px",
+              fontSize: "14px",
               fontWeight: 400,
-              letterSpacing: "0.02em",
-              textTransform: "uppercase",
+              letterSpacing: "-0.01em",
               color: "rgba(37, 37, 37, 0.55)",
             }}
           >
@@ -51,7 +50,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <LocalTime />
-              <span>Colombo, Sri Lanka</span>
+              <span>Dhaka, Bangladesh</span>
             </div>
           </div>
         </Container>
