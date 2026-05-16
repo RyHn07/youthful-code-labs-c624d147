@@ -31,7 +31,7 @@ export function Hero() {
     <section className="relative isolate overflow-hidden pt-16 border-b border-[color:var(--hairline)]">
       {/* Top status bar — bottom hairline contained inside the rails */}
       <div>
-        <Container className="border-x border-[color:var(--hairline)]">
+        <Container className="max-w-none px-[254px] border-x border-[color:var(--hairline)]">
           <div className="border-x border-b border-[color:var(--hairline)] px-3">
           <div
             className="flex items-center justify-between py-3"
@@ -60,7 +60,7 @@ export function Hero() {
         </Container>
       </div>
 
-      <Container className="relative border-x border-[color:var(--hairline)]">
+      <Container className="relative max-w-none px-[254px] border-x border-[color:var(--hairline)]">
         <div className="border-x border-[color:var(--hairline)] px-3">
         <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-24 text-center md:pt-28 md:pb-32">
           <span
