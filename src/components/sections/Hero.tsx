@@ -16,7 +16,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white/[0.04] px-3 py-1.5 text-xs text-[color:var(--text-soft)] backdrop-blur"
+          className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-black/[0.04] px-3 py-1.5 text-xs text-[color:var(--text-soft)] backdrop-blur"
         >
           <Sparkles className="h-3.5 w-3.5" />
           A talent-network studio · est. 2024
@@ -28,7 +28,7 @@ export function Hero() {
             young talent.
             <span
               aria-hidden
-              className="absolute -inset-x-2 -bottom-1 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"
+              className="absolute -inset-x-2 -bottom-1 h-px bg-gradient-to-r from-transparent via-black/30 to-transparent"
             />
           </span>
         </h1>
@@ -57,7 +57,7 @@ export function Hero() {
           </Link>
           <Link
             to="/careers"
-            className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white/[0.04] px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-white/[0.08]"
+            className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-black/[0.04] px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-black/[0.07]"
           >
             Join the network
           </Link>

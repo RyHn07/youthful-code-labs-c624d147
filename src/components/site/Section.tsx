@@ -34,7 +34,7 @@ export function Section({
             )}
           >
             {eyebrow && (
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white/[0.02] px-3 py-1 text-xs uppercase tracking-[0.18em] text-[color:var(--text-mute)]">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-black/[0.025] px-3 py-1 text-xs uppercase tracking-[0.18em] text-[color:var(--text-mute)]">
                 <span className="h-1 w-1 rounded-full bg-foreground/80" />
                 {eyebrow}
               </div>

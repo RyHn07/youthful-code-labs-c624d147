@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 export function Logo() {
   return (
     <Link to="/" className="group flex items-center gap-2.5">
-      <div className="relative grid h-8 w-8 place-items-center rounded-lg border border-[color:var(--hairline)] bg-white/[0.04]">
+      <div className="relative grid h-8 w-8 place-items-center rounded-lg border border-[color:var(--hairline)] bg-black/[0.04]">
         <div
           aria-hidden
           className="absolute inset-0 rounded-lg opacity-0 transition-opacity group-hover:opacity-100"

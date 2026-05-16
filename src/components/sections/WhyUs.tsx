@@ -20,8 +20,8 @@ export function WhyUs() {
       <div className="grid gap-3 md:grid-cols-2">
         {points.map((p, i) => (
           <ScrollReveal key={p.title} delay={i * 0.04}>
-            <div className="group flex gap-4 rounded-2xl border border-[color:var(--hairline)] bg-white/[0.02] p-5 transition-all hover:bg-white/[0.04]">
-              <div className="mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-full border border-[color:var(--hairline)] bg-white/[0.05]">
+            <div className="group flex gap-4 rounded-2xl border border-[color:var(--hairline)] bg-black/[0.025] p-5 transition-all hover:bg-black/[0.04]">
+              <div className="mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-full border border-[color:var(--hairline)] bg-black/[0.05]">
                 <Check className="h-3.5 w-3.5" />
               </div>
               <div>

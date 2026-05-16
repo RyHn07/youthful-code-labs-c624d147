@@ -41,8 +41,8 @@ export function FloatingDock() {
           <Link
             key={to}
             to={to}
-            className="group flex h-10 items-center gap-2 rounded-full px-3 text-sm text-[color:var(--text-soft)] transition-all hover:bg-white/[0.06] hover:text-foreground"
-            activeProps={{ className: "bg-white/[0.08] text-foreground" }}
+            className="group flex h-10 items-center gap-2 rounded-full px-3 text-sm text-[color:var(--text-soft)] transition-all hover:bg-black/[0.06] hover:text-foreground"
+            activeProps={{ className: "bg-black/[0.07] text-foreground" }}
           >
             <Icon className="h-4 w-4" />
             <span className="hidden sm:inline">{label}</span>

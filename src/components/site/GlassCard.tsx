@@ -13,7 +13,7 @@ export function GlassCard({ className, children, ...props }: HTMLAttributes<HTML
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-60"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/20 to-transparent opacity-60"
       />
       {children}
     </div>

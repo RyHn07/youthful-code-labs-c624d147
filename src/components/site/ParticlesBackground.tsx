@@ -33,7 +33,7 @@ export function ParticlesBackground({ density = 80 }: { density?: number }) {
           if (p.y < 0 || p.y > h) p.vy *= -1;
         }
         ctx.beginPath();
-        ctx.fillStyle = `rgba(255,255,255,${p.a})`;
+        ctx.fillStyle = `rgba(15,15,20,${p.a * 0.35})`;
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
       }
