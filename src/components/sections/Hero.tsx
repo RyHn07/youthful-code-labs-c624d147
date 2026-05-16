@@ -31,6 +31,7 @@ export function Hero() {
       {/* Top status bar — full width with hairline above and below */}
       <div className="border-y border-[color:var(--hairline)]">
         <Container className="border-x border-[color:var(--hairline)]">
+          <div className="border-x border-[color:var(--hairline)] px-3">
           <div
             className="flex items-center justify-between py-3"
             style={{
@@ -54,10 +55,12 @@ export function Hero() {
               <span>DAC</span>
             </div>
           </div>
+          </div>
         </Container>
       </div>
 
       <Container className="relative border-x border-[color:var(--hairline)]">
+        <div className="border-x border-[color:var(--hairline)] px-3">
         <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-24 text-center md:pt-28 md:pb-32">
           <span
             className="mb-8 inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-white px-4 py-2"
@@ -130,6 +133,7 @@ export function Hero() {
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
+        </div>
         </div>
       </Container>
     </section>
