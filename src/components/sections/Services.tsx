@@ -65,12 +65,12 @@ export function Services() {
                 }}
               />
               <div className="flex items-center justify-between">
-                <div className="grid h-10 w-10 place-items-center rounded-xl border border-[color:var(--hairline)] bg-black/[0.04]">
-                  <s.icon className="h-4.5 w-4.5 h-[18px] w-[18px]" />
+                <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[color:var(--brand-indigo)] to-[color:var(--brand-navy)] text-white shadow-[0_8px_24px_-8px_rgba(91,101,220,0.6)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  <s.icon className="h-[18px] w-[18px]" />
                 </div>
-                <span className="text-xs text-[color:var(--text-mute)]">0{i + 1 < 10 ? `0${i + 1}` : i + 1}</span>
+                <span className="text-xs font-medium text-[color:var(--text-mute)]">0{i + 1 < 10 ? `0${i + 1}` : i + 1}</span>
               </div>
-              <h3 className="mt-5 text-lg font-medium">{s.title}</h3>
+              <h3 className="mt-5 text-lg font-medium transition-colors group-hover:text-[color:var(--brand-indigo)]">{s.title}</h3>
               <p className="mt-2 text-sm text-[color:var(--text-soft)]">{s.desc}</p>
             </div>
           </ScrollReveal>

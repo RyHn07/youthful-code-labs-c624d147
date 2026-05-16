@@ -10,14 +10,22 @@ const stats = [
 
 export function Stats() {
   return (
-    <Section eyebrow="By the numbers" title="A growing ecosystem.">
+    <Section
+      className="section-dark relative overflow-hidden"
+      eyebrow="By the numbers"
+      title="A growing ecosystem."
+    >
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {stats.map((s) => (
-          <div key={s.label} className="rounded-2xl border border-[color:var(--hairline)] bg-black/[0.025] p-6">
-            <div className="text-4xl font-semibold tracking-tight md:text-5xl">
+          <div
+            key={s.label}
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-[color:var(--brand-indigo)]/60"
+          >
+            <div className="pointer-events-none absolute -inset-x-10 -top-10 h-32 bg-[color:var(--brand-indigo)]/0 blur-3xl transition-all duration-500 group-hover:bg-[color:var(--brand-indigo)]/30" />
+            <div className="relative bg-gradient-to-br from-white to-[color:var(--brand-indigo-soft)] bg-clip-text text-4xl font-semibold tracking-tight text-transparent md:text-5xl">
               <CountUp to={s.to} suffix={s.suffix} />
             </div>
-            <div className="mt-2 text-sm text-[color:var(--text-mute)]">{s.label}</div>
+            <div className="relative mt-2 text-sm text-on-dark-soft">{s.label}</div>
           </div>
         ))}
       </div>

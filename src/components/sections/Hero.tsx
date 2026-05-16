@@ -25,10 +25,12 @@ export function Hero() {
           <DecryptedText text="Affordable, high-quality" /> <br />
           <span className="text-[color:var(--text-soft)]">digital solutions powered by</span>{" "}
           <span className="relative inline-block">
-            young talent.
+            <span className="bg-gradient-to-r from-[color:var(--brand-indigo)] via-[color:var(--brand-indigo-soft)] to-[color:var(--brand-navy)] bg-clip-text text-transparent">
+              young talent.
+            </span>
             <span
               aria-hidden
-              className="absolute -inset-x-2 -bottom-1 h-px bg-gradient-to-r from-transparent via-black/30 to-transparent"
+              className="absolute -inset-x-2 -bottom-1 h-px bg-gradient-to-r from-transparent via-[color:var(--brand-indigo)] to-transparent"
             />
           </span>
         </h1>
@@ -50,14 +52,14 @@ export function Hero() {
         >
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-all hover:bg-foreground/90"
+            className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand-indigo)] px-5 py-3 text-sm font-medium text-white transition-all hover:bg-[color:var(--brand-navy)] indigo-glow"
           >
             Start a project
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
             to="/careers"
-            className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-black/[0.04] px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-black/[0.07]"
+            className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white/60 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-all hover:bg-[color:var(--brand-lavender)]"
           >
             Join the network
           </Link>
