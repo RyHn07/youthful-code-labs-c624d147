@@ -2,20 +2,32 @@ import { Link } from "@tanstack/react-router";
 
 export function Logo() {
   return (
-    <Link to="/" className="group flex items-center gap-2.5">
-      <div className="relative grid h-8 w-8 place-items-center rounded-lg border border-[color:var(--hairline)] bg-black/[0.04]">
-        <div
-          aria-hidden
-          className="absolute inset-0 rounded-lg opacity-0 transition-opacity group-hover:opacity-100"
-          style={{
-            background:
-              "radial-gradient(closest-side, rgba(255,255,255,0.18), transparent 70%)",
-          }}
+    <Link to="/" className="flex items-center gap-2">
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden
+      >
+        <path
+          d="M12 2.5l8.5 4.9v9.2L12 21.5 3.5 16.6V7.4L12 2.5z"
+          stroke="#252525"
+          strokeWidth="2"
+          strokeLinejoin="round"
         />
-        <span className="text-sm font-bold tracking-tight">N</span>
-      </div>
-      <span className="text-base font-semibold tracking-tight">
-        Novara<span className="text-[color:var(--text-mute)]">/Studio</span>
+        <circle cx="12" cy="12" r="2.4" fill="#252525" />
+      </svg>
+      <span
+        style={{
+          fontWeight: 700,
+          fontSize: "18px",
+          letterSpacing: "-0.01em",
+          color: "#252525",
+        }}
+      >
+        QODRAN
       </span>
     </Link>
   );
