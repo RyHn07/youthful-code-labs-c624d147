@@ -27,9 +27,9 @@ function LocalTime() {
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate overflow-hidden pt-16">
       {/* Top status bar — full width with hairline above and below */}
-      <div className="border-b border-[color:var(--hairline)] pt-20">
+      <div className="border-y border-[color:var(--hairline)]">
         <Container>
           <div
             className="flex items-center justify-between py-3"
