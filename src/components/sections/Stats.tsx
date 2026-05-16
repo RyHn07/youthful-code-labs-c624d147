@@ -13,7 +13,7 @@ export function Stats() {
     <Section eyebrow="By the numbers" title="A growing ecosystem.">
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {stats.map((s) => (
-          <div key={s.label} className="rounded-2xl border border-[color:var(--hairline)] bg-white/[0.02] p-6">
+          <div key={s.label} className="rounded-2xl border border-[color:var(--hairline)] bg-black/[0.025] p-6">
             <div className="text-4xl font-semibold tracking-tight md:text-5xl">
               <CountUp to={s.to} suffix={s.suffix} />
             </div>

@@ -65,7 +65,7 @@ export function Services() {
                 }}
               />
               <div className="flex items-center justify-between">
-                <div className="grid h-10 w-10 place-items-center rounded-xl border border-[color:var(--hairline)] bg-white/[0.04]">
+                <div className="grid h-10 w-10 place-items-center rounded-xl border border-[color:var(--hairline)] bg-black/[0.04]">
                   <s.icon className="h-4.5 w-4.5 h-[18px] w-[18px]" />
                 </div>
                 <span className="text-xs text-[color:var(--text-mute)]">0{i + 1 < 10 ? `0${i + 1}` : i + 1}</span>

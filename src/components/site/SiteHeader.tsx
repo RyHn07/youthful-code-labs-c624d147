@@ -40,8 +40,8 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="rounded-full px-3.5 py-1.5 text-sm text-[color:var(--text-soft)] transition-colors hover:bg-white/[0.05] hover:text-foreground"
-              activeProps={{ className: "text-foreground bg-white/[0.05]" }}
+              className="rounded-full px-3.5 py-1.5 text-sm text-[color:var(--text-soft)] transition-colors hover:bg-black/[0.05] hover:text-foreground"
+              activeProps={{ className: "text-foreground bg-black/[0.05]" }}
             >
               {item.label}
             </Link>
@@ -50,7 +50,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-2 md:flex">
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white/[0.04] px-4 py-1.5 text-sm font-medium transition-all hover:bg-white/[0.08]"
+            className="group inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-black/[0.04] px-4 py-1.5 text-sm font-medium transition-all hover:bg-black/[0.07]"
           >
             Start a project
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
@@ -72,8 +72,8 @@ export function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2 text-sm text-[color:var(--text-soft)] hover:bg-white/[0.05] hover:text-foreground"
-                activeProps={{ className: "text-foreground bg-white/[0.05]" }}
+                className="rounded-lg px-3 py-2 text-sm text-[color:var(--text-soft)] hover:bg-black/[0.05] hover:text-foreground"
+                activeProps={{ className: "text-foreground bg-black/[0.05]" }}
               >
                 {item.label}
               </Link>
@@ -81,7 +81,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full border border-[color:var(--hairline)] bg-white/[0.05] px-4 py-2 text-sm"
+              className="mt-2 inline-flex items-center justify-center rounded-full border border-[color:var(--hairline)] bg-black/[0.05] px-4 py-2 text-sm"
             >
               Start a project
             </Link>

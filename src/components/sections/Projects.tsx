@@ -28,7 +28,7 @@ export function Projects() {
       {cards.length > 0 ? (
         <CardSwap cards={cards} />
       ) : (
-        <div className="rounded-2xl border border-[color:var(--hairline)] bg-white/[0.02] p-12 text-center text-sm text-[color:var(--text-soft)]">
+        <div className="rounded-2xl border border-[color:var(--hairline)] bg-black/[0.025] p-12 text-center text-sm text-[color:var(--text-soft)]">
           New work coming soon.
         </div>
       )}
