@@ -6,7 +6,7 @@ import { Container } from "./Container";
 import { cn } from "@/lib/utils";
 
 const saansSans =
-  '"Saans TRIAL Regular", "Saans TRIAL Regular Placeholder", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
+  '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
 
 const nav = [
   { href: "#work", label: "Work" },
