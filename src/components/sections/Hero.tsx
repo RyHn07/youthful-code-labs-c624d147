@@ -37,7 +37,16 @@ export function Hero() {
             for modern startups
           </h1>
 
-          <p className="mt-7 max-w-2xl text-balance text-base text-[color:var(--text-soft)] md:text-lg">
+          <p
+            className="font-mono-friendly mt-7 max-w-2xl text-balance text-center"
+            style={{
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              letterSpacing: "-0.01em",
+              color: "rgba(37, 37, 37, 0.65)",
+            }}
+          >
             High-quality visual and dev solutions tailored to each client's needs.
             With a focus on delivering work that's both distinctive and effective.
           </p>
