@@ -7,11 +7,10 @@ import { LiveClock } from "./LiveClock";
 import { cn } from "@/lib/utils";
 
 const nav = [
-  { to: "/services", label: "Services" },
-  { to: "/work", label: "Work" },
-  { to: "/talent", label: "Talent" },
-  { to: "/about", label: "About" },
-  { to: "/careers", label: "Careers" },
+  { href: "#work", label: "Work" },
+  { href: "#our-services", label: "Services" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#faq", label: "FAQ" },
 ] as const;
 
 export function SiteHeader() {
@@ -38,23 +37,22 @@ export function SiteHeader() {
         <Logo />
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
           {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
+            <a
+              key={item.href}
+              href={item.href}
               className="rounded-full px-3.5 py-1.5 text-sm text-[color:var(--text-soft)] transition-colors hover:bg-black/[0.05] hover:text-foreground"
-              activeProps={{ className: "text-foreground bg-black/[0.05]" }}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </nav>
         <div className="hidden items-center gap-2 md:flex">
           <LiveClock />
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand-indigo)] px-4 py-1.5 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(91,101,220,0.6)] transition-all hover:bg-[color:var(--brand-navy)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-1.5 text-sm font-medium text-background transition-all hover:opacity-90"
           >
-            Start a project
+            Let's Talk
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
           </Link>
         </div>
@@ -70,22 +68,21 @@ export function SiteHeader() {
         <div className="md:hidden border-t border-[color:var(--hairline)] bg-background/95 backdrop-blur-xl">
           <Container className="flex flex-col gap-1 py-4">
             {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
+              <a
+                key={item.href}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-2 text-sm text-[color:var(--text-soft)] hover:bg-black/[0.05] hover:text-foreground"
-                activeProps={{ className: "text-foreground bg-black/[0.05]" }}
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full border border-[color:var(--hairline)] bg-black/[0.05] px-4 py-2 text-sm"
             >
-              Start a project
+              Let's Talk
             </Link>
           </Container>
         </div>

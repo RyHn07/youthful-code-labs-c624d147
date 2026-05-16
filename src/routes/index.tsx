@@ -1,17 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
+import { WorkShowcase } from "@/components/sections/WorkShowcase";
+import { ServicesList } from "@/components/sections/ServicesList";
 import { WhyUs } from "@/components/sections/WhyUs";
-import { Talent } from "@/components/sections/Talent";
-import { Workflow } from "@/components/sections/Workflow";
-import { Projects } from "@/components/sections/Projects";
-import { Logos } from "@/components/sections/Logos";
-import { Stats } from "@/components/sections/Stats";
-import { JoinCTA } from "@/components/sections/JoinCTA";
-import { Pricing } from "@/components/sections/Pricing";
-import { BookAppointment } from "@/components/sections/BookAppointment";
-import { Marquee } from "@/components/sections/Marquee";
-import { Manifesto } from "@/components/sections/Manifesto";
+import { PricingPlans } from "@/components/sections/PricingPlans";
+import { FAQ } from "@/components/sections/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,18 +31,12 @@ function Index() {
   return (
     <>
       <Hero />
-      <Marquee />
-      <Workflow />
-      <Services />
-      <Manifesto />
-      <Pricing />
-      <Projects />
+      <WorkShowcase />
+      <ServicesList />
       <WhyUs />
-      <Stats />
-      <Talent />
-      <Logos />
-      <BookAppointment />
-      <JoinCTA />
+      <PricingPlans />
+      <FAQ />
+      <FinalCTA />
     </>
   );
 }
