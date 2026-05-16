@@ -14,7 +14,7 @@ const slots = ["Mon · 10:00", "Tue · 14:30", "Wed · 11:00", "Thu · 16:00", "
 export function BookAppointment() {
   return (
     <Section eyebrow="Book a call" title="Talk to a strategist this week." description="Pick a 30-minute slot, share what you're building, and we'll come back with a clear plan and team proposal.">
-      <div className="grid gap-6 overflow-hidden rounded-3xl border border-[color:var(--hairline)] bg-white p-6 md:grid-cols-[1.1fr_0.9fr] md:p-10">
+      <div className="grid gap-6 overflow-hidden rounded-lg border border-[color:var(--hairline)] bg-white p-6 md:grid-cols-[1.1fr_0.9fr] md:p-10">
         {/* Left: pitch */}
         <div className="relative flex flex-col justify-between gap-8">
           <div>
@@ -59,7 +59,7 @@ export function BookAppointment() {
         </div>
 
         {/* Right: faux calendar */}
-        <div className="relative overflow-hidden rounded-2xl section-dark p-6 md:p-7">
+        <div className="relative overflow-hidden rounded-md section-dark p-6 md:p-7">
           <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[color:var(--brand-indigo)]/40 blur-3xl" />
 
           <div className="relative flex items-center justify-between">
@@ -67,7 +67,7 @@ export function BookAppointment() {
               <p className="text-[11px] uppercase tracking-[0.18em] text-white/60">This week</p>
               <p className="mt-1 text-base font-medium text-white">Available slots</p>
             </div>
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-white">
+            <div className="grid h-10 w-10 place-items-center rounded-md bg-white/10 text-white">
               <CalendarDays className="h-4 w-4" />
             </div>
           </div>
@@ -77,7 +77,7 @@ export function BookAppointment() {
               <Link
                 key={s}
                 to="/contact"
-                className={`group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] px-3.5 py-3 text-sm text-white/90 backdrop-blur transition-all hover:border-white/30 hover:bg-white/[0.1] ${i === 1 ? "ring-1 ring-white/30" : ""}`}
+                className={`group flex items-center justify-between rounded-md border border-white/10 bg-white/[0.04] px-3.5 py-3 text-sm text-white/90 backdrop-blur transition-all hover:border-white/30 hover:bg-white/[0.1] ${i === 1 ? "ring-1 ring-white/30" : ""}`}
               >
                 <span className="tabular-nums">{s}</span>
                 <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5" />

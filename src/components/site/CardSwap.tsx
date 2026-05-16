@@ -38,7 +38,7 @@ export function CardSwap({
           <AnimatePresence key={c.id}>
             <motion.div
               key={c.id + offset}
-              className="absolute inset-0 rounded-3xl glass p-8 cursor-pointer"
+              className="absolute inset-0 rounded-lg glass p-8 cursor-pointer"
               onClick={() => setIndex((index + 1) % cards.length)}
               animate={{
                 y: offset * 14,

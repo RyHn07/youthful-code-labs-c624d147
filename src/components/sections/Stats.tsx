@@ -19,7 +19,7 @@ export function Stats() {
         {stats.map((s) => (
           <div
             key={s.label}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-[color:var(--brand-indigo)]/60"
+            className="group relative overflow-hidden rounded-md border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-[color:var(--brand-indigo)]/60"
           >
             <div className="pointer-events-none absolute -inset-x-10 -top-10 h-32 bg-[color:var(--brand-indigo)]/0 blur-3xl transition-all duration-500 group-hover:bg-[color:var(--brand-indigo)]/30" />
             <div className="relative bg-gradient-to-br from-white to-[color:var(--brand-indigo-soft)] bg-clip-text text-4xl font-semibold tracking-tight text-transparent md:text-5xl">

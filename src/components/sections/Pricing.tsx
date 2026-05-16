@@ -55,7 +55,7 @@ export function Pricing() {
           <ScrollReveal key={t.name} delay={i * 0.06}>
             <div
               className={cn(
-                "group relative flex h-full flex-col overflow-hidden rounded-3xl border p-7 transition-all duration-300 hover:-translate-y-1",
+                "group relative flex h-full flex-col overflow-hidden rounded-lg border p-7 transition-all duration-300 hover:-translate-y-1",
                 t.highlight
                   ? "section-dark border-transparent indigo-glow"
                   : "border-[color:var(--hairline)] bg-white hover:border-[color:var(--hairline-strong)] hover:shadow-[0_30px_60px_-30px_rgba(18,32,86,0.18)]",

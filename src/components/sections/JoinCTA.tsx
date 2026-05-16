@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export function JoinCTA() {
   return (
     <Section>
-      <div className="section-dark relative overflow-hidden rounded-3xl border border-white/10 p-10 md:p-16">
+      <div className="section-dark relative overflow-hidden rounded-lg border border-white/10 p-10 md:p-16">
         <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[color:var(--brand-indigo)]/40 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-[color:var(--brand-indigo-soft)]/30 blur-3xl" />
         <div className="relative max-w-2xl">
