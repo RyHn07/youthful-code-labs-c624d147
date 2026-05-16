@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { Container } from "./Container";
+import { LiveClock } from "./LiveClock";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -48,6 +49,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden items-center gap-2 md:flex">
+          <LiveClock />
           <Link
             to="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand-indigo)] px-4 py-1.5 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(91,101,220,0.6)] transition-all hover:bg-[color:var(--brand-navy)]"
