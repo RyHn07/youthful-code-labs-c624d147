@@ -62,7 +62,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-2 md:flex">
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-full border border-[color:var(--hairline-strong)] bg-white px-5 py-2 transition-all hover:bg-black hover:text-white"
+            className="inline-flex items-center rounded-lg border border-[color:var(--hairline-strong)] bg-white px-5 py-2 transition-all hover:bg-black hover:text-white"
             style={{
               fontFamily: saansSans,
               fontSize: "14px",
