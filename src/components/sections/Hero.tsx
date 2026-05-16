@@ -15,14 +15,15 @@ function LocalTime() {
       new Intl.DateTimeFormat("en-US", {
         hour: "2-digit",
         minute: "2-digit",
+        second: "2-digit",
         hour12: true,
         timeZone: "Asia/Dhaka",
       }).format(new Date());
     setNow(fmt());
-    const id = setInterval(() => setNow(fmt()), 1000 * 30);
+    const id = setInterval(() => setNow(fmt()), 1000);
     return () => clearInterval(id);
   }, []);
-  return <span className="tabular-nums">{now ?? "--:-- --"}</span>;
+  return <span className="tabular-nums">{now ?? "--:--:-- --"}</span>;
 }
 
 export function Hero() {
