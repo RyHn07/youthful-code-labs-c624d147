@@ -38,6 +38,7 @@ export function Hero() {
               fontSize: "14px",
               fontWeight: 400,
               letterSpacing: "-0.01em",
+              textTransform: "uppercase",
               color: "rgba(37, 37, 37, 0.55)",
             }}
           >
@@ -50,7 +51,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <LocalTime />
-              <span>Dhaka, Bangladesh</span>
+              <span>DAC</span>
             </div>
           </div>
         </Container>
