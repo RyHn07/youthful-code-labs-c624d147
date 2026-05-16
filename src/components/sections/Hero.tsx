@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
-const sans =
-  '"Saans TRIAL Regular", "Saans TRIAL Regular Placeholder", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
+const display =
+  '"Satoshi", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
 
 function LocalTime() {
   const [now, setNow] = useState<string | null>(null);
@@ -83,15 +83,15 @@ export function Hero() {
           <h1
             className="text-balance"
             style={{
-              fontFamily: mono,
-              fontWeight: 700,
+              fontFamily: display,
+              fontWeight: 900,
               fontSize: "clamp(44px, 7vw, 88px)",
-              lineHeight: "1.02",
-              letterSpacing: "-0.04em",
+              lineHeight: "1.05",
+              letterSpacing: "-0.035em",
               color: "#252525",
             }}
           >
-            Building unique websites for startups
+            The Future of Digital Services Starts Here
           </h1>
 
           <p
