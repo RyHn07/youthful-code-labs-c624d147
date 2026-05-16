@@ -69,7 +69,7 @@ export function Hero() {
           <span
             className="mb-8 inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-white px-4 py-2"
             style={{
-              fontFamily: sans,
+              fontFamily: mono,
               fontSize: "14px",
               fontWeight: 400,
               lineHeight: "1.5em",
@@ -83,7 +83,7 @@ export function Hero() {
           <h1
             className="text-balance"
             style={{
-              fontFamily: sans,
+              fontFamily: mono,
               fontWeight: 700,
               fontSize: "clamp(44px, 7vw, 88px)",
               lineHeight: "1.02",
@@ -97,7 +97,7 @@ export function Hero() {
           <p
             className="mt-6 max-w-xl text-balance text-center"
             style={{
-              fontFamily: sans,
+              fontFamily: mono,
               fontSize: "16px",
               fontWeight: 400,
               lineHeight: "24px",
@@ -114,7 +114,7 @@ export function Hero() {
               to="/contact"
               className="group inline-flex items-center gap-2 rounded-full bg-[#252525] px-6 py-3 text-white transition-all hover:opacity-90"
               style={{
-                fontFamily: sans,
+                fontFamily: mono,
                 fontSize: "14px",
                 fontWeight: 500,
                 letterSpacing: "-0.01em",
@@ -127,7 +127,7 @@ export function Hero() {
               href="#work"
               className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white px-6 py-3 text-[#252525] transition-all hover:bg-black/[0.04]"
               style={{
-                fontFamily: sans,
+                fontFamily: mono,
                 fontSize: "14px",
                 fontWeight: 500,
                 letterSpacing: "-0.01em",
