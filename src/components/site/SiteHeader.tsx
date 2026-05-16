@@ -5,6 +5,9 @@ import { Logo } from "./Logo";
 import { Container } from "./Container";
 import { cn } from "@/lib/utils";
 
+const saansMono =
+  '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
+
 const nav = [
   { href: "#work", label: "Work" },
   { href: "#our-services", label: "Services" },
@@ -44,6 +47,7 @@ export function SiteHeader() {
               href={item.href}
               className="transition-colors hover:opacity-70"
               style={{
+                fontFamily: saansMono,
                 fontSize: "14px",
                 fontWeight: 400,
                 letterSpacing: "-0.01em",
@@ -59,6 +63,7 @@ export function SiteHeader() {
             to="/contact"
             className="inline-flex items-center rounded-full border border-[color:var(--hairline-strong)] bg-white px-5 py-2 transition-all hover:bg-black hover:text-white"
             style={{
+              fontFamily: saansMono,
               fontSize: "14px",
               fontWeight: 500,
               letterSpacing: "-0.01em",
