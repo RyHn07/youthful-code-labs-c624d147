@@ -31,8 +31,9 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-[color:var(--hairline)]"
+          ? "bg-background/80 backdrop-blur-xl"
           : "bg-transparent",
+        "border-b border-[color:var(--hairline)]",
       )}
     >
       <Container className="relative flex h-16 items-center justify-between">
