@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Container } from "@/components/site/Container";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -28,41 +27,45 @@ function LocalTime() {
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-16 border-b border-[color:var(--hairline)]">
-      {/* Top status bar — bottom hairline contained inside the rails */}
-      <div>
-        <Container className="max-w-none px-[254px] border-x border-[color:var(--hairline)]">
-          <div className="border-x border-b border-[color:var(--hairline)] px-3">
-          <div
-            className="flex items-center justify-between py-3"
-            style={{
-              fontFamily: mono,
-              fontSize: "14px",
-              fontWeight: 400,
-              letterSpacing: "-0.01em",
-              textTransform: "uppercase",
-              color: "rgba(37, 37, 37, 0.55)",
-            }}
-          >
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              </span>
-              Available for new projects
-            </div>
-            <div className="flex items-center gap-2">
-              <LocalTime />
-              <span>DAC</span>
+    <section className="relative isolate overflow-hidden pt-16">
+      {/*
+        Section frame — reusable rail system (use for all sections):
+        • Outer safe area : max-w-[1320px] mx-auto  (outer vertical rails)
+        • Inner content   : max-w-6xl  mx-auto + px-6 md:px-10  (aligned with header)
+        Both rails use border-[color:var(--hairline)].
+      */}
+      <div className="mx-auto w-full max-w-[1320px] border-x border-[color:var(--hairline)]">
+        <div className="mx-auto w-full max-w-6xl border-x border-[color:var(--hairline)]">
+          {/* Status bar — bottom hairline closes the row inside the inner rails */}
+          <div className="border-b border-[color:var(--hairline)] px-6 md:px-10">
+            <div
+              className="flex items-center justify-between py-3"
+              style={{
+                fontFamily: mono,
+                fontSize: "14px",
+                fontWeight: 400,
+                letterSpacing: "-0.01em",
+                textTransform: "uppercase",
+                color: "rgba(37, 37, 37, 0.55)",
+              }}
+            >
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                </span>
+                Available for new projects
+              </div>
+              <div className="flex items-center gap-2">
+                <LocalTime />
+                <span>DAC</span>
+              </div>
             </div>
           </div>
-          </div>
-        </Container>
-      </div>
 
-      <Container className="relative max-w-none px-[254px] border-x border-[color:var(--hairline)]">
-        <div className="border-x border-[color:var(--hairline)] px-3">
-        <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-24 text-center md:pt-28 md:pb-32">
+          {/* Hero content */}
+          <div className="px-6 md:px-10">
+            <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-24 text-center md:pt-28 md:pb-32">
           <span
             className="mb-8 inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-white px-4 py-2"
             style={{
@@ -133,10 +136,11 @@ export function Hero() {
               Recent Work
               <ArrowRight className="h-4 w-4" />
             </a>
+            </div>
           </div>
         </div>
-        </div>
-      </Container>
+      </div>
+      </div>
     </section>
   );
 }
