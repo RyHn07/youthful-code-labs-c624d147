@@ -12,6 +12,7 @@ import {
   Smartphone,
   Bot,
   Share2,
+  ArrowRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -36,42 +37,54 @@ export function Services() {
       title="Studio-grade work across the full digital stack."
       description="Cherry-picked talent assembled into a small, senior-led team for each engagement."
     >
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
           <ScrollReveal key={s.title} delay={i * 0.03}>
             <div
               className={cn(
-                "group relative overflow-hidden rounded-md border border-[color:var(--hairline)] bg-[color:var(--surface-2)] p-6 transition-all duration-300",
-                "hover:-translate-y-0.5 hover:border-[color:var(--hairline-strong)]",
+                "group relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-2xl p-7 transition-all duration-500",
+                "bg-gradient-to-b from-[#1a1a24] to-[#0c0c12] text-white",
+                "ring-1 ring-white/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]",
+                "hover:-translate-y-1 hover:ring-white/20",
               )}
             >
+              {/* Aurora glow at bottom */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="pointer-events-none absolute -bottom-24 left-1/2 h-64 w-[120%] -translate-x-1/2 rounded-[50%] opacity-70 blur-3xl transition-all duration-700 group-hover:opacity-100 group-hover:-bottom-16"
                 style={{
                   background:
-                    "radial-gradient(400px circle at var(--x,50%) var(--y,50%), rgba(255,255,255,0.06), transparent 60%)",
-                }}
-                onMouseMove={(e) => {
-                  const r = (e.target as HTMLElement).getBoundingClientRect();
-                  (e.target as HTMLElement).style.setProperty(
-                    "--x",
-                    `${e.clientX - r.left}px`,
-                  );
-                  (e.target as HTMLElement).style.setProperty(
-                    "--y",
-                    `${e.clientY - r.top}px`,
-                  );
+                    "radial-gradient(ellipse at center, rgba(167,139,250,0.55) 0%, rgba(236,72,153,0.45) 35%, rgba(91,101,220,0.35) 60%, transparent 75%)",
                 }}
               />
-              <div className="flex items-center justify-between">
-                <div className="grid h-10 w-10 place-items-center rounded-md bg-gradient-to-br from-[color:var(--brand-indigo)] to-[color:var(--brand-navy)] text-white shadow-[0_8px_24px_-8px_rgba(91,101,220,0.6)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                  <s.icon className="h-[18px] w-[18px]" />
-                </div>
-                <span className="text-xs font-medium text-[color:var(--text-mute)]">0{i + 1 < 10 ? `0${i + 1}` : i + 1}</span>
+              {/* Top sheen */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
+              />
+
+              {/* Icon tile */}
+              <div className="relative grid h-12 w-12 place-items-center rounded-xl bg-white/[0.06] ring-1 ring-white/10 backdrop-blur-sm transition-all duration-300 group-hover:bg-white/[0.1] group-hover:scale-105">
+                <s.icon className="h-5 w-5 text-white" />
               </div>
-              <h3 className="mt-5 text-lg font-medium transition-colors group-hover:text-[color:var(--brand-indigo)]">{s.title}</h3>
-              <p className="mt-2 text-sm text-[color:var(--text-soft)]">{s.desc}</p>
+
+              <h3 className="relative mt-8 text-2xl font-semibold leading-tight tracking-tight">
+                {s.title}
+              </h3>
+              <p className="relative mt-3 text-sm leading-relaxed text-white/65">
+                {s.desc}
+              </p>
+
+              <div className="relative mt-auto pt-8">
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white transition-all group-hover:gap-2.5">
+                  Learn more
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </div>
+
+              <span className="absolute right-5 top-5 text-xs font-medium text-white/30">
+                0{i + 1 < 10 ? `0${i + 1}` : i + 1}
+              </span>
             </div>
           </ScrollReveal>
         ))}
