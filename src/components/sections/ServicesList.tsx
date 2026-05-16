@@ -37,7 +37,7 @@ export function ServicesList() {
       <Container>
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-[color:var(--text-mute)] font-mono-friendly">
+            <div className="mb-3 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
               Our Services · 02 | 04
             </div>
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-5xl">
@@ -45,7 +45,7 @@ export function ServicesList() {
             </h2>
           </div>
           <div className="flex flex-wrap items-center gap-2 max-w-md">
-            <span className="text-[11px] uppercase tracking-[0.18em] text-[color:var(--text-mute)] font-mono-friendly">
+            <span className="text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
               Sectors:
             </span>
             {sectors.map((s) => (

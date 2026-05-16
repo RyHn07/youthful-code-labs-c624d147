@@ -50,7 +50,7 @@ export function PricingPlans() {
     <section id="pricing" className="relative py-20 md:py-28">
       <Container>
         <div className="mb-14 max-w-2xl">
-          <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-[color:var(--text-mute)] font-mono-friendly">
+          <div className="mb-3 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
             Pricing · 03 | 04
           </div>
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
