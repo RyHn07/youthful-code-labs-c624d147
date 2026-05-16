@@ -39,7 +39,7 @@ export function FAQ() {
       <Container>
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-[color:var(--text-mute)] font-mono-friendly">
+            <div className="mb-3 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
               FAQ · 04 | 04
             </div>
             <h2 className="text-3xl font-bold tracking-tight md:text-5xl">

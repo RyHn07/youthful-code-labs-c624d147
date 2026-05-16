@@ -16,7 +16,7 @@ export function WorkShowcase() {
       <Container>
         <div className="mb-10 flex items-end justify-between">
           <div>
-            <div className="mb-3 text-[11px] uppercase tracking-[0.18em] text-[color:var(--text-mute)] font-mono-friendly">
+            <div className="mb-3 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
               Recent Work · 01 | 04
             </div>
             <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
