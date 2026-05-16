@@ -5,7 +5,7 @@ export function GlassCard({ className, children, ...props }: HTMLAttributes<HTML
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-2xl glass p-6 transition-all duration-300",
+        "group relative overflow-hidden rounded-md glass p-6 transition-all duration-300",
         "hover:border-[color:var(--hairline-strong)]",
         className,
       )}

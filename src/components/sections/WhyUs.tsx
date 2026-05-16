@@ -124,12 +124,12 @@ export function WhyUs() {
       <div className="grid gap-5 md:grid-cols-2">
         {features.map((f, i) => (
           <ScrollReveal key={f.title} delay={i * 0.05}>
-            <article className="group relative h-full overflow-hidden rounded-3xl border border-[color:var(--hairline)] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--hairline-strong)] hover:shadow-[0_30px_60px_-30px_rgba(18,32,86,0.18)] md:p-9">
+            <article className="group relative h-full overflow-hidden rounded-lg border border-[color:var(--hairline)] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--hairline-strong)] hover:shadow-[0_30px_60px_-30px_rgba(18,32,86,0.18)] md:p-9">
               <CornerArt kind={f.art} />
 
               {/* Neumorphic icon tile */}
               <div
-                className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-white to-[color:var(--brand-lavender)] text-[color:var(--brand-indigo)] ring-1 ring-[color:var(--hairline)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3"
+                className="grid h-14 w-14 place-items-center rounded-md bg-gradient-to-br from-white to-[color:var(--brand-lavender)] text-[color:var(--brand-indigo)] ring-1 ring-[color:var(--hairline)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3"
                 style={{
                   boxShadow:
                     "inset 0 1px 0 0 rgba(255,255,255,0.9), 0 1px 2px rgba(18,32,86,0.06), 0 12px 24px -12px rgba(18,32,86,0.12)",

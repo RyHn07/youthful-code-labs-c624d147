@@ -69,7 +69,7 @@ function ContactPage() {
 }
 
 function Field({ name, label, type = "text", textarea = false, required = true }: { name: string; label: string; type?: string; textarea?: boolean; required?: boolean }) {
-  const cls = "w-full rounded-xl border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
+  const cls = "w-full rounded-md border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
   return (
     <label className="grid gap-2 text-sm">
       <span className="text-[color:var(--text-mute)]">{label}</span>

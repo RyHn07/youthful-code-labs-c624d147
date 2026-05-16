@@ -12,7 +12,7 @@ export const Route = createFileRoute("/login")({
 function LoginPage() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const cls = "w-full rounded-xl border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
+  const cls = "w-full rounded-md border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
   return (
     <Section className="pt-40" eyebrow="Studio" title="Sign in." align="center">
       <form className="mx-auto grid max-w-sm gap-4" onSubmit={async (e) => {

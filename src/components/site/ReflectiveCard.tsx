@@ -40,7 +40,7 @@ export function ReflectiveCard({
         transition: "transform 280ms cubic-bezier(.2,.7,.2,1)",
       }}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-[color:var(--hairline)] bg-[color:var(--surface-2)] p-6",
+        "group relative overflow-hidden rounded-md border border-[color:var(--hairline)] bg-[color:var(--surface-2)] p-6",
         className,
       )}
       {...props}
@@ -55,7 +55,7 @@ export function ReflectiveCard({
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-2xl"
+        className="pointer-events-none absolute inset-0 rounded-md"
         style={{
           background:
             "linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.06) 50%, transparent 70%)",

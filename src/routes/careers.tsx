@@ -13,7 +13,7 @@ export const Route = createFileRoute("/careers")({
 function CareersPage() {
   const apply = useServerFn(submitApplication);
   const [loading, setLoading] = useState(false);
-  const cls = "w-full rounded-xl border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
+  const cls = "w-full rounded-md border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
   return (
     <Section className="pt-40" eyebrow="Careers" title="Join the talent network." description="Real, paid project experience alongside senior mentors.">
       <form className="mx-auto grid max-w-xl gap-4" onSubmit={async (e) => {

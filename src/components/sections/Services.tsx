@@ -41,7 +41,7 @@ export function Services() {
           <ScrollReveal key={s.title} delay={i * 0.03}>
             <div
               className={cn(
-                "group relative overflow-hidden rounded-2xl border border-[color:var(--hairline)] bg-[color:var(--surface-2)] p-6 transition-all duration-300",
+                "group relative overflow-hidden rounded-md border border-[color:var(--hairline)] bg-[color:var(--surface-2)] p-6 transition-all duration-300",
                 "hover:-translate-y-0.5 hover:border-[color:var(--hairline-strong)]",
               )}
             >
@@ -65,7 +65,7 @@ export function Services() {
                 }}
               />
               <div className="flex items-center justify-between">
-                <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[color:var(--brand-indigo)] to-[color:var(--brand-navy)] text-white shadow-[0_8px_24px_-8px_rgba(91,101,220,0.6)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                <div className="grid h-10 w-10 place-items-center rounded-md bg-gradient-to-br from-[color:var(--brand-indigo)] to-[color:var(--brand-navy)] text-white shadow-[0_8px_24px_-8px_rgba(91,101,220,0.6)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <s.icon className="h-[18px] w-[18px]" />
                 </div>
                 <span className="text-xs font-medium text-[color:var(--text-mute)]">0{i + 1 < 10 ? `0${i + 1}` : i + 1}</span>
