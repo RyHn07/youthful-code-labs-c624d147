@@ -21,6 +21,8 @@ export function Logo() {
       </svg>
       <span
         style={{
+          fontFamily:
+            '"Saans SemiMono-TRIAL SemiBold", "Saans SemiMono-TRIAL SemiBold Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace',
           fontWeight: 700,
           fontSize: "18px",
           letterSpacing: "-0.01em",
