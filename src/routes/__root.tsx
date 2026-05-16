@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { FloatingDock } from "@/components/site/FloatingDock";
 import { ClickSpark } from "@/components/site/ClickSpark";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -124,6 +125,7 @@ function RootComponent() {
       </main>
       <SiteFooter />
       <FloatingDock />
+      <Toaster />
     </QueryClientProvider>
   );
 }
