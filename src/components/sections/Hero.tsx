@@ -1,69 +1,56 @@
 import { Link } from "@tanstack/react-router";
-import { AuroraBackground } from "@/components/site/AuroraBackground";
-import { ParticlesBackground } from "@/components/site/ParticlesBackground";
-import { DecryptedText } from "@/components/site/DecryptedText";
+import { ArrowRight, Calendar } from "lucide-react";
 import { Container } from "@/components/site/Container";
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-40 pb-32 md:pt-48 md:pb-44">
-      <AuroraBackground />
-      <ParticlesBackground density={70} />
+    <section className="relative isolate overflow-hidden pt-36 pb-20 md:pt-44 md:pb-24">
       <Container className="relative">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-black/[0.04] px-3 py-1.5 text-xs text-[color:var(--text-soft)] backdrop-blur"
-        >
-          <Sparkles className="h-3.5 w-3.5" />
-          A talent-network studio · est. 2024
-        </motion.div>
-        <h1 className="text-balance text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl">
-          <DecryptedText text="Affordable, high-quality" /> <br />
-          <span className="text-[color:var(--text-soft)]">digital solutions powered by</span>{" "}
-          <span className="relative inline-block">
-            <span className="bg-gradient-to-r from-[color:var(--brand-indigo)] via-[color:var(--brand-indigo-soft)] to-[color:var(--brand-navy)] bg-clip-text text-transparent">
-              young talent.
+        {/* Top status bar */}
+        <div className="mb-12 flex items-center justify-between border-y border-[color:var(--hairline)] py-3 text-[11px] uppercase tracking-[0.18em] text-[color:var(--text-mute)] font-mono-friendly">
+          <div className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            <span
-              aria-hidden
-              className="absolute -inset-x-2 -bottom-1 h-px bg-gradient-to-r from-transparent via-[color:var(--brand-indigo)] to-transparent"
-            />
+            Available for new projects
+          </div>
+          <div className="hidden md:block">Dhaka, Bangladesh</div>
+        </div>
+
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+          <span className="mb-8 inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white/70 px-4 py-1.5 text-xs text-[color:var(--text-soft)] backdrop-blur">
+            Design &amp; Dev Studio for Startups
           </span>
-        </h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-6 max-w-2xl text-balance text-base text-[color:var(--text-soft)] md:text-lg"
-        >
-          We assemble project-based teams of top university students, supervised
-          by senior experts — delivering modern design, engineering, and growth
-          work at startup speed and indie prices.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="mt-10 flex flex-wrap items-center gap-3"
-        >
-          <Link
-            to="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand-indigo)] px-5 py-3 text-sm font-medium text-white transition-all hover:bg-[color:var(--brand-navy)] indigo-glow"
-          >
-            Start a project
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-          <Link
-            to="/careers"
-            className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white/60 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-all hover:bg-[color:var(--brand-lavender)]"
-          >
-            Join the network
-          </Link>
-        </motion.div>
+
+          <h1 className="text-balance text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl lg:text-[88px]">
+            Building <span className="italic font-light">unique</span> websites
+            for modern startups
+          </h1>
+
+          <p className="mt-7 max-w-2xl text-balance text-base text-[color:var(--text-soft)] md:text-lg">
+            High-quality visual and dev solutions tailored to each client's needs.
+            With a focus on delivering work that's both distinctive and effective.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background transition-all hover:opacity-90"
+            >
+              <Calendar className="h-4 w-4" />
+              Book a call
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+            <a
+              href="#work"
+              className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white/60 px-6 py-3.5 text-sm font-medium text-foreground backdrop-blur transition-all hover:bg-white"
+            >
+              Recent Work
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
       </Container>
     </section>
   );
