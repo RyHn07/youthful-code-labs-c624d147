@@ -146,109 +146,99 @@ export function PricingPlans() {
               {/* Right pricing stack */}
               <div className="flex flex-col gap-5 lg:col-span-7">
                 {plans.map((p) => (
-                  <article key={p.name} className={cardClass}>
-                    <div className="flex flex-col justify-between gap-6 md:flex-row md:items-start">
-                      <div className="flex-1">
+                  <article key={p.tier} className={cardClass}>
+                    {/* Top row: tier label + toggle */}
+                    <div className="flex items-start justify-between gap-4">
+                      <span
+                        style={{
+                          fontFamily: mono,
+                          fontSize: "12px",
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                          color: "rgba(37,37,37,0.65)",
+                        }}
+                      >
+                        {p.tier}
+                      </span>
+                      <div
+                        className="flex items-center gap-3"
+                        style={{
+                          fontFamily: mono,
+                          fontSize: "13px",
+                          letterSpacing: "-0.01em",
+                          color: "#252525",
+                        }}
+                      >
+                        <span>Design &amp; Dev</span>
                         <span
-                          style={{
-                            fontFamily: mono,
-                            fontSize: "11px",
-                            letterSpacing: "0.18em",
-                            textTransform: "uppercase",
-                            color: "rgba(37,37,37,0.55)",
-                          }}
+                          role="switch"
+                          aria-checked="true"
+                          className="relative inline-flex h-5 w-9 items-center rounded-full bg-[#252525]"
                         >
-                          {p.tier}
+                          <span className="absolute left-0.5 h-4 w-4 rounded-full bg-[#ff7a1a]" />
                         </span>
-                        <h3
-                          className="mt-2"
-                          style={{
-                            fontFamily: display,
-                            fontWeight: 700,
-                            fontSize: "26px",
-                            letterSpacing: "-0.02em",
-                            color: "#252525",
-                          }}
-                        >
-                          {p.name}
-                        </h3>
-
-                        <div className="mt-5 inline-flex rounded-full border border-[color:var(--hairline)] bg-white p-1">
-                          <button
-                            type="button"
-                            className="rounded-full bg-[#252525] px-3 py-1 text-white shadow-sm"
-                            style={{ fontFamily: mono, fontSize: "11px", letterSpacing: "-0.01em" }}
-                          >
-                            Design & Dev
-                          </button>
-                          <button
-                            type="button"
-                            className="px-3 py-1"
-                            style={{
-                              fontFamily: mono,
-                              fontSize: "11px",
-                              letterSpacing: "-0.01em",
-                              color: "rgba(37,37,37,0.55)",
-                            }}
-                          >
-                            Design Only
-                          </button>
-                        </div>
-
-                        <div className="mt-5 flex flex-wrap gap-2">
-                          {p.features.map((f) => (
-                            <span
-                              key={f}
-                              className="rounded-full border border-[color:var(--hairline)] bg-white px-3 py-1"
-                              style={{
-                                fontFamily: mono,
-                                fontSize: "11px",
-                                letterSpacing: "-0.01em",
-                                color: "#252525",
-                              }}
-                            >
-                              {f}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="flex min-w-[160px] flex-col items-start gap-5 md:items-end">
-                        <div className="text-left md:text-right">
-                          <div
-                            style={{
-                              fontFamily: display,
-                              fontWeight: 700,
-                              fontSize: "40px",
-                              letterSpacing: "-0.03em",
-                              lineHeight: 1,
-                              color: "#252525",
-                            }}
-                          >
-                            {p.price}
-                          </div>
-                          <span
-                            className="mt-1 inline-block"
-                            style={{
-                              fontFamily: mono,
-                              fontSize: "11px",
-                              letterSpacing: "0.12em",
-                              textTransform: "uppercase",
-                              color: "rgba(37,37,37,0.55)",
-                            }}
-                          >
-                            {p.priceMeta}
-                          </span>
-                        </div>
-                        <Link
-                          to="/contact"
-                          className="inline-flex w-full items-center justify-center rounded-full bg-[#252525] px-6 py-3 text-white transition-opacity hover:opacity-90"
-                          style={{ fontFamily: mono, fontSize: "13px", letterSpacing: "-0.01em" }}
-                        >
-                          {p.cta}
-                        </Link>
+                        <span style={{ color: "rgba(37,37,37,0.55)" }}>Design only</span>
                       </div>
                     </div>
+
+                    {/* Price */}
+                    <div className="mt-3 flex items-baseline gap-2">
+                      <span
+                        style={{
+                          fontFamily: display,
+                          fontWeight: 700,
+                          fontSize: "56px",
+                          lineHeight: 1,
+                          letterSpacing: "-0.04em",
+                          color: "#252525",
+                        }}
+                      >
+                        {p.price}
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: display,
+                          fontWeight: 500,
+                          fontSize: "18px",
+                          letterSpacing: "-0.02em",
+                          color: "rgba(37,37,37,0.55)",
+                        }}
+                      >
+                        {p.priceMeta}
+                      </span>
+                    </div>
+
+                    {/* Features with vertical dividers */}
+                    <div
+                      className="mt-7 flex flex-wrap gap-x-4 gap-y-2"
+                      style={{
+                        fontFamily: mono,
+                        fontSize: "13px",
+                        letterSpacing: "-0.01em",
+                        color: "rgba(37,37,37,0.7)",
+                      }}
+                    >
+                      {p.features.map((f, i) => (
+                        <span key={f} className="flex items-center gap-4">
+                          <span>{f}</span>
+                          {i < p.features.length - 1 && (
+                            <span aria-hidden className="text-[color:var(--hairline-strong)]">
+                              |
+                            </span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <Link
+                      to="/contact"
+                      className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#252525] px-5 py-2.5 text-white transition-opacity hover:opacity-90"
+                      style={{ fontFamily: mono, fontSize: "13px", letterSpacing: "-0.01em" }}
+                    >
+                      Get Started
+                      <span aria-hidden>›</span>
+                    </Link>
                   </article>
                 ))}
               </div>
