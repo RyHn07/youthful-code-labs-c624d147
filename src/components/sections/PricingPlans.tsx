@@ -6,7 +6,6 @@ const mono =
 const display =
   '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
 
-
 const titleStyle = {
   fontFamily: display,
   fontWeight: 600,
