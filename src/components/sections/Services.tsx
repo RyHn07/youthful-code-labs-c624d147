@@ -15,7 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import CardGlow from "@/components/ui/card-glow";
+import BorderGlow from "@/components/ui/border-glow";
 
 const services = [
   { icon: Layout, title: "Website Design", desc: "Considered, conversion-aware design systems." },
@@ -41,12 +41,10 @@ export function Services() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
           <ScrollReveal key={s.title} delay={i * 0.03}>
-            <CardGlow borderRadius={16} className="h-full" glowColor="280 90 70">
+            <BorderGlow borderRadius={16} backgroundColor="#0c0c12" fillOpacity={0} glowColor="280 90 70" glowRadius={32} glowIntensity={1} className="h-full">
             <div
               className={cn(
-                "group relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-2xl p-7 transition-all duration-500",
-                "bg-gradient-to-b from-[#1a1a24] to-[#0c0c12] text-white",
-                "ring-1 ring-white/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]",
+                "group relative flex h-full min-h-[360px] flex-col overflow-hidden p-7 transition-all duration-500 text-white",
                 "hover:-translate-y-1 hover:ring-white/20",
               )}
             >
@@ -88,7 +86,7 @@ export function Services() {
                 0{i + 1 < 10 ? `0${i + 1}` : i + 1}
               </span>
             </div>
-            </CardGlow>
+            </BorderGlow>
           </ScrollReveal>
         ))}
       </div>

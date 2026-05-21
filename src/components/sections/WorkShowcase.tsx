@@ -1,5 +1,5 @@
 import { OuterContainer } from "@/components/site/Containers";
-import CardGlow from "@/components/ui/card-glow";
+import BorderGlow from "@/components/ui/border-glow";
 
 // Placeholder thumbnails (user will replace later). Using Unsplash for now.
 const projects = [
@@ -22,10 +22,18 @@ export function WorkShowcase() {
       >
           <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {loop.map((p, i) => (
-            <CardGlow key={`${p.title}-${i}`} borderRadius={12} className="w-[560px] max-w-[80vw] shrink-0">
+            <BorderGlow
+              key={`${p.title}-${i}`}
+              borderRadius={12}
+              backgroundColor="#f5f3ee"
+              fillOpacity={0}
+              glowRadius={28}
+              glowIntensity={0.8}
+              className="w-[560px] max-w-[80vw] shrink-0"
+            >
             <a
               href="#work"
-              className="relative block h-full w-full overflow-hidden rounded-xl border border-[color:var(--hairline)] bg-black/[0.025]"
+              className="relative block h-full w-full overflow-hidden"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
@@ -44,7 +52,7 @@ export function WorkShowcase() {
                 </div>
               </div>
             </a>
-            </CardGlow>
+            </BorderGlow>
           ))}
           </div>
           <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
