@@ -28,7 +28,7 @@ function LocalTime() {
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate overflow-hidden pt-16">
       <OuterContainer borders="x">
         <InnerContainer borders="x" className="!px-0">
           {/* Status bar — bottom hairline closes the row inside the inner rails */}
