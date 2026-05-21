@@ -14,13 +14,14 @@ export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
     <section id="work" className="relative py-20 md:py-28 overflow-hidden">
-      <div
-        className="group relative w-full overflow-hidden border-y border-[color:var(--hairline)]"
-        style={{
-          paddingTop: 24,
-          paddingBottom: 24,
-        }}
-      >
+      <Container>
+        <div
+          className="group relative w-full overflow-hidden border-y border-x border-[color:var(--hairline)]"
+          style={{
+            paddingTop: 24,
+            paddingBottom: 24,
+          }}
+        >
           <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {loop.map((p, i) => (
             <a
@@ -48,7 +49,8 @@ export function WorkShowcase() {
           ))}
           </div>
           <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
-      </div>
+        </div>
+      </Container>
     </section>
   );
 }
