@@ -6,7 +6,9 @@ import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
 const display =
-  '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
+  '"Graphik Trial Medium", "Graphik Trial Medium Placeholder", sans-serif';
+const displayBold =
+  '"Graphik Trial Semibold", "Graphik Trial Semibold Placeholder", sans-serif';
 
 function LocalTime() {
   const [now, setNow] = useState<string | null>(null);
