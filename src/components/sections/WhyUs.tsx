@@ -9,11 +9,10 @@ const display =
 
 const statusBarStyle = {
   fontFamily: mono,
-  fontSize: "14px",
-  fontWeight: 400,
-  letterSpacing: "-0.01em",
+  fontSize: "12px",
+  lineHeight: "16px",
   textTransform: "uppercase" as const,
-  color: "rgba(37, 37, 37, 0.55)",
+  color: "rgb(22, 22, 18)",
 };
 
 const cardClass =
