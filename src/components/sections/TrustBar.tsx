@@ -1,9 +1,9 @@
-import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import { FullWidthContainer, OuterContainer, InnerContainer } from "@/components/site/Containers";
 
 export function TrustBar() {
   return (
-    <section className="h-[60px]">
-      <OuterContainer className="h-full">
+    <FullWidthContainer borders="y">
+      <OuterContainer className="h-[60px]">
         <InnerContainer
           borders="x"
           className="flex h-full items-center justify-center text-sm text-[color:var(--text-mute)]"
@@ -11,6 +11,6 @@ export function TrustBar() {
           <span>Trusted by startups, founders, and small businesses worldwide</span>
         </InnerContainer>
       </OuterContainer>
-    </section>
+    </FullWidthContainer>
   );
 }
