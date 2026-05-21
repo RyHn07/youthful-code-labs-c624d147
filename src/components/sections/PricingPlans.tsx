@@ -90,7 +90,7 @@ export function PricingPlans() {
               {/* Left context */}
               <div className="lg:col-span-5 lg:border-r lg:border-[color:var(--hairline)]">
                 <div className="flex flex-col px-6 md:px-10 pt-12 pb-14 lg:sticky lg:top-0 lg:h-screen lg:justify-between lg:py-12">
-                <div className="rounded-2xl border border-[color:var(--hairline)] bg-white p-7 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.08)]">
+                <div>
                   <h2
                     style={{
                       fontFamily: display,
