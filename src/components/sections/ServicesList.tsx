@@ -149,7 +149,7 @@ export function ServicesList() {
                   <img src={founder2} alt="" width={36} height={36} loading="lazy" className="h-9 w-9 rounded-full border-2 border-[var(--background)] object-cover" />
                   <img src={founder3} alt="" width={36} height={36} loading="lazy" className="h-9 w-9 rounded-full border-2 border-[var(--background)] object-cover" />
                   <span
-                    className="h-9 min-w-9 px-2 inline-flex items-center justify-center rounded-full border-2 border-[var(--background)] bg-[#F0EBE3]"
+                    className="h-9 w-9 inline-flex items-center justify-center rounded-full border-2 border-[var(--background)] bg-[#F0EBE3]"
                     style={{ fontFamily: mono, fontSize: "12px", color: "#252525" }}
                   >
                     20+
