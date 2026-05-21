@@ -15,10 +15,6 @@ interface CardGlowProps {
   glowIntensity?: number;
   /** Cone mask width (5-45) */
   coneSpread?: number;
-  /** Mesh border colors */
-  colors?: [string, string, string];
-  /** Mesh border opacity (0-1) */
-  borderOpacityMax?: number;
   /** Play intro sweep on mount */
   animated?: boolean;
   /** Style override on wrapper */
@@ -46,18 +42,6 @@ function buildBoxShadow(glowColor: string, intensity: number): string {
     .join(", ");
 }
 
-const GRADIENT_POSITIONS = ["80% 55%", "69% 34%", "8% 6%", "41% 38%", "86% 85%", "82% 18%", "51% 4%"];
-const COLOR_MAP = [0, 1, 2, 0, 1, 2, 1];
-
-function buildMeshGradients(colors: string[]): string[] {
-  const gradients: string[] = [];
-  for (let i = 0; i < 7; i++) {
-    const c = colors[Math.min(COLOR_MAP[i], colors.length - 1)];
-    gradients.push(`radial-gradient(at ${GRADIENT_POSITIONS[i]}, ${c} 0px, transparent 50%)`);
-  }
-  return gradients;
-}
-
 function easeOutCubic(x: number) { return 1 - Math.pow(1 - x, 3); }
 function easeInCubic(x: number) { return x * x * x; }
 
@@ -70,8 +54,6 @@ const CardGlow: React.FC<CardGlowProps> = ({
   glowRadius = 32,
   glowIntensity = 0.9,
   coneSpread = 25,
-  colors = ["#ff7a1a", "#ff4d6d", "#c084fc"],
-  borderOpacityMax = 0.9,
   animated = false,
   style,
 }) => {
@@ -130,16 +112,11 @@ const CardGlow: React.FC<CardGlowProps> = ({
     return () => cancelAnimationFrame(raf);
   }, [animated]);
 
-  const colorSensitivity = edgeSensitivity + 20;
   const isVisible = isHovered || sweepActive;
-  const borderOpacity = isVisible
-    ? Math.max(0, (edgeProximity * 100 - colorSensitivity) / (100 - colorSensitivity)) * borderOpacityMax
-    : 0;
   const glowOpacity = isVisible
     ? Math.max(0, (edgeProximity * 100 - edgeSensitivity) / (100 - edgeSensitivity))
     : 0;
 
-  const meshGradients = buildMeshGradients(colors);
   const angleDeg = `${cursorAngle.toFixed(3)}deg`;
 
   return (
@@ -155,27 +132,7 @@ const CardGlow: React.FC<CardGlowProps> = ({
         ...style,
       }}
     >
-      {/* mesh gradient border ring (sits on top of the card edge) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-[2]"
-        style={{
-          borderRadius: `${borderRadius}px`,
-          padding: "1.5px",
-          background: meshGradients.join(", "),
-          WebkitMask:
-            "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-          WebkitMaskComposite: "xor",
-          mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-          maskComposite: "exclude",
-          maskImage: `conic-gradient(from ${angleDeg} at center, black ${coneSpread}%, transparent ${coneSpread + 15}%, transparent ${100 - coneSpread - 15}%, black ${100 - coneSpread}%)`,
-          WebkitMaskImage: `conic-gradient(from ${angleDeg} at center, black ${coneSpread}%, transparent ${coneSpread + 15}%, transparent ${100 - coneSpread - 15}%, black ${100 - coneSpread}%)`,
-          opacity: borderOpacity,
-          transition: isVisible ? "opacity 0.25s ease-out" : "opacity 0.6s ease-in-out",
-        } as CSSProperties}
-      />
-
-      {/* outer glow */}
+      {/* outer glow — sits OUTSIDE the card border only, no fill on card */}
       <span
         aria-hidden
         className="pointer-events-none absolute z-[1]"
