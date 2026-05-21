@@ -3,6 +3,9 @@ import { Container } from "@/components/site/Container";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const mono =
+  '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
+
 const plans = [
   {
     name: "Landing page",
