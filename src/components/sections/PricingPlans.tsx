@@ -1,5 +1,31 @@
 import { Link } from "@tanstack/react-router";
-import { Container } from "@/components/site/Container";
+import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+
+const mono =
+  '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
+const display =
+  '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
+
+const statusBarStyle = {
+  fontFamily: mono,
+  fontSize: "12px",
+  lineHeight: "16px",
+  textTransform: "uppercase" as const,
+  color: "rgb(22, 22, 18)",
+};
+
+const titleStyle = {
+  fontFamily: display,
+  fontWeight: 600,
+  fontSize: "20px",
+  lineHeight: "1.35",
+  letterSpacing: "-0.02em",
+  color: "#252525",
+};
+const softStyle = { color: "rgba(37, 37, 37, 0.5)" };
+
+const cardClass =
+  "relative overflow-hidden rounded-2xl border border-[color:var(--hairline-strong)] bg-[#F7F7F7] p-7";
 
 const plans = [
   {
@@ -30,100 +56,194 @@ const plans = [
 
 export function PricingPlans() {
   return (
-    <section id="pricing" className="relative py-20 md:py-28 bg-[#f5f3ee]">
-      <Container>
-        <div className="mb-10 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
-          Pricing · 03 | 04
-        </div>
-
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
-          {/* Left context column */}
-          <div className="flex flex-col lg:col-span-5">
-            <h2 className="mb-8 text-5xl font-bold tracking-tight text-[#0d0d0d] md:text-6xl">
-              Flexible Pricing Plans
-            </h2>
-            <p className="mb-12 max-w-md text-xl leading-relaxed text-[#2d2d2d]">
-              Transparent pricing designed to scale with your project needs. No hidden fees, just
-              high-quality design and development.
-            </p>
-
-            <div className="mt-auto border-t border-[#e8e4dd] pt-8">
-              <p className="mb-4 text-lg italic leading-snug text-[#0d0d0d]">
-                "The team delivered a high-quality site in record time. Communication was seamless
-                throughout the entire process."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-[#e8e4dd]" />
-                <div>
-                  <p className="font-medium text-[#0d0d0d]">Sarah Jenkins</p>
-                  <p className="text-sm text-[#2d2d2d]">Founder, Aura Studio</p>
-                </div>
+    <section id="pricing" className="relative">
+      <OuterContainer>
+        <InnerContainer borders="x" className="!px-0">
+          {/* Status bar */}
+          <div className="border-t border-b border-[color:var(--hairline)] px-6 md:px-10">
+            <div className="flex items-center justify-between py-3" style={statusBarStyle}>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#ff7a1a] text-[10px] font-bold text-white">
+                  ◉
+                </span>
+                Pricing
               </div>
+              <div className="tabular-nums">03 | 04</div>
             </div>
           </div>
 
-          {/* Right pricing stack */}
-          <div className="flex flex-col gap-6 lg:col-span-7">
-            {plans.map((p) => (
-              <div
-                key={p.name}
-                className="group border border-[#e8e4dd] bg-white p-8 transition-all duration-300 hover:border-[#0d0d0d]"
-              >
-                <div className="flex flex-col justify-between gap-6 md:flex-row md:items-start">
-                  <div className="flex-1">
-                    <span className="mb-4 block text-xs font-bold uppercase tracking-[0.2em] text-[#2d2d2d]">
-                      {p.tier}
+          {/* Body */}
+          <div className="px-6 md:px-10 pt-12 pb-14">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+              {/* Left context */}
+              <div className="flex flex-col lg:col-span-5">
+                <h2
+                  style={{
+                    fontFamily: display,
+                    fontWeight: 700,
+                    fontSize: "44px",
+                    lineHeight: "1.1",
+                    letterSpacing: "-0.03em",
+                    color: "#252525",
+                  }}
+                >
+                  Flexible Pricing Plans
+                </h2>
+                <p
+                  className="mt-5 max-w-md"
+                  style={{
+                    fontFamily: mono,
+                    fontSize: "14px",
+                    lineHeight: "1.5em",
+                    letterSpacing: "-0.01em",
+                    color: "rgba(37, 37, 37, 0.65)",
+                  }}
+                >
+                  Transparent pricing designed to scale with your project needs. No hidden fees,
+                  just high-quality design and development.
+                </p>
+
+                <div className="mt-10 border-t border-[color:var(--hairline)] pt-6">
+                  <p style={titleStyle}>
+                    "The team delivered a high-quality site in record time.{" "}
+                    <span style={softStyle}>
+                      Communication was seamless throughout the entire process."
                     </span>
-                    <h3 className="mb-4 text-3xl font-bold tracking-tight text-[#0d0d0d]">
-                      {p.name}
-                    </h3>
-
-                    <div className="mb-6 inline-flex rounded-full border border-[#e8e4dd] bg-[#f5f3ee] p-1">
-                      <button
-                        type="button"
-                        className="rounded-full bg-[#0d0d0d] px-4 py-1.5 text-xs font-medium text-[#f5f3ee] shadow-sm"
+                  </p>
+                  <div className="mt-5 flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full border border-[color:var(--hairline)] bg-[#F7F7F7]" />
+                    <div>
+                      <p
+                        style={{
+                          fontFamily: display,
+                          fontWeight: 600,
+                          fontSize: "14px",
+                          color: "#252525",
+                        }}
                       >
-                        Design & Dev
-                      </button>
-                      <button type="button" className="px-4 py-1.5 text-xs font-medium text-[#2d2d2d]">
-                        Design Only
-                      </button>
+                        Sarah Jenkins
+                      </p>
+                      <p style={{ fontFamily: mono, fontSize: "12px", color: "rgba(37,37,37,0.55)" }}>
+                        Founder, Aura Studio
+                      </p>
                     </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      {p.features.map((f) => (
-                        <span
-                          key={f}
-                          className="rounded-full border border-[#e8e4dd] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2d2d2d]"
-                        >
-                          {f}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex min-w-[180px] flex-col items-start justify-between md:items-end">
-                    <div className="mb-8 text-left md:text-right">
-                      <div className="mb-1 text-5xl font-bold tracking-tight text-[#0d0d0d]">
-                        {p.price}
-                      </div>
-                      <span className="text-sm font-medium uppercase tracking-wide text-[#2d2d2d]">
-                        {p.priceMeta}
-                      </span>
-                    </div>
-                    <Link
-                      to="/contact"
-                      className="inline-flex w-full items-center justify-center bg-[#0d0d0d] px-8 py-4 font-bold text-[#f5f3ee] transition-colors hover:bg-[#2d2d2d]"
-                    >
-                      {p.cta}
-                    </Link>
                   </div>
                 </div>
               </div>
-            ))}
+
+              {/* Right pricing stack */}
+              <div className="flex flex-col gap-5 lg:col-span-7">
+                {plans.map((p) => (
+                  <article key={p.name} className={cardClass}>
+                    <div className="flex flex-col justify-between gap-6 md:flex-row md:items-start">
+                      <div className="flex-1">
+                        <span
+                          style={{
+                            fontFamily: mono,
+                            fontSize: "11px",
+                            letterSpacing: "0.18em",
+                            textTransform: "uppercase",
+                            color: "rgba(37,37,37,0.55)",
+                          }}
+                        >
+                          {p.tier}
+                        </span>
+                        <h3
+                          className="mt-2"
+                          style={{
+                            fontFamily: display,
+                            fontWeight: 700,
+                            fontSize: "26px",
+                            letterSpacing: "-0.02em",
+                            color: "#252525",
+                          }}
+                        >
+                          {p.name}
+                        </h3>
+
+                        <div className="mt-5 inline-flex rounded-full border border-[color:var(--hairline)] bg-white p-1">
+                          <button
+                            type="button"
+                            className="rounded-full bg-[#252525] px-3 py-1 text-white shadow-sm"
+                            style={{ fontFamily: mono, fontSize: "11px", letterSpacing: "-0.01em" }}
+                          >
+                            Design & Dev
+                          </button>
+                          <button
+                            type="button"
+                            className="px-3 py-1"
+                            style={{
+                              fontFamily: mono,
+                              fontSize: "11px",
+                              letterSpacing: "-0.01em",
+                              color: "rgba(37,37,37,0.55)",
+                            }}
+                          >
+                            Design Only
+                          </button>
+                        </div>
+
+                        <div className="mt-5 flex flex-wrap gap-2">
+                          {p.features.map((f) => (
+                            <span
+                              key={f}
+                              className="rounded-full border border-[color:var(--hairline)] bg-white px-3 py-1"
+                              style={{
+                                fontFamily: mono,
+                                fontSize: "11px",
+                                letterSpacing: "-0.01em",
+                                color: "#252525",
+                              }}
+                            >
+                              {f}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="flex min-w-[160px] flex-col items-start gap-5 md:items-end">
+                        <div className="text-left md:text-right">
+                          <div
+                            style={{
+                              fontFamily: display,
+                              fontWeight: 700,
+                              fontSize: "40px",
+                              letterSpacing: "-0.03em",
+                              lineHeight: 1,
+                              color: "#252525",
+                            }}
+                          >
+                            {p.price}
+                          </div>
+                          <span
+                            className="mt-1 inline-block"
+                            style={{
+                              fontFamily: mono,
+                              fontSize: "11px",
+                              letterSpacing: "0.12em",
+                              textTransform: "uppercase",
+                              color: "rgba(37,37,37,0.55)",
+                            }}
+                          >
+                            {p.priceMeta}
+                          </span>
+                        </div>
+                        <Link
+                          to="/contact"
+                          className="inline-flex w-full items-center justify-center rounded-full bg-[#252525] px-6 py-3 text-white transition-opacity hover:opacity-90"
+                          style={{ fontFamily: mono, fontSize: "13px", letterSpacing: "-0.01em" }}
+                        >
+                          {p.cta}
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </Container>
+        </InnerContainer>
+      </OuterContainer>
     </section>
   );
 }
