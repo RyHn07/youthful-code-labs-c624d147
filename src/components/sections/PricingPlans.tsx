@@ -202,9 +202,9 @@ export function PricingPlans() {
                       </span>
                     </div>
 
-                    {/* Features with vertical dividers */}
+                    {/* Features */}
                     <div
-                      className="mt-7 flex flex-wrap gap-x-4 gap-y-2"
+                      className="mt-7 flex flex-wrap gap-x-3 gap-y-1"
                       style={{
                         fontFamily: mono,
                         fontSize: "13px",
@@ -212,15 +212,8 @@ export function PricingPlans() {
                         color: "rgba(37,37,37,0.7)",
                       }}
                     >
-                      {p.features.map((f, i) => (
-                        <span key={f} className="flex items-center gap-4">
-                          <span>{f}</span>
-                          {i < p.features.length - 1 && (
-                            <span aria-hidden className="text-[color:var(--hairline-strong)]">
-                              |
-                            </span>
-                          )}
-                        </span>
+                      {p.features.map((f) => (
+                        <span key={f}>{f}</span>
                       ))}
                     </div>
 
