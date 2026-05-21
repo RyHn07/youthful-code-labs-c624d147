@@ -27,7 +27,7 @@ function LocalTime() {
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-16">
+    <section className="relative isolate overflow-hidden pt-16 pb-16">
       {/*
         Section frame — reusable rail system (use for all sections):
         • Outer safe area : max-w-[1320px] mx-auto  (outer vertical rails)
