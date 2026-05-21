@@ -89,9 +89,9 @@ export function ServicesList() {
               </div>
 
               {services.map((s) => (
+                <CardGlow key={s.n} borderRadius={16} className="min-h-[260px]">
                 <article
-                  key={s.n}
-                  className="flex flex-col justify-between rounded-2xl border border-[color:var(--hairline)] bg-[#F7F7F7] p-7 min-h-[260px]"
+                  className="flex h-full flex-col justify-between rounded-2xl border border-[color:var(--hairline)] bg-[#F7F7F7] p-7"
                 >
                   <div
                     style={{
@@ -129,6 +129,7 @@ export function ServicesList() {
                     {s.desc}
                   </p>
                 </article>
+                </CardGlow>
               ))}
             </div>
           </div>
