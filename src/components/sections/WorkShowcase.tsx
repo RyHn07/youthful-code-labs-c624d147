@@ -31,7 +31,7 @@ export function WorkShowcase() {
             onMouseMove={handleMove}
             onMouseEnter={handleMove}
             onMouseLeave={() => setCursor((c) => ({ ...c, visible: false }))}
-            className="group relative overflow-hidden border-y border-[color:var(--hairline)] cursor-none"
+            className="group relative overflow-hidden border-t border-[color:var(--hairline)] cursor-none"
             style={{
               paddingTop: 24,
               paddingBottom: 24,
