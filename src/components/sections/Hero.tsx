@@ -6,7 +6,7 @@ import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
 const display =
-  '"Satoshi", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
+  '"Gordita", "Satoshi", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
 
 function LocalTime() {
   const [now, setNow] = useState<string | null>(null);
@@ -59,8 +59,8 @@ export function Hero() {
           </div>
 
           {/* Hero content */}
-          <div className="px-6 md:px-10 pt-16 pb-16">
-            <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-0 text-center md:pt-28">
+          <div className="px-6 md:px-10 flex min-h-[calc(100vh-49px)] items-center justify-center">
+            <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <span
             className="mb-8 inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-white px-4 py-2"
             style={{
