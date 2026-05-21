@@ -40,11 +40,10 @@ const sectors = ["Startups", "SaaS", "AI", "Fintech", "Fashion", "Portfolio", "S
 
 const statusBarStyle = {
   fontFamily: mono,
-  fontSize: "14px",
-  fontWeight: 400,
-  letterSpacing: "-0.01em",
+  fontSize: "12px",
+  lineHeight: "20px",
   textTransform: "uppercase" as const,
-  color: "rgba(37, 37, 37, 0.55)",
+  color: "rgba(37, 37, 37, 0.65)",
 };
 
 const topBarStyle = {
