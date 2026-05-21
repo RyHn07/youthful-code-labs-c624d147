@@ -59,7 +59,17 @@ export function PricingPlans() {
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Flexible pricing plans.
           </h2>
-          <p className="mt-4 text-[color:var(--text-soft)]">
+          <p
+            className="mt-4 max-w-xl text-balance text-center"
+            style={{
+              fontFamily: mono,
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              letterSpacing: "-0.01em",
+              color: "rgba(37, 37, 37, 0.65)",
+            }}
+          >
             High-quality visual and dev solutions tailored to each client's needs.
             Tell us what you're building and we'll send a custom quote.
           </p>
