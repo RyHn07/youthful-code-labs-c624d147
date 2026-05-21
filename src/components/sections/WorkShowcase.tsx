@@ -12,11 +12,9 @@ export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
     <section id="work" className="relative overflow-hidden">
-      {/* Outer rail — same as Hero */}
+      {/* Single rail aligned with Hero's outer rail */}
       <div className="mx-auto w-full max-w-[1320px] border-x border-[color:var(--hairline)]">
-        {/* Inner rail — same as Hero */}
-        <div className="mx-auto w-full max-w-6xl border-x border-[color:var(--hairline)]">
-          <div
+        <div
             className="group relative overflow-hidden border-y border-[color:var(--hairline)]"
             style={{
               paddingTop: 24,
@@ -50,7 +48,6 @@ export function WorkShowcase() {
               ))}
             </div>
             <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
-          </div>
         </div>
       </div>
     </section>
