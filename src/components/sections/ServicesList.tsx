@@ -1,5 +1,9 @@
-import { Container } from "@/components/site/Container";
-import { ArrowUpRight } from "lucide-react";
+import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+
+const mono =
+  '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
+const display =
+  '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
 
 const services = [
   {
@@ -29,57 +33,104 @@ const services = [
   },
 ];
 
-const sectors = ["Startups", "SaaS", "AI", "Fintech", "Fashion", "Portfolio", "Technology"];
+const sectors = ["Startups", "SaaS", "AI", "Fintech", "Fashion", "Portfolio", "Services"];
+
+const statusBarStyle = {
+  fontFamily: mono,
+  fontSize: "14px",
+  fontWeight: 400,
+  letterSpacing: "-0.01em",
+  textTransform: "uppercase" as const,
+  color: "rgba(37, 37, 37, 0.55)",
+};
 
 export function ServicesList() {
   return (
-    <section id="our-services" className="relative py-20 md:py-28">
-      <Container>
-        <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <div className="mb-3 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
-              Our Services · 02 | 04
+    <section id="our-services" className="relative">
+      <OuterContainer borders="x">
+        <InnerContainer borders="x" className="!px-0">
+          {/* Status bar — mirrors Hero */}
+          <div className="border-b border-[color:var(--hairline)] px-6 md:px-10">
+            <div className="flex items-center justify-between py-3" style={statusBarStyle}>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#ff7a1a] text-[10px] font-bold text-white">
+                  ◉
+                </span>
+                Our Services
+              </div>
+              <div className="tabular-nums">01 | 04</div>
             </div>
-            <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-5xl">
-              Services built around how startups actually ship.
-            </h2>
           </div>
-          <div className="flex flex-wrap items-center gap-2 max-w-md">
-            <span className="text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
-              Sectors:
-            </span>
-            {sectors.map((s) => (
-              <span
-                key={s}
-                className="rounded-full border border-[color:var(--hairline)] bg-white/60 px-3 py-1 text-xs text-[color:var(--text-soft)]"
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-        </div>
 
-        <div className="overflow-hidden rounded-xl border border-[color:var(--hairline)] bg-white/50">
-          {services.map((s) => (
-            <a
-              key={s.n}
-              href="#contact"
-              className="group grid grid-cols-12 items-center gap-6 border-b border-[color:var(--hairline)] px-6 py-7 transition-colors last:border-b-0 hover:bg-white md:px-10 md:py-9"
-            >
-              <span className="col-span-2 text-xs text-[color:var(--text-mute)] font-mono-friendly md:col-span-1">
-                ({s.n})
-              </span>
-              <h3 className="col-span-10 text-2xl font-semibold tracking-tight md:col-span-4 md:text-3xl">
-                {s.title}
-              </h3>
-              <p className="col-span-12 text-sm text-[color:var(--text-soft)] md:col-span-6 md:text-base">
-                {s.desc}
-              </p>
-              <ArrowUpRight className="col-span-12 h-5 w-5 justify-self-end text-[color:var(--text-mute)] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 md:col-span-1" />
-            </a>
-          ))}
-        </div>
-      </Container>
+          {/* Grid */}
+          <div className="px-6 md:px-10 py-10 md:py-14">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {/* Sectors cell — top-left */}
+              <div className="flex flex-col gap-4">
+                <div style={statusBarStyle}>Sectors :</div>
+                <div className="flex flex-wrap gap-2">
+                  {sectors.map((s) => (
+                    <span
+                      key={s}
+                      className="rounded-full border border-[color:var(--hairline-strong)] bg-transparent px-4 py-1.5"
+                      style={{
+                        fontFamily: display,
+                        fontSize: "14px",
+                        color: "#252525",
+                      }}
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {services.map((s) => (
+                <article
+                  key={s.n}
+                  className="flex flex-col justify-between rounded-2xl border border-[color:var(--hairline)] bg-white p-7 min-h-[260px]"
+                >
+                  <div
+                    style={{
+                      fontFamily: mono,
+                      fontSize: "13px",
+                      color: "#ff7a1a",
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
+                    ({s.n})
+                  </div>
+                  <h3
+                    className="mt-3"
+                    style={{
+                      fontFamily: display,
+                      fontWeight: 700,
+                      fontSize: "24px",
+                      lineHeight: "1.2",
+                      letterSpacing: "-0.02em",
+                      color: "#252525",
+                    }}
+                  >
+                    {s.title}
+                  </h3>
+                  <p
+                    className="mt-auto pt-6"
+                    style={{
+                      fontFamily: mono,
+                      fontSize: "14px",
+                      lineHeight: "22px",
+                      letterSpacing: "-0.01em",
+                      color: "rgba(37, 37, 37, 0.6)",
+                    }}
+                  >
+                    {s.desc}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </InnerContainer>
+      </OuterContainer>
     </section>
   );
 }
