@@ -88,7 +88,8 @@ export function PricingPlans() {
           <div>
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-0">
               {/* Left context */}
-              <div className="flex flex-col px-6 md:px-10 pt-12 pb-14 lg:col-span-5 lg:border-r lg:border-[color:var(--hairline)]">
+              <div className="lg:col-span-5 lg:border-r lg:border-[color:var(--hairline)]">
+                <div className="flex flex-col px-6 md:px-10 pt-12 pb-14 lg:sticky lg:top-0 lg:h-screen lg:justify-center lg:py-12">
                 <h2
                   style={{
                     fontFamily: display,
@@ -140,6 +141,7 @@ export function PricingPlans() {
                       </p>
                     </div>
                   </div>
+                </div>
                 </div>
               </div>
 
