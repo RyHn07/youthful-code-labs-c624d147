@@ -155,27 +155,7 @@ const CardGlow: React.FC<CardGlowProps> = ({
         ...style,
       }}
     >
-      {/* mesh gradient border ring (sits on top of the card edge) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-[2]"
-        style={{
-          borderRadius: `${borderRadius}px`,
-          padding: "1.5px",
-          background: meshGradients.join(", "),
-          WebkitMask:
-            "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-          WebkitMaskComposite: "xor",
-          mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
-          maskComposite: "exclude",
-          maskImage: `conic-gradient(from ${angleDeg} at center, black ${coneSpread}%, transparent ${coneSpread + 15}%, transparent ${100 - coneSpread - 15}%, black ${100 - coneSpread}%)`,
-          WebkitMaskImage: `conic-gradient(from ${angleDeg} at center, black ${coneSpread}%, transparent ${coneSpread + 15}%, transparent ${100 - coneSpread - 15}%, black ${100 - coneSpread}%)`,
-          opacity: borderOpacity,
-          transition: isVisible ? "opacity 0.25s ease-out" : "opacity 0.6s ease-in-out",
-        } as CSSProperties}
-      />
-
-      {/* outer glow */}
+      {/* outer glow — sits OUTSIDE the card border only, no fill on card */}
       <span
         aria-hidden
         className="pointer-events-none absolute z-[1]"
