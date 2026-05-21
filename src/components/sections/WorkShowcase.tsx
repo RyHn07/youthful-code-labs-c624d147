@@ -15,19 +15,18 @@ export function WorkShowcase() {
   return (
     <section id="work" className="relative py-20 md:py-28 overflow-hidden">
       <Container>
-        <div className="mb-10 h-px w-full bg-[color:var(--hairline)]" />
-      </Container>
-
-      <div
-        className="group relative w-full overflow-hidden"
-        style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-        }}
-      >
-        <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
+        <div
+          className="group relative w-full overflow-hidden border-y border-x border-[color:var(--hairline)]"
+          style={{
+            paddingTop: 24,
+            paddingBottom: 24,
+            maskImage:
+              "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+          }}
+        >
+          <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {loop.map((p, i) => (
             <a
               key={`${p.title}-${i}`}
@@ -52,9 +51,10 @@ export function WorkShowcase() {
               </div>
             </a>
           ))}
+          </div>
+          <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
         </div>
-        <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
-      </div>
+      </Container>
     </section>
   );
 }
