@@ -34,7 +34,7 @@ function Index() {
       <WorkShowcase />
       <section
         aria-hidden="true"
-        className="relative border-y border-[color:var(--hairline)]"
+        className="relative"
         style={{ height: 60 }}
       >
         <div className="mx-auto h-full w-full max-w-[1320px] border-x border-[color:var(--hairline)]" />
