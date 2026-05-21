@@ -80,9 +80,9 @@ export function PricingPlans() {
 
           {/* Body */}
           <div className="px-6 md:px-10 pt-12 pb-14">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-0">
               {/* Left context */}
-              <div className="flex flex-col lg:col-span-5">
+              <div className="flex flex-col lg:col-span-5 lg:border-r lg:border-[color:var(--hairline)] lg:pr-14">
                 <h2
                   style={{
                     fontFamily: display,
