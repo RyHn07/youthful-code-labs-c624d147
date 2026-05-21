@@ -90,31 +90,33 @@ export function PricingPlans() {
               {/* Left context */}
               <div className="lg:col-span-5 lg:border-r lg:border-[color:var(--hairline)]">
                 <div className="flex flex-col px-6 md:px-10 pt-12 pb-14 lg:sticky lg:top-0 lg:h-screen lg:justify-between lg:py-12">
-                <h2
-                  style={{
-                    fontFamily: display,
-                    fontWeight: 700,
-                    fontSize: "44px",
-                    lineHeight: "1.1",
-                    letterSpacing: "-0.03em",
-                    color: "#252525",
-                  }}
-                >
-                  Flexible Pricing Plans
-                </h2>
-                <p
-                  className="mt-5 max-w-md"
-                  style={{
-                    fontFamily: mono,
-                    fontSize: "14px",
-                    lineHeight: "1.5em",
-                    letterSpacing: "-0.01em",
-                    color: "rgba(37, 37, 37, 0.65)",
-                  }}
-                >
-                  Transparent pricing designed to scale with your project needs. No hidden fees,
-                  just high-quality design and development.
-                </p>
+                <div className="rounded-2xl border border-[color:var(--hairline)] bg-white p-7 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.08)]">
+                  <h2
+                    style={{
+                      fontFamily: display,
+                      fontWeight: 700,
+                      fontSize: "44px",
+                      lineHeight: "1.1",
+                      letterSpacing: "-0.03em",
+                      color: "#252525",
+                    }}
+                  >
+                    Flexible Pricing Plans
+                  </h2>
+                  <p
+                    className="mt-5 max-w-md"
+                    style={{
+                      fontFamily: mono,
+                      fontSize: "14px",
+                      lineHeight: "1.5em",
+                      letterSpacing: "-0.01em",
+                      color: "rgba(37, 37, 37, 0.65)",
+                    }}
+                  >
+                    Transparent pricing designed to scale with your project needs. No hidden fees,
+                    just high-quality design and development.
+                  </p>
+                </div>
 
                 <div className="mt-10 border-t border-[color:var(--hairline)] pt-6">
                   <p style={titleStyle}>
