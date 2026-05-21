@@ -1,5 +1,4 @@
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
-import BorderGlow from "@/components/ui/border-glow";
 import { Heart, Palette, Figma, Framer, Sparkle, CheckCircle2, User } from "lucide-react";
 import founder1 from "@/assets/founder-1.jpg";
 
@@ -18,7 +17,7 @@ const statusBarStyle = {
 };
 
 const cardClass =
-  "relative overflow-hidden p-7";
+  "relative overflow-hidden rounded-2xl border border-[color:var(--hairline-strong)] bg-[#F7F7F7] p-7";
 
 const titleStyle = {
   fontFamily: display,
@@ -189,8 +188,7 @@ export function WhyUs() {
           <div className="px-6 md:px-10 pb-14">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* Card 1 — tall left, dots */}
-              <BorderGlow borderRadius={16} backgroundColor="#F7F7F7" fillOpacity={0} glowRadius={28} glowIntensity={0.8} className="md:row-span-2 min-h-[460px]">
-              <article className={`${cardClass} h-full flex flex-col`}>
+              <article className={`${cardClass} md:row-span-2 min-h-[460px] flex flex-col`}>
                 <div className="relative flex-1">
                   <DotsArt />
                 </div>
@@ -201,11 +199,9 @@ export function WhyUs() {
                   </p>
                 </div>
               </article>
-              </BorderGlow>
 
               {/* Card 2 — top middle, ideas → designs */}
-              <BorderGlow borderRadius={16} backgroundColor="#F7F7F7" fillOpacity={0} glowRadius={28} glowIntensity={0.8} className="min-h-[220px]">
-              <article className={`${cardClass} h-full flex flex-col items-center justify-center text-center`}>
+              <article className={`${cardClass} min-h-[220px] flex flex-col items-center justify-center text-center`}>
                 <div className="flex items-center gap-3">
                   <div className="grid h-12 w-12 place-items-center rounded-full bg-[#FFE5EC] shadow-[0_0_30px_rgba(255,100,130,0.35)]">
                     <Heart className="h-6 w-6 text-[#ff4d6d]" fill="#ff4d6d" />
@@ -219,11 +215,9 @@ export function WhyUs() {
                   Your ideas turned into <span style={softStyle}>great designs</span>
                 </p>
               </article>
-              </BorderGlow>
 
               {/* Card 3 — tall right, layers */}
-              <BorderGlow borderRadius={16} backgroundColor="#F7F7F7" fillOpacity={0} glowRadius={28} glowIntensity={0.8} className="md:row-span-2 min-h-[460px]">
-              <article className={`${cardClass} h-full flex flex-col`}>
+              <article className={`${cardClass} md:row-span-2 min-h-[460px] flex flex-col`}>
                 <p style={titleStyle}>
                   Every site built from zero for your brand.{" "}
                   <span style={softStyle}>No templates, no recycled layouts.</span>
@@ -232,21 +226,17 @@ export function WhyUs() {
                   <LayersArt />
                 </div>
               </article>
-              </BorderGlow>
 
               {/* Card 4 — middle row, tools */}
-              <BorderGlow borderRadius={16} backgroundColor="#F7F7F7" fillOpacity={0} glowRadius={28} glowIntensity={0.8} className="min-h-[220px]">
-              <article className={`${cardClass} h-full flex flex-col items-center justify-center text-center`}>
+              <article className={`${cardClass} min-h-[220px] flex flex-col items-center justify-center text-center`}>
                 <p style={titleStyle}>
                   Build with Industry <span style={softStyle}>leading tools</span>
                 </p>
                 <ToolsRow />
               </article>
-              </BorderGlow>
 
               {/* Card 5 — wide bottom-left, support */}
-              <BorderGlow borderRadius={16} backgroundColor="#F7F7F7" fillOpacity={0} glowRadius={28} glowIntensity={0.8} className="md:col-span-2 min-h-[240px]">
-              <article className={`${cardClass} h-full flex items-center`}>
+              <article className={`${cardClass} md:col-span-2 min-h-[240px] flex items-center`}>
                 <div className="max-w-[55%]">
                   <p style={titleStyle}>
                     We stick around even after site goes live.{" "}
@@ -257,17 +247,14 @@ export function WhyUs() {
                   <CodeMockup />
                 </div>
               </article>
-              </BorderGlow>
 
               {/* Card 6 — bottom right, avatars */}
-              <BorderGlow borderRadius={16} backgroundColor="#F7F7F7" fillOpacity={0} glowRadius={28} glowIntensity={0.8} className="min-h-[240px]">
-              <article className={`${cardClass} h-full flex flex-col items-center justify-center text-center`}>
+              <article className={`${cardClass} min-h-[240px] flex flex-col items-center justify-center text-center`}>
                 <AvatarRow />
                 <p className="mt-6" style={titleStyle}>
                   Talk straight to <span style={softStyle}>the people building your Product</span>
                 </p>
               </article>
-              </BorderGlow>
             </div>
           </div>
         </InnerContainer>
