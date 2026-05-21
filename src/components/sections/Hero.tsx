@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -28,14 +29,8 @@ function LocalTime() {
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
-      {/*
-        Section frame — reusable rail system (use for all sections):
-        • Outer safe area : max-w-[1320px] mx-auto  (outer vertical rails)
-        • Inner content   : max-w-6xl  mx-auto + px-6 md:px-10  (aligned with header)
-        Both rails use border-[color:var(--hairline)].
-      */}
-      <div className="mx-auto w-full max-w-[1320px] border-x border-[color:var(--hairline)]">
-        <div className="mx-auto w-full max-w-6xl border-x border-[color:var(--hairline)]">
+      <OuterContainer borders="x">
+        <InnerContainer borders="x" className="!px-0">
           {/* Status bar — bottom hairline closes the row inside the inner rails */}
           <div className="border-b border-[color:var(--hairline)] px-6 md:px-10">
             <div
@@ -138,9 +133,8 @@ export function Hero() {
             </a>
             </div>
           </div>
-        </div>
-      </div>
-      </div>
+        </InnerContainer>
+      </OuterContainer>
     </section>
   );
 }
