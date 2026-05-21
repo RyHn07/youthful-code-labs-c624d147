@@ -153,8 +153,8 @@ function AvatarRow() {
 export function WhyUs() {
   return (
     <section id="why-us" className="relative">
-      <OuterContainer borders="x">
-        <InnerContainer borders="x" className="!px-0">
+      <OuterContainer>
+        <InnerContainer className="!px-0">
           {/* Status bar */}
           <div className="border-t border-b border-[color:var(--hairline)] px-6 md:px-10">
             <div className="flex items-center justify-between py-3" style={statusBarStyle}>
