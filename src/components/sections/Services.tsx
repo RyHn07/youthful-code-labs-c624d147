@@ -41,7 +41,7 @@ export function Services() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
           <ScrollReveal key={s.title} delay={i * 0.03}>
-            <CardGlow borderRadius={16} className="h-full" glowColor="280 90 70" colors={["#a78bfa", "#ec4899", "#5b65dc"]}>
+            <CardGlow borderRadius={16} className="h-full" glowColor="280 90 70">
             <div
               className={cn(
                 "group relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-2xl p-7 transition-all duration-500",
