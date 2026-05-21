@@ -71,10 +71,16 @@ export function PricingPlans() {
     <section id="pricing" className="relative">
       <OuterContainer>
         <InnerContainer borders="x" className="!px-0">
-          {/* Status bar — title only */}
+          {/* Status bar */}
           <div className="border-t border-b border-[color:var(--hairline)] px-6 md:px-10">
-            <div className="py-3" style={statusBarStyle}>
-              Pricing
+            <div className="flex items-center justify-between py-3" style={statusBarStyle}>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#ff7a1a] text-[10px] font-bold text-white">
+                  ◉
+                </span>
+                Pricing
+              </div>
+              <div className="tabular-nums">03 | 04</div>
             </div>
           </div>
 
