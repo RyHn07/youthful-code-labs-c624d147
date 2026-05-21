@@ -1,4 +1,5 @@
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import CardGlow from "@/components/ui/card-glow";
 import founder1 from "@/assets/founder-1.jpg";
 import founder2 from "@/assets/founder-2.jpg";
 import founder3 from "@/assets/founder-3.jpg";
