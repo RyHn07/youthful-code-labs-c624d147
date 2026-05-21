@@ -25,32 +25,44 @@ const titleStyle = {
 const softStyle = { color: "rgba(37, 37, 37, 0.5)" };
 
 const cardClass =
-  "relative overflow-hidden rounded-2xl border border-[color:var(--hairline-strong)] bg-[#F7F7F7] p-7";
+  "relative overflow-hidden rounded-2xl border border-[color:var(--hairline)] bg-white p-7 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.08)]";
 
 const plans = [
   {
-    tier: "Tier 01",
-    name: "Landing page",
-    price: "$3,000",
-    priceMeta: "Fixed Price",
-    features: ["5 Sections", "SEO Optimized", "Responsive", "7-Day Turnaround", "CMS Setup"],
-    cta: "Get Started",
+    tier: "Landing page",
+    price: "$3000",
+    priceMeta: "Fixed",
+    features: [
+      "Design + Dev in 2 weeks or less",
+      "Wireframes & prototypes",
+      "Custom Animation",
+      "Framer development",
+      "1 month of  free support",
+    ],
   },
   {
-    tier: "Tier 02",
-    name: "Multipage website",
-    price: "$4,000+",
-    priceMeta: "Fixed Price",
-    features: ["Up to 10 Pages", "Custom CMS", "Performance Audit", "Blog Setup", "Analytics"],
-    cta: "Get Started",
+    tier: "Multipage website",
+    price: "$4000",
+    priceMeta: "Fixed",
+    features: [
+      "Design + Dev in 3 weeks or less",
+      "Wireframes & prototypes",
+      "Custom Animation",
+      "Framer development",
+      "1 month of  free support",
+    ],
   },
   {
-    tier: "Tier 03",
-    name: "Monthly retainer",
+    tier: "Retainer",
     price: "Custom",
     priceMeta: "Per Month",
-    features: ["Ongoing Support", "Priority Access", "Strategy Calls", "Asset Audit", "Scalable Hours"],
-    cta: "Get Started",
+    features: [
+      "Ongoing design & dev support",
+      "Priority turnaround",
+      "New pages, sections & features",
+      "Direct line to the team",
+      "Pause or cancel anytime",
+    ],
   },
 ];
 
