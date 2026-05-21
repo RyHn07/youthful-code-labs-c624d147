@@ -14,9 +14,9 @@ export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
     <section id="work" className="relative pb-20 md:pb-28 overflow-hidden">
-      <Container>
+      <Container className="max-w-[1320px]">
         <div
-          className="group relative w-full overflow-hidden border-y border-x border-[color:var(--hairline)]"
+          className="group relative w-full overflow-hidden border-t border-x border-[color:var(--hairline)]"
           style={{
             paddingTop: 24,
             paddingBottom: 24,
