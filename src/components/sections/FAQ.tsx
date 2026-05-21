@@ -1,10 +1,23 @@
-import { Container } from "@/components/site/Container";
+import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+const mono =
+  '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
+const display =
+  '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
+
+const statusBarStyle = {
+  fontFamily: mono,
+  fontSize: "12px",
+  lineHeight: "16px",
+  textTransform: "uppercase" as const,
+  color: "rgb(22, 22, 18)",
+};
 
 const faqs = [
   {
@@ -35,45 +48,150 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="relative py-20 md:py-28">
-      <Container>
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <div className="mb-3 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
-              FAQ · 04 | 04
+    <section id="faq" className="relative">
+      <OuterContainer>
+        <InnerContainer borders="x" className="!px-0">
+          {/* Status bar */}
+          <div className="border-b border-[color:var(--hairline)] px-6 md:px-10">
+            <div className="flex items-center justify-between py-3" style={statusBarStyle}>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#ff7a1a] text-[10px] font-bold text-white">
+                  ◉
+                </span>
+                FAQ
+              </div>
+              <div className="tabular-nums">04 | 04</div>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-              Frequently asked questions.
-            </h2>
-            <p className="mt-4 max-w-sm text-[color:var(--text-soft)]">
-              Everything you need to know about our services. Still got questions?{" "}
-              <a href="/contact" className="underline underline-offset-4">
-                Book a call
-              </a>
-              .
-            </p>
           </div>
 
-          <div className="md:col-span-7">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((f, i) => (
-                <AccordionItem
-                  key={f.q}
-                  value={`item-${i}`}
-                  className="border-b border-[color:var(--hairline)]"
+          {/* Body */}
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-0">
+            {/* Left: title + accordion */}
+            <div className="lg:col-span-8 lg:border-r lg:border-[color:var(--hairline)]">
+              <div className="px-6 md:px-10 pt-12 pb-14 lg:py-12">
+                <h2
+                  style={{
+                    fontFamily: display,
+                    fontWeight: 700,
+                    fontSize: "44px",
+                    lineHeight: "1.1",
+                    letterSpacing: "-0.03em",
+                    color: "#252525",
+                  }}
                 >
-                  <AccordionTrigger className="py-5 text-left text-lg font-medium hover:no-underline">
-                    {f.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[color:var(--text-soft)]">
-                    {f.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+                  Frequently Asked
+                  <br />
+                  Questions
+                </h2>
+                <p
+                  className="mt-5 max-w-md"
+                  style={{
+                    fontFamily: mono,
+                    fontSize: "14px",
+                    lineHeight: "1.5em",
+                    letterSpacing: "-0.01em",
+                    color: "rgba(37, 37, 37, 0.65)",
+                  }}
+                >
+                  Everything you need to know about our services
+                </p>
+
+                <div className="mt-10 border-t border-[color:var(--hairline)]">
+                  <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
+                    {faqs.map((f, i) => (
+                      <AccordionItem
+                        key={f.q}
+                        value={`item-${i}`}
+                        className="border-b border-[color:var(--hairline)]"
+                      >
+                        <AccordionTrigger
+                          className="py-6 text-left hover:no-underline"
+                          style={{
+                            fontFamily: display,
+                            fontWeight: 600,
+                            fontSize: "16px",
+                            letterSpacing: "-0.01em",
+                            color: "#252525",
+                          }}
+                        >
+                          {f.q}
+                        </AccordionTrigger>
+                        <AccordionContent
+                          className="pb-6"
+                          style={{
+                            fontFamily: mono,
+                            fontSize: "14px",
+                            lineHeight: "1.6em",
+                            color: "rgba(37, 37, 37, 0.65)",
+                          }}
+                        >
+                          {f.a}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: still got questions */}
+            <div className="lg:col-span-4">
+              <div className="px-6 md:px-10 pb-14 lg:py-12 lg:sticky lg:top-12">
+                <h3
+                  style={{
+                    fontFamily: display,
+                    fontWeight: 700,
+                    fontSize: "22px",
+                    letterSpacing: "-0.02em",
+                    color: "#252525",
+                  }}
+                >
+                  Still got questions?
+                </h3>
+                <p
+                  className="mt-2"
+                  style={{
+                    fontFamily: mono,
+                    fontSize: "14px",
+                    color: "rgba(37, 37, 37, 0.65)",
+                  }}
+                >
+                  Book a call or send us a message on Telegram
+                </p>
+
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#252525] px-5 py-2.5 text-white transition hover:bg-black"
+                    style={{ fontFamily: display, fontSize: "14px", fontWeight: 500 }}
+                  >
+                    Book a call <span aria-hidden>›</span>
+                  </a>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white px-5 py-2.5 text-[#252525] transition hover:bg-black/[0.03]"
+                    style={{ fontFamily: display, fontSize: "14px", fontWeight: 500 }}
+                  >
+                    Message <span aria-hidden>›</span>
+                  </a>
+                </div>
+
+                <p
+                  className="mt-6"
+                  style={{
+                    fontFamily: mono,
+                    fontSize: "13px",
+                    color: "rgba(37, 37, 37, 0.65)",
+                  }}
+                >
+                  Or send us a email{" "}
+                  <span style={{ color: "#252525", fontWeight: 600 }}>Hello@qodran.com</span>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </Container>
+        </InnerContainer>
+      </OuterContainer>
     </section>
   );
 }
