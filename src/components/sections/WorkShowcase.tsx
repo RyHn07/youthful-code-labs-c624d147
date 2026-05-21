@@ -1,4 +1,4 @@
-import { Container } from "@/components/site/Container";
+import { OuterContainer } from "@/components/site/Containers";
 
 // Placeholder thumbnails (user will replace later). Using Unsplash for now.
 const projects = [
@@ -14,14 +14,11 @@ export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
     <section id="work" className="relative pb-20 md:pb-28 overflow-hidden">
-      <Container className="max-w-[1320px]">
-        <div
-          className="group relative w-full overflow-hidden border-t border-x border-[color:var(--hairline)]"
-          style={{
-            paddingTop: 24,
-            paddingBottom: 24,
-          }}
-        >
+      <OuterContainer
+        borders="tx"
+        className="group relative overflow-hidden"
+        style={{ paddingTop: 24, paddingBottom: 24 }}
+      >
           <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {loop.map((p, i) => (
             <a
@@ -49,8 +46,7 @@ export function WorkShowcase() {
           ))}
           </div>
           <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
-        </div>
-      </Container>
+      </OuterContainer>
     </section>
   );
 }
