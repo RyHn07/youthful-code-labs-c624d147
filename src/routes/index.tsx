@@ -33,8 +33,8 @@ function Index() {
     <>
       <Hero />
       <WorkShowcase />
-      <ServicesList />
       <TrustBar />
+      <ServicesList />
       <WhyUs />
       <PricingPlans />
       <FAQ />
