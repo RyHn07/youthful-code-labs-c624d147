@@ -6,7 +6,9 @@ import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
 const display =
-  '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
+  '"Graphik Trial Medium", "Graphik Trial Medium Placeholder", sans-serif';
+const displayBold =
+  '"Graphik Trial Semibold", "Graphik Trial Semibold Placeholder", sans-serif';
 
 function LocalTime() {
   const [now, setNow] = useState<string | null>(null);
@@ -80,10 +82,10 @@ export function Hero() {
             className="text-balance"
             style={{
               fontFamily: display,
-              fontWeight: 900,
-              fontSize: "clamp(44px, 7vw, 88px)",
-              lineHeight: "1.05",
-              letterSpacing: "-0.035em",
+              fontWeight: 500,
+              fontSize: "68px",
+              lineHeight: "68px",
+              letterSpacing: "-0.04em",
               color: "#252525",
             }}
           >
