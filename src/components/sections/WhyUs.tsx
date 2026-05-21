@@ -188,7 +188,8 @@ export function WhyUs() {
           <div className="px-6 md:px-10 pb-14">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* Card 1 — tall left, dots */}
-              <article className={`${cardClass} md:row-span-2 min-h-[460px] flex flex-col`}>
+              <CardGlow borderRadius={16} className="md:row-span-2 min-h-[460px]">
+              <article className={`${cardClass} h-full flex flex-col`}>
                 <div className="relative flex-1">
                   <DotsArt />
                 </div>
@@ -199,9 +200,11 @@ export function WhyUs() {
                   </p>
                 </div>
               </article>
+              </CardGlow>
 
               {/* Card 2 — top middle, ideas → designs */}
-              <article className={`${cardClass} min-h-[220px] flex flex-col items-center justify-center text-center`}>
+              <CardGlow borderRadius={16} className="min-h-[220px]">
+              <article className={`${cardClass} h-full flex flex-col items-center justify-center text-center`}>
                 <div className="flex items-center gap-3">
                   <div className="grid h-12 w-12 place-items-center rounded-full bg-[#FFE5EC] shadow-[0_0_30px_rgba(255,100,130,0.35)]">
                     <Heart className="h-6 w-6 text-[#ff4d6d]" fill="#ff4d6d" />
@@ -215,9 +218,11 @@ export function WhyUs() {
                   Your ideas turned into <span style={softStyle}>great designs</span>
                 </p>
               </article>
+              </CardGlow>
 
               {/* Card 3 — tall right, layers */}
-              <article className={`${cardClass} md:row-span-2 min-h-[460px] flex flex-col`}>
+              <CardGlow borderRadius={16} className="md:row-span-2 min-h-[460px]">
+              <article className={`${cardClass} h-full flex flex-col`}>
                 <p style={titleStyle}>
                   Every site built from zero for your brand.{" "}
                   <span style={softStyle}>No templates, no recycled layouts.</span>
@@ -226,17 +231,21 @@ export function WhyUs() {
                   <LayersArt />
                 </div>
               </article>
+              </CardGlow>
 
               {/* Card 4 — middle row, tools */}
-              <article className={`${cardClass} min-h-[220px] flex flex-col items-center justify-center text-center`}>
+              <CardGlow borderRadius={16} className="min-h-[220px]">
+              <article className={`${cardClass} h-full flex flex-col items-center justify-center text-center`}>
                 <p style={titleStyle}>
                   Build with Industry <span style={softStyle}>leading tools</span>
                 </p>
                 <ToolsRow />
               </article>
+              </CardGlow>
 
               {/* Card 5 — wide bottom-left, support */}
-              <article className={`${cardClass} md:col-span-2 min-h-[240px] flex items-center`}>
+              <CardGlow borderRadius={16} className="md:col-span-2 min-h-[240px]">
+              <article className={`${cardClass} h-full flex items-center`}>
                 <div className="max-w-[55%]">
                   <p style={titleStyle}>
                     We stick around even after site goes live.{" "}
@@ -247,14 +256,17 @@ export function WhyUs() {
                   <CodeMockup />
                 </div>
               </article>
+              </CardGlow>
 
               {/* Card 6 — bottom right, avatars */}
-              <article className={`${cardClass} min-h-[240px] flex flex-col items-center justify-center text-center`}>
+              <CardGlow borderRadius={16} className="min-h-[240px]">
+              <article className={`${cardClass} h-full flex flex-col items-center justify-center text-center`}>
                 <AvatarRow />
                 <p className="mt-6" style={titleStyle}>
                   Talk straight to <span style={softStyle}>the people building your Product</span>
                 </p>
               </article>
+              </CardGlow>
             </div>
           </div>
         </InnerContainer>
