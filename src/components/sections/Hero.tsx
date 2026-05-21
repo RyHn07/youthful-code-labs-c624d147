@@ -82,10 +82,10 @@ export function Hero() {
             className="text-balance"
             style={{
               fontFamily: display,
-              fontWeight: 900,
-              fontSize: "clamp(44px, 7vw, 88px)",
-              lineHeight: "1.05",
-              letterSpacing: "-0.035em",
+              fontWeight: 500,
+              fontSize: "68px",
+              lineHeight: "68px",
+              letterSpacing: "-0.04em",
               color: "#252525",
             }}
           >
