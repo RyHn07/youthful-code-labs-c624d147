@@ -4,7 +4,7 @@ export function TrustBar() {
   return (
     <FullWidthContainer borders="y">
       <OuterContainer>
-        <InnerContainer borders="x" className="!px-0">
+        <InnerContainer borders="x" className="px-4">
           <div className="flex items-center gap-4 py-6">
             <div className="flex-1 flex items-center" style={{ gap: "16px" }}>
               <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "36px" }} />
