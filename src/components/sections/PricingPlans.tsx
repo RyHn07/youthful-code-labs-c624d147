@@ -6,13 +6,6 @@ const mono =
 const display =
   '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
 
-const statusBarStyle = {
-  fontFamily: mono,
-  fontSize: "12px",
-  lineHeight: "16px",
-  textTransform: "uppercase" as const,
-  color: "rgb(22, 22, 18)",
-};
 
 const titleStyle = {
   fontFamily: display,
@@ -71,19 +64,6 @@ export function PricingPlans() {
     <section id="pricing" className="relative">
       <OuterContainer>
         <InnerContainer borders="x" className="!px-0">
-          {/* Status bar */}
-          <div className="border-t border-b border-[color:var(--hairline)] px-6 md:px-10">
-            <div className="flex items-center justify-between py-3" style={statusBarStyle}>
-              <div className="flex items-center gap-2">
-                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#ff7a1a] text-[10px] font-bold text-white">
-                  ◉
-                </span>
-                Pricing
-              </div>
-              <div className="tabular-nums">03 | 04</div>
-            </div>
-          </div>
-
           {/* Body */}
           <div className="px-6 md:px-10 pt-12 pb-14">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
