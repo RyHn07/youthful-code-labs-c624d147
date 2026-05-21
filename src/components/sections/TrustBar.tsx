@@ -9,14 +9,10 @@ export function TrustBar() {
             <div className="flex-1 flex items-center" style={{ gap: "16px" }}>
               <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "36px" }} />
               <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "20px" }} />
-              <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "16px" }} />
-              <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "10px" }} />
               <span className="h-px flex-1 bg-[color:var(--hairline-strong)]" />
             </div>
             <div className="flex-1 flex items-center" style={{ gap: "16px" }}>
               <span className="h-px flex-1 bg-[color:var(--hairline-strong)]" />
-              <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "10px" }} />
-              <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "16px" }} />
               <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "20px" }} />
               <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "36px" }} />
             </div>
