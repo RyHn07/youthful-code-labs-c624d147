@@ -138,7 +138,7 @@ export function PricingPlans() {
               </div>
 
               {/* Right pricing stack */}
-              <div className="flex flex-col gap-5 lg:col-span-7">
+              <div className="flex flex-col gap-5 lg:col-span-7 lg:pl-14">
                 {plans.map((p) => (
                   <article key={p.tier} className={cardClass}>
                     {/* Top row: tier label + toggle */}
