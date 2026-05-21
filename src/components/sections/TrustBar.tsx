@@ -2,7 +2,7 @@ import { FullWidthContainer, OuterContainer, InnerContainer } from "@/components
 
 export function TrustBar() {
   return (
-    <FullWidthContainer borders="y">
+    <FullWidthContainer borders="b">
       <OuterContainer>
         <InnerContainer borders="x" className="px-4">
           <div className="flex items-center justify-between py-3">
