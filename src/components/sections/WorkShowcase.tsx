@@ -13,11 +13,11 @@ const projects = [
 export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
-    <section id="work" className="relative pb-20 md:pb-28 overflow-hidden">
+    <section id="work" className="relative overflow-hidden">
       <OuterContainer
         borders="tx"
         className="group relative overflow-hidden"
-        style={{ paddingTop: 24, paddingBottom: 24 }}
+        style={{ paddingTop: 24 }}
       >
           <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {loop.map((p, i) => (
