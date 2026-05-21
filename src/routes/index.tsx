@@ -34,6 +34,7 @@ function Index() {
       <Hero />
       <WorkShowcase />
       <ServicesList />
+      <TrustBar />
       <WhyUs />
       <PricingPlans />
       <FAQ />
