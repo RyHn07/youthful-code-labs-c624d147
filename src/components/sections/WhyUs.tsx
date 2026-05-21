@@ -1,4 +1,5 @@
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import CardGlow from "@/components/ui/card-glow";
 import { Heart, Palette, Figma, Framer, Sparkle, CheckCircle2, User } from "lucide-react";
 import founder1 from "@/assets/founder-1.jpg";
 
