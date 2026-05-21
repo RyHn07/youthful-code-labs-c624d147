@@ -16,6 +16,14 @@ const titleStyle = {
 };
 const softStyle = { color: "rgba(37, 37, 37, 0.5)" };
 
+const statusBarStyle = {
+  fontFamily: mono,
+  fontSize: "12px",
+  lineHeight: "16px",
+  textTransform: "uppercase" as const,
+  color: "rgb(22, 22, 18)",
+};
+
 const cardClass =
   "relative overflow-hidden rounded-2xl border border-[color:var(--hairline)] bg-white p-7 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.08)]";
 
@@ -63,6 +71,13 @@ export function PricingPlans() {
     <section id="pricing" className="relative">
       <OuterContainer>
         <InnerContainer borders="x" className="!px-0">
+          {/* Status bar — title only */}
+          <div className="border-t border-b border-[color:var(--hairline)] px-6 md:px-10">
+            <div className="py-3" style={statusBarStyle}>
+              Pricing
+            </div>
+          </div>
+
           {/* Body */}
           <div className="px-6 md:px-10 pt-12 pb-14">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
