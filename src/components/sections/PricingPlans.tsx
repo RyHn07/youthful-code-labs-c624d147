@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Container } from "@/components/site/Container";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import CardGlow from "@/components/ui/card-glow";
 
 const plans = [
   {
@@ -64,10 +65,10 @@ export function PricingPlans() {
 
         <div className="grid gap-4 md:grid-cols-3">
           {plans.map((p) => (
+            <CardGlow key={p.name} borderRadius={12} className="h-full">
             <div
-              key={p.name}
               className={cn(
-                "flex flex-col rounded-xl border p-8 transition-transform duration-300 hover:-translate-y-1",
+                "flex h-full flex-col rounded-xl border p-8 transition-transform duration-300 hover:-translate-y-1",
                 p.highlight
                   ? "border-transparent bg-foreground text-background"
                   : "border-[color:var(--hairline)] bg-white",
@@ -124,6 +125,7 @@ export function PricingPlans() {
                 {p.cta}
               </Link>
             </div>
+            </CardGlow>
           ))}
         </div>
       </Container>

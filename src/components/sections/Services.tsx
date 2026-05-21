@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import CardGlow from "@/components/ui/card-glow";
 
 const services = [
   { icon: Layout, title: "Website Design", desc: "Considered, conversion-aware design systems." },
@@ -40,6 +41,7 @@ export function Services() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
           <ScrollReveal key={s.title} delay={i * 0.03}>
+            <CardGlow borderRadius={16} className="h-full" glowColor="280 90 70" colors={["#a78bfa", "#ec4899", "#5b65dc"]}>
             <div
               className={cn(
                 "group relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-2xl p-7 transition-all duration-500",
@@ -86,6 +88,7 @@ export function Services() {
                 0{i + 1 < 10 ? `0${i + 1}` : i + 1}
               </span>
             </div>
+            </CardGlow>
           </ScrollReveal>
         ))}
       </div>
