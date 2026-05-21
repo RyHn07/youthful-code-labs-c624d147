@@ -88,7 +88,7 @@ export function ServicesList() {
               {services.map((s) => (
                 <article
                   key={s.n}
-                  className="flex flex-col justify-between rounded-2xl border border-[color:var(--hairline)] bg-white p-7 min-h-[260px]"
+                  className="flex flex-col justify-between rounded-2xl border border-[color:var(--hairline)] bg-[#F7F7F7] p-7 min-h-[260px]"
                 >
                   <div
                     style={{
