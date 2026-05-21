@@ -66,7 +66,7 @@ export function ServicesList() {
           </div>
 
           {/* Grid */}
-          <div className="px-6 md:px-10 py-10 md:py-14">
+          <div className="px-6 md:px-10 pt-10 md:pt-14 pb-3">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* Sectors cell — top-left */}
               <div className="flex flex-col gap-4">
