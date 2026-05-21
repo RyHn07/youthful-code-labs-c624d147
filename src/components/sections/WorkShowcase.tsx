@@ -13,7 +13,7 @@ const projects = [
 export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
-    <section id="work" className="relative py-20 md:py-28 overflow-hidden">
+    <section id="work" className="relative pb-20 md:pb-28 overflow-hidden">
       <Container>
         <div
           className="group relative w-full overflow-hidden border-y border-x border-[color:var(--hairline)]"
