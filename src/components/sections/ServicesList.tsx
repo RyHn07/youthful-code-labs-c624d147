@@ -136,19 +136,20 @@ export function ServicesList() {
           {/* Founders bar */}
           <div className="border-t border-[color:var(--hairline)] py-6">
             <div className="flex items-center gap-4 px-0">
-              <div className="flex-1 flex items-center gap-1">
+              <div className="flex-1 flex items-center" style={{ gap: "16px" }}>
                 <span className="h-px flex-1 bg-[color:var(--hairline-strong)]" />
-                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
-                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
-                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "10px" }} />
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "16px" }} />
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "20px" }} />
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "36px" }} />
               </div>
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
-                  <img src={founder1} alt="" width={32} height={32} loading="lazy" className="h-8 w-8 rounded-full border-2 border-[var(--background)] object-cover" />
-                  <img src={founder2} alt="" width={32} height={32} loading="lazy" className="h-8 w-8 rounded-full border-2 border-[var(--background)] object-cover" />
-                  <img src={founder3} alt="" width={32} height={32} loading="lazy" className="h-8 w-8 rounded-full border-2 border-[var(--background)] object-cover" />
+                  <img src={founder1} alt="" width={36} height={36} loading="lazy" className="h-9 w-9 rounded-full border-2 border-[var(--background)] object-cover" />
+                  <img src={founder2} alt="" width={36} height={36} loading="lazy" className="h-9 w-9 rounded-full border-2 border-[var(--background)] object-cover" />
+                  <img src={founder3} alt="" width={36} height={36} loading="lazy" className="h-9 w-9 rounded-full border-2 border-[var(--background)] object-cover" />
                   <span
-                    className="h-8 min-w-8 px-2 inline-flex items-center justify-center rounded-full border-2 border-[var(--background)] bg-[#F0EBE3]"
+                    className="h-9 min-w-9 px-2 inline-flex items-center justify-center rounded-full border-2 border-[var(--background)] bg-[#F0EBE3]"
                     style={{ fontFamily: mono, fontSize: "12px", color: "#252525" }}
                   >
                     20+
@@ -156,10 +157,11 @@ export function ServicesList() {
                 </div>
                 <span style={statusBarStyle}>We worked with founders around the world</span>
               </div>
-              <div className="flex-1 flex items-center gap-1">
-                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
-                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
-                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+              <div className="flex-1 flex items-center" style={{ gap: "16px" }}>
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "36px" }} />
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "20px" }} />
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "16px" }} />
+                <span className="w-px bg-[color:var(--hairline-strong)]" style={{ height: "10px" }} />
                 <span className="h-px flex-1 bg-[color:var(--hairline-strong)]" />
               </div>
             </div>
