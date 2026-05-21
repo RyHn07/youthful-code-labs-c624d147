@@ -1,4 +1,7 @@
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import founder1 from "@/assets/founder-1.jpg";
+import founder2 from "@/assets/founder-2.jpg";
+import founder3 from "@/assets/founder-3.jpg";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -127,6 +130,38 @@ export function ServicesList() {
                   </p>
                 </article>
               ))}
+            </div>
+          </div>
+
+          {/* Founders bar */}
+          <div className="border-t border-[color:var(--hairline)] px-6 md:px-10 py-6">
+            <div className="flex items-center gap-4">
+              <div className="flex-1 flex items-center gap-1">
+                <span className="h-px flex-1 bg-[color:var(--hairline-strong)]" />
+                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-2">
+                  <img src={founder1} alt="" width={32} height={32} loading="lazy" className="h-8 w-8 rounded-full border-2 border-[var(--background)] object-cover" />
+                  <img src={founder2} alt="" width={32} height={32} loading="lazy" className="h-8 w-8 rounded-full border-2 border-[var(--background)] object-cover" />
+                  <img src={founder3} alt="" width={32} height={32} loading="lazy" className="h-8 w-8 rounded-full border-2 border-[var(--background)] object-cover" />
+                  <span
+                    className="h-8 min-w-8 px-2 inline-flex items-center justify-center rounded-full border-2 border-[var(--background)] bg-[#F0EBE3]"
+                    style={{ fontFamily: mono, fontSize: "12px", color: "#252525" }}
+                  >
+                    20+
+                  </span>
+                </div>
+                <span style={statusBarStyle}>We worked with founders around the world</span>
+              </div>
+              <div className="flex-1 flex items-center gap-1">
+                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+                <span className="h-2 w-px bg-[color:var(--hairline-strong)]" />
+                <span className="h-px flex-1 bg-[color:var(--hairline-strong)]" />
+              </div>
             </div>
           </div>
         </InnerContainer>
