@@ -15,22 +15,7 @@ export function WorkShowcase() {
   return (
     <section id="work" className="relative py-20 md:py-28 overflow-hidden">
       <Container>
-        <div className="mb-10 flex items-end justify-between">
-          <div>
-            <div className="mb-3 text-[14px] tracking-[-0.01em] text-[color:var(--text-mute)] font-mono-friendly">
-              Recent Work · 01 | 04
-            </div>
-            <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-              Selected projects.
-            </h2>
-          </div>
-          <a
-            href="#work"
-            className="hidden text-sm text-[color:var(--text-soft)] underline-offset-4 hover:underline md:block"
-          >
-            View all →
-          </a>
-        </div>
+        <div className="mb-10 h-px w-full bg-[color:var(--hairline)]" />
       </Container>
 
       <div
