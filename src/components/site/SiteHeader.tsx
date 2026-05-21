@@ -29,7 +29,7 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "relative z-50 transition-all duration-500",
+        "absolute inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
           ? "bg-background/80 backdrop-blur-xl"
           : "bg-transparent",
