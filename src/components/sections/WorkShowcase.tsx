@@ -1,5 +1,3 @@
-import { Container } from "@/components/site/Container";
-
 // Placeholder thumbnails (user will replace later). Using Unsplash for now.
 const projects = [
   { title: "Flyplugin", tag: "SaaS · Plugin", img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80" },
@@ -14,14 +12,14 @@ export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
     <section id="work" className="relative py-20 md:py-28 overflow-hidden">
-      <Container>
-        <div
-          className="group relative w-full overflow-hidden border-y border-x border-[color:var(--hairline)]"
-          style={{
-            paddingTop: 24,
-            paddingBottom: 24,
-          }}
-        >
+      <div
+        className="group relative mx-auto w-full overflow-hidden border-y border-x border-[color:var(--hairline)]"
+        style={{
+          maxWidth: 1324,
+          paddingTop: 24,
+          paddingBottom: 24,
+        }}
+      >
           <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {loop.map((p, i) => (
             <a
@@ -49,8 +47,7 @@ export function WorkShowcase() {
           ))}
           </div>
           <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
-        </div>
-      </Container>
+      </div>
     </section>
   );
 }
