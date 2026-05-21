@@ -134,7 +134,7 @@ export function ServicesList() {
           </div>
 
           {/* Founders bar */}
-          <div className="border-t border-[color:var(--hairline)] py-3">
+          <div className="py-3">
             <div className="flex items-center gap-4 px-0">
               <div className="flex-1 flex items-center" style={{ gap: "16px" }}>
                 <span className="h-px flex-1 bg-[color:var(--hairline-strong)]" />
