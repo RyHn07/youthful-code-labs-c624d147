@@ -47,6 +47,14 @@ const statusBarStyle = {
   color: "rgba(37, 37, 37, 0.55)",
 };
 
+const topBarStyle = {
+  fontFamily: mono,
+  fontSize: "12px",
+  lineHeight: "16px",
+  textTransform: "uppercase" as const,
+  color: "rgb(22, 22, 18)",
+};
+
 export function ServicesList() {
   return (
     <section id="our-services" className="relative">
@@ -54,7 +62,7 @@ export function ServicesList() {
         <InnerContainer borders="x" className="!px-0">
           {/* Status bar — mirrors Hero */}
           <div className="border-b border-[color:var(--hairline)] px-6 md:px-10">
-            <div className="flex items-center justify-between py-3" style={statusBarStyle}>
+            <div className="flex items-center justify-between py-3" style={topBarStyle}>
               <div className="flex items-center gap-2">
                 <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#ff7a1a] text-[10px] font-bold text-white">
                   ◉
