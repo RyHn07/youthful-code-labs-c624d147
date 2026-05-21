@@ -37,11 +37,12 @@ export function Hero() {
               className="flex items-center justify-between py-3"
               style={{
                 fontFamily: mono,
-                fontSize: "14px",
+                fontSize: "12px",
+                lineHeight: "16px",
                 fontWeight: 400,
                 letterSpacing: "-0.01em",
                 textTransform: "uppercase",
-                color: "rgba(37, 37, 37, 0.55)",
+                color: "rgb(22, 22, 18)",
               }}
             >
               <div className="flex items-center gap-2">
