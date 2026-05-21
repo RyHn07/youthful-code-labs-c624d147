@@ -72,7 +72,7 @@ export function ServicesList() {
                   {sectors.map((s) => (
                     <span
                       key={s}
-                      className="rounded-full border border-[color:var(--hairline-strong)] bg-transparent px-4 py-1.5"
+                      className="inline-flex items-center rounded-full border border-[color:var(--hairline-strong)] bg-transparent h-[44px] px-5"
                       style={{
                         fontFamily: display,
                         fontSize: "14px",
