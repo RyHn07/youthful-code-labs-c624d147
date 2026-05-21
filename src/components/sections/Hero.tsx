@@ -111,12 +111,15 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-[#252525] px-6 py-3 text-white transition-all hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#252525] px-6 py-3 transition-all hover:opacity-90"
               style={{
-                fontFamily: mono,
+                fontFamily: '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", monospace',
                 fontSize: "14px",
-                fontWeight: 500,
-                letterSpacing: "-0.01em",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "-0.03em",
+                textAlign: "center",
+                color: "rgb(255, 255, 255)",
               }}
             >
               Book a call
@@ -124,12 +127,15 @@ export function Hero() {
             </Link>
             <a
               href="#work"
-              className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white px-6 py-3 text-[#252525] transition-all hover:bg-black/[0.04]"
+              className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white px-6 py-3 transition-all hover:bg-black/[0.04]"
               style={{
-                fontFamily: mono,
+                fontFamily: '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", monospace',
                 fontSize: "14px",
-                fontWeight: 500,
-                letterSpacing: "-0.01em",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "-0.03em",
+                textAlign: "center",
+                color: "rgb(255, 255, 255)",
               }}
             >
               Recent Work
