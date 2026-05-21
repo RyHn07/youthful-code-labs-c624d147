@@ -72,7 +72,8 @@ export function Hero() {
               fontWeight: 400,
               lineHeight: "1.5em",
               letterSpacing: "-0.01em",
-              color: "#585455",
+              textAlign: "start",
+              color: "#252525",
             }}
           >
             Design &amp; Dev Studio for Startups
