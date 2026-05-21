@@ -133,6 +133,7 @@ export function Hero() {
             </a>
             </div>
           </div>
+          </div>
         </InnerContainer>
       </OuterContainer>
     </section>
