@@ -36,7 +36,7 @@ export function SiteHeader() {
         "border-b border-[color:var(--hairline)]",
       )}
     >
-      <OuterContainer borders="x">
+      <OuterContainer>
         <InnerContainer borders="x" className="relative flex h-16 items-center justify-between">
           <Logo />
         <nav
