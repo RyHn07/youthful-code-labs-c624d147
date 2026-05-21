@@ -85,7 +85,7 @@ export function SiteHeader() {
       </OuterContainer>
       {open && (
         <div className="md:hidden border-t border-[color:var(--hairline)] bg-background/95 backdrop-blur-xl">
-          <OuterContainer borders="x">
+          <OuterContainer>
             <InnerContainer borders="x" className="flex flex-col gap-1 py-4">
             {nav.map((item) => (
               <a
