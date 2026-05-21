@@ -17,7 +17,6 @@ export function WorkShowcase() {
       <OuterContainer
         borders="tx"
         className="group relative overflow-hidden"
-        style={{ paddingTop: 24 }}
       >
           <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {loop.map((p, i) => (
