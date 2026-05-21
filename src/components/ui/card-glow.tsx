@@ -200,7 +200,7 @@ const CardGlow: React.FC<CardGlowProps> = ({
       </span>
 
       {/* children render on their own layer */}
-      <div className="relative z-0" style={{ borderRadius: `${borderRadius}px` }}>
+      <div className="relative z-0 h-full w-full" style={{ borderRadius: `${borderRadius}px` }}>
         {children}
       </div>
     </div>
