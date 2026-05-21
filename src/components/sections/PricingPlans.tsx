@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Container } from "@/components/site/Container";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
-import BorderGlow from "@/components/ui/border-glow";
 
 const plans = [
   {
@@ -65,21 +64,13 @@ export function PricingPlans() {
 
         <div className="grid gap-4 md:grid-cols-3">
           {plans.map((p) => (
-            <BorderGlow
-              key={p.name}
-              borderRadius={12}
-              backgroundColor={p.highlight ? "#0a0a0a" : "#ffffff"}
-              fillOpacity={0}
-              glowRadius={28}
-              glowIntensity={0.8}
-              className="h-full"
-            >
             <div
+              key={p.name}
               className={cn(
-                "flex h-full flex-col p-8 transition-transform duration-300 hover:-translate-y-1",
+                "flex h-full flex-col rounded-xl border p-8 transition-transform duration-300 hover:-translate-y-1",
                 p.highlight
-                  ? "text-background"
-                  : "",
+                  ? "border-white/10 bg-[#0a0a0a] text-background"
+                  : "border-[color:var(--hairline-strong)] bg-white",
               )}
             >
               <div
@@ -133,7 +124,6 @@ export function PricingPlans() {
                 {p.cta}
               </Link>
             </div>
-            </BorderGlow>
           ))}
         </div>
       </Container>
