@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
-import { Container } from "./Container";
+import { OuterContainer, InnerContainer } from "./Containers";
 import { cn } from "@/lib/utils";
 
 const saansSans =
@@ -36,8 +36,9 @@ export function SiteHeader() {
         "border-b border-[color:var(--hairline)]",
       )}
     >
-      <Container className="relative flex h-16 items-center justify-between">
-        <Logo />
+      <OuterContainer borders="x">
+        <InnerContainer borders="x" className="relative flex h-16 items-center justify-between">
+          <Logo />
         <nav
           className="pointer-events-auto absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 md:flex"
           aria-label="Primary"
@@ -73,17 +74,19 @@ export function SiteHeader() {
             Let's Talk
           </Link>
         </div>
-        <button
+          <button
           className="md:hidden grid h-9 w-9 place-items-center rounded-full border border-[color:var(--hairline)]"
           aria-label="Open menu"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-        </button>
-      </Container>
+          </button>
+        </InnerContainer>
+      </OuterContainer>
       {open && (
         <div className="md:hidden border-t border-[color:var(--hairline)] bg-background/95 backdrop-blur-xl">
-          <Container className="flex flex-col gap-1 py-4">
+          <OuterContainer borders="x">
+            <InnerContainer borders="x" className="flex flex-col gap-1 py-4">
             {nav.map((item) => (
               <a
                 key={item.href}
@@ -101,7 +104,8 @@ export function SiteHeader() {
             >
               Let's Talk
             </Link>
-          </Container>
+            </InnerContainer>
+          </OuterContainer>
         </div>
       )}
     </header>
