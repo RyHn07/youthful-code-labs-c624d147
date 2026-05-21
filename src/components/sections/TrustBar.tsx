@@ -3,7 +3,7 @@ import { FullWidthContainer, OuterContainer, InnerContainer } from "@/components
 export function TrustBar() {
   return (
     <FullWidthContainer borders="y">
-      <OuterContainer className="py-6">
+      <OuterContainer>
         <InnerContainer
           borders="x"
           className="flex h-[60px] items-center justify-center text-sm text-[color:var(--text-mute)]"
