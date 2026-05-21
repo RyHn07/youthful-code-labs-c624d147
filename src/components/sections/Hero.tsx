@@ -59,7 +59,7 @@ export function Hero() {
           </div>
 
           {/* Hero content */}
-          <div className="px-6 md:px-10 flex min-h-[calc(100vh-49px)] items-center justify-center">
+          <div className="px-6 md:px-10 flex h-[550px] items-center justify-center">
             <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <span
             className="mb-8 inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-white px-4 py-2"
