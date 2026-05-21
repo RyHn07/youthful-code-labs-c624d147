@@ -36,6 +36,7 @@ function Index() {
       <TrustBar />
       <ServicesList />
       <WhyUs />
+      <TrustBar />
       <PricingPlans />
       <FAQ />
       <FinalCTA />
