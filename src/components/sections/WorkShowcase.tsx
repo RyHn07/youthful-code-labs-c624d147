@@ -11,42 +11,47 @@ const projects = [
 export function WorkShowcase() {
   const loop = [...projects, ...projects];
   return (
-    <section id="work" className="relative py-20 md:py-28 overflow-hidden">
-      <div
-        className="group relative mx-auto w-full overflow-hidden border-y border-x border-[color:var(--hairline)]"
-        style={{
-          maxWidth: 1324,
-          paddingTop: 24,
-          paddingBottom: 24,
-        }}
-      >
-          <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
-          {loop.map((p, i) => (
-            <a
-              key={`${p.title}-${i}`}
-              href="#work"
-              className="relative block w-[560px] max-w-[80vw] shrink-0 overflow-hidden rounded-xl border border-[color:var(--hairline)] bg-black/[0.025]"
-            >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
-                />
-              </div>
-              <div className="flex items-center justify-between px-5 py-4">
-                <div className="text-[11px] uppercase tracking-[0.16em] opacity-70 font-mono-friendly">
-                  {p.tag}
-                </div>
-                <div className="text-lg font-semibold tracking-tight">
-                  {p.title}
-                </div>
-              </div>
-            </a>
-          ))}
+    <section id="work" className="relative overflow-hidden">
+      {/* Outer rail — same as Hero */}
+      <div className="mx-auto w-full max-w-[1320px] border-x border-[color:var(--hairline)]">
+        {/* Inner rail — same as Hero */}
+        <div className="mx-auto w-full max-w-6xl border-x border-[color:var(--hairline)]">
+          <div
+            className="group relative overflow-hidden border-y border-[color:var(--hairline)]"
+            style={{
+              paddingTop: 24,
+              paddingBottom: 24,
+            }}
+          >
+            <div className="flex w-max gap-6 animate-[work-marquee_40s_linear_infinite] group-hover:[animation-play-state:paused]">
+              {loop.map((p, i) => (
+                <a
+                  key={`${p.title}-${i}`}
+                  href="#work"
+                  className="relative block w-[560px] max-w-[80vw] shrink-0 overflow-hidden rounded-xl border border-[color:var(--hairline)] bg-black/[0.025]"
+                >
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={p.img}
+                      alt={p.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="flex items-center justify-between px-5 py-4">
+                    <div className="text-[11px] uppercase tracking-[0.16em] opacity-70 font-mono-friendly">
+                      {p.tag}
+                    </div>
+                    <div className="text-lg font-semibold tracking-tight">
+                      {p.title}
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
           </div>
-          <style>{`@keyframes work-marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
+        </div>
       </div>
     </section>
   );
