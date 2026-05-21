@@ -1,4 +1,4 @@
-import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import { OuterContainer } from "@/components/site/Containers";
 
 // Placeholder thumbnails (user will replace later). Using Unsplash for now.
 const projects = [
