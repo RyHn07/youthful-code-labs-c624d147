@@ -65,7 +65,7 @@ export function Hero() {
 
           {/* Hero content */}
           <div className="px-6 md:px-10">
-            <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-24 text-center md:pt-28 md:pb-32">
+            <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-0 text-center md:pt-28">
           <span
             className="mb-8 inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-white px-4 py-2"
             style={{
