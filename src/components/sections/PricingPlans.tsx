@@ -205,12 +205,23 @@ export function PricingPlans() {
                         type="button"
                         aria-label={`Show testimonial ${i + 1}`}
                         onClick={() => setActive(i)}
-                        className="h-[3px] flex-1 rounded-full transition-colors"
-                        style={{
-                          backgroundColor:
-                            i === active ? "#252525" : "rgba(37,37,37,0.18)",
-                        }}
-                      />
+                        className="relative h-[3px] flex-1 overflow-hidden rounded-full"
+                        style={{ backgroundColor: "rgba(37,37,37,0.18)" }}
+                      >
+                        <span
+                          aria-hidden
+                          className="absolute inset-y-0 left-0 rounded-full"
+                          style={{
+                            backgroundColor: "#252525",
+                            width:
+                              i < active
+                                ? "100%"
+                                : i === active
+                                  ? `${progress * 100}%`
+                                  : "0%",
+                          }}
+                        />
+                      </button>
                     ))}
                   </div>
                 </div>
