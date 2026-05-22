@@ -1,5 +1,6 @@
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import { Heart, Palette, Figma, Framer, Sparkle, CheckCircle2, User } from "lucide-react";
+import { Globe } from "@/components/site/Globe";
 import founder1 from "@/assets/founder-1.jpg";
 
 const mono =
@@ -221,8 +222,8 @@ export function WhyUs() {
                   Every site built from zero for your brand.{" "}
                   <span style={softStyle}>No templates, no recycled layouts.</span>
                 </p>
-                <div className="relative mt-4 flex-1">
-                  <LayersArt />
+                <div className="relative mt-4 flex-1 min-h-[300px] overflow-hidden">
+                  <Globe className="!relative !inset-auto mx-auto" />
                 </div>
               </article>
 
