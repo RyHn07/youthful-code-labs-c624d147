@@ -16,7 +16,7 @@ export function FinalCTA() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-background px-6 py-3.5 text-sm font-medium text-foreground transition-all hover:opacity-90"
+                className="group inline-flex items-center gap-2 rounded-lg bg-background px-6 py-3.5 text-sm font-medium text-foreground transition-all hover:opacity-90"
               >
                 <Calendar className="h-4 w-4" />
                 Book a call
@@ -24,7 +24,7 @@ export function FinalCTA() {
               </Link>
               <a
                 href="mailto:hello@novara.studio"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-medium text-background transition-all hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-6 py-3.5 text-sm font-medium text-background transition-all hover:bg-white/10"
               >
                 hello@novara.studio
               </a>

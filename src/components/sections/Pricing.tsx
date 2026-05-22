@@ -121,7 +121,7 @@ export function Pricing() {
               <Link
                 to="/contact"
                 className={cn(
-                  "relative mt-8 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-all",
+                  "relative mt-8 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-medium transition-all",
                   t.highlight
                     ? "bg-white text-[color:var(--brand-navy)] hover:bg-[color:var(--brand-lavender)]"
                     : "bg-[color:var(--brand-indigo)] text-white hover:bg-[color:var(--brand-navy)] indigo-glow",

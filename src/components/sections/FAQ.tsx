@@ -162,14 +162,14 @@ export function FAQ() {
                 <div className="mt-5 flex flex-wrap items-center gap-3">
                   <a
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-dark-gradient px-5 py-2.5 text-white transition hover:opacity-90"
+                    className="inline-flex items-center gap-2 rounded-lg bg-dark-gradient px-5 py-2.5 text-white transition hover:opacity-90"
                     style={{ fontFamily: display, fontSize: "14px", fontWeight: 500 }}
                   >
                     Book a call <span aria-hidden>›</span>
                   </a>
                   <a
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline)] bg-white px-5 py-2.5 text-[#252525] transition hover:bg-black/[0.03]"
+                    className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--hairline)] bg-white px-5 py-2.5 text-[#252525] transition hover:bg-black/[0.03]"
                     style={{ fontFamily: display, fontSize: "14px", fontWeight: 500 }}
                   >
                     Message <span aria-hidden>›</span>

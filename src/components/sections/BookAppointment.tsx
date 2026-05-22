@@ -44,14 +44,14 @@ export function BookAppointment() {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-[color:var(--brand-indigo)] px-5 py-3 text-sm font-medium text-white indigo-glow transition-all hover:bg-[color:var(--brand-navy)]"
+              className="group inline-flex items-center gap-2 rounded-lg bg-[color:var(--brand-indigo)] px-5 py-3 text-sm font-medium text-white indigo-glow transition-all hover:bg-[color:var(--brand-navy)]"
             >
               Book an appointment
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <a
               href="mailto:hello@novara.studio"
-              className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-[color:var(--brand-lavender)]"
+              className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--hairline-strong)] bg-white px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-[color:var(--brand-lavender)]"
             >
               hello@novara.studio
             </a>
