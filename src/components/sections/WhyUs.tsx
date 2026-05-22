@@ -324,7 +324,7 @@ export function WhyUs() {
               {/* Card 1 — tall left, dots */}
               <article className={`${cardClass} md:row-span-2 min-h-[460px] flex flex-col`}>
                 <div className="relative flex-1 flex items-center justify-center">
-                  <Terminal className="bg-white max-w-full w-full">
+                  <Terminal className="!bg-transparent !border-0 max-w-full w-full [&_pre]:!px-0 [&_pre]:!pt-0 [&>div:first-child]:!border-0 [&>div:first-child]:!px-0 [&>div:first-child]:!pt-0">
                     <TypingAnimation>&gt; pnpm create qodran-app</TypingAnimation>
                     <AnimatedSpan className="text-green-600">✔ Preflight checks.</AnimatedSpan>
                     <AnimatedSpan className="text-green-600">✔ Setting up project.</AnimatedSpan>
