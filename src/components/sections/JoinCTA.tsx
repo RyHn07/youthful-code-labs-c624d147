@@ -16,11 +16,11 @@ export function JoinCTA() {
             Whether you're a founder shipping the next idea, or a student ready for real work — we'd love to talk.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/contact" className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[color:var(--brand-navy)] transition-all hover:bg-[color:var(--brand-lavender)]">
+            <Link to="/contact" className="group inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-medium text-[color:var(--brand-navy)] transition-all hover:bg-[color:var(--brand-lavender)]">
               Start a project
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            <Link to="/careers" className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur transition-all hover:bg-white/10">
+            <Link to="/careers" className="inline-flex items-center gap-2 rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur transition-all hover:bg-white/10">
               Join the network
             </Link>
           </div>

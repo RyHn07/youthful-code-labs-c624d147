@@ -111,7 +111,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-dark-gradient px-6 py-3 transition-all hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-lg bg-dark-gradient px-6 py-3 transition-all hover:opacity-90"
               style={{
                 fontFamily: '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", monospace',
                 fontSize: "14px",
@@ -127,7 +127,7 @@ export function Hero() {
             </Link>
             <a
               href="#work"
-              className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] bg-white px-6 py-3 transition-all hover:bg-black/[0.04]"
+              className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--hairline-strong)] bg-white px-6 py-3 transition-all hover:bg-black/[0.04]"
               style={{
                 fontFamily: '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", monospace',
                 fontSize: "14px",

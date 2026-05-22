@@ -311,7 +311,7 @@ export function PricingPlans() {
                     {/* CTA */}
                     <Link
                       to="/contact"
-                      className="mt-7 inline-flex items-center gap-2 rounded-full bg-dark-gradient px-5 py-2.5 text-white transition-opacity hover:opacity-90"
+                      className="mt-7 inline-flex items-center gap-2 rounded-lg bg-dark-gradient px-5 py-2.5 text-white transition-opacity hover:opacity-90"
                       style={{ fontFamily: mono, fontSize: "13px", letterSpacing: "-0.01em" }}
                     >
                       Get Started
