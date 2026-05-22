@@ -165,7 +165,7 @@ export function PricingPlans() {
                 </div>
 
                 <div className="mt-10">
-                  <div className="rounded-2xl border border-[color:var(--hairline)] bg-white p-6 md:p-7 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.06)]">
+                  <div className="rounded-2xl border border-[color:var(--hairline)] p-6 md:p-7">
                     <p
                       style={{
                         fontFamily: mono,
