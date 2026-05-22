@@ -51,7 +51,7 @@ function DotsArt() {
           <circle key={i} cx={d.x} cy={d.y} r={d.r} fill="#252525" />
         ))}
       </svg>
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 grid h-14 w-14 place-items-center rounded-full bg-[#252525] text-white">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 grid h-14 w-14 place-items-center rounded-full bg-dark-gradient text-white">
         <Sparkle className="h-6 w-6" />
       </div>
     </div>
@@ -64,7 +64,7 @@ function LayersArt() {
       <div className="relative h-[220px] w-[180px]">
         {/* Top diamond */}
         <div
-          className="absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 rounded-md bg-[#252525] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.4)]"
+          className="absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 rounded-md bg-dark-gradient"
           style={{ transform: "translateX(-50%) rotate(45deg)" }}
         >
           <div className="grid h-full w-full place-items-center" style={{ transform: "rotate(-45deg)" }}>
