@@ -224,17 +224,58 @@ function LayersArt() {
 }
 
 function ToolsRow() {
-  const tools = [Figma, Framer, Sparkle, Palette, Figma];
+  const AeIcon = () => (
+    <div className="grid h-5 w-5 place-items-center rounded-[4px] bg-[#252525] text-white text-[10px] font-bold leading-none">
+      Ae
+    </div>
+  );
+  const tools: Array<React.ComponentType<{ className?: string }> | "ae"> = [
+    Figma,
+    Framer,
+    "ae",
+    Sparkle,
+    Palette,
+    Figma,
+    Framer,
+    "ae",
+    Sparkle,
+    Palette,
+  ];
+  // Duplicated track for seamless infinite scroll
+  const track = [...tools, ...tools];
   return (
-    <div className="mt-5 flex items-center justify-center gap-3">
-      {tools.map((Icon, i) => (
-        <div
-          key={i}
-          className="grid h-11 w-11 place-items-center rounded-xl border border-[color:var(--hairline)] bg-white"
-        >
-          <Icon className="h-5 w-5 text-[#252525]" />
-        </div>
-      ))}
+    <div
+      className="mt-5 w-full overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+      }}
+    >
+      <div
+        className="flex w-max items-center gap-3"
+        style={{ animation: "tools-marquee 20s linear infinite" }}
+      >
+        {track.map((Item, i) => (
+          <div
+            key={i}
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-[color:var(--hairline)] bg-white"
+          >
+            {Item === "ae" ? (
+              <AeIcon />
+            ) : (
+              <Item className="h-5 w-5 text-[#252525]" />
+            )}
+          </div>
+        ))}
+      </div>
+      <style>{`
+        @keyframes tools-marquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>
   );
 }
