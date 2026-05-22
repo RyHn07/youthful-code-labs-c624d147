@@ -90,6 +90,28 @@ const testimonials = [
 
 export function PricingPlans() {
   const [active, setActive] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const DURATION = 5000;
+  const startRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    startRef.current = Date.now();
+    setProgress(0);
+    let raf = 0;
+    const tick = () => {
+      const elapsed = Date.now() - startRef.current;
+      const p = Math.min(1, elapsed / DURATION);
+      setProgress(p);
+      if (p >= 1) {
+        setActive((a) => (a + 1) % testimonials.length);
+      } else {
+        raf = requestAnimationFrame(tick);
+      }
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [active]);
+
   const t = testimonials[active];
   return (
     <section id="pricing" className="relative">
