@@ -172,7 +172,7 @@ function DotsArt() {
         </LogoContainer>
       </div>
 
-      <div className="h-40 w-px absolute top-1/2 -translate-y-1/2 z-40 bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-[move_5s_linear_infinite]">
+      <div className="h-40 w-px absolute top-1/2 -translate-y-1/2 z-40 bg-gradient-to-b from-transparent via-black to-transparent animate-[move_5s_linear_infinite]">
         <div className="w-10 h-32 top-1/2 -translate-y-1/2 absolute -left-10">
           <Sparkles />
         </div>
