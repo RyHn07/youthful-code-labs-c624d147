@@ -2,6 +2,8 @@ import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import { Heart, Palette, Figma, Framer, Sparkle, CheckCircle2, User } from "lucide-react";
 import { Globe } from "@/components/ui/globe";
 import founder1 from "@/assets/founder-1.jpg";
+import { animate, motion } from "motion/react";
+import { useEffect } from "react";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -32,29 +34,56 @@ const softStyle = { color: "rgba(37, 37, 37, 0.5)" };
 /* --- Decorative bits --- */
 function DotsArt() {
   const dots = [
-    { x: 38, y: 14, r: 10 },
-    { x: 64, y: 10, r: 14 },
-    { x: 86, y: 22, r: 9 },
-    { x: 18, y: 36, r: 7 },
-    { x: 50, y: 34, r: 6 },
-    { x: 74, y: 38, r: 11 },
-    { x: 8, y: 58, r: 12 },
-    { x: 32, y: 62, r: 7 },
-    { x: 80, y: 70, r: 8 },
-    { x: 24, y: 86, r: 14 },
-    { x: 60, y: 88, r: 9 },
-    { x: 90, y: 92, r: 6 },
+    { cls: "circle-1", x: 38, y: 14, r: 10 },
+    { cls: "circle-2", x: 64, y: 10, r: 14 },
+    { cls: "circle-3", x: 86, y: 22, r: 9 },
+    { cls: "circle-4", x: 18, y: 36, r: 7 },
+    { cls: "circle-5", x: 50, y: 34, r: 6 },
+    { cls: "circle-1", x: 74, y: 38, r: 11 },
+    { cls: "circle-2", x: 8, y: 58, r: 12 },
+    { cls: "circle-3", x: 32, y: 62, r: 7 },
+    { cls: "circle-4", x: 80, y: 70, r: 8 },
+    { cls: "circle-5", x: 24, y: 86, r: 14 },
+    { cls: "circle-1", x: 60, y: 88, r: 9 },
+    { cls: "circle-2", x: 90, y: 92, r: 6 },
   ];
+
+  useEffect(() => {
+    const scale = [1, 1.1, 1];
+    const translate = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
+    const sequence = [
+      [".circle-1", { scale, transform: translate }, { duration: 0.8 }],
+      [".circle-2", { scale, transform: translate }, { duration: 0.8 }],
+      [".circle-3", { scale, transform: translate }, { duration: 0.8 }],
+      [".circle-4", { scale, transform: translate }, { duration: 0.8 }],
+      [".circle-5", { scale, transform: translate }, { duration: 0.8 }],
+    ];
+    // @ts-ignore
+    animate(sequence, { repeat: Infinity, repeatDelay: 1 });
+  }, []);
+
   return (
     <div className="relative h-full w-full">
       <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" preserveAspectRatio="none">
         {dots.map((d, i) => (
-          <circle key={i} cx={d.x} cy={d.y} r={d.r} fill="#252525" />
+          <circle
+            key={i}
+            cx={d.x}
+            cy={d.y}
+            r={d.r}
+            fill="#252525"
+            className={d.cls}
+            style={{ transformBox: "fill-box", transformOrigin: "center" }}
+          />
         ))}
       </svg>
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 grid h-14 w-14 place-items-center rounded-full bg-dark-gradient text-white">
+      <motion.div
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 grid h-14 w-14 place-items-center rounded-full bg-dark-gradient text-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)]"
+        animate={{ y: [0, -6, 0] }}
+        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+      >
         <Sparkle className="h-6 w-6" />
-      </div>
+      </motion.div>
     </div>
   );
 }
