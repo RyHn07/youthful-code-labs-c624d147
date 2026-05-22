@@ -33,7 +33,6 @@ const titleStyle = {
 const softStyle = { color: "rgba(37, 37, 37, 0.5)" };
 
 /* --- Decorative bits --- */
-function DotsArt() {
 const LogoContainer = ({ className, children }: { className?: string; children: React.ReactNode }) => (
   <div
     className={cn(
