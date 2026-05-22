@@ -7,7 +7,6 @@ import { WhyUs } from "@/components/sections/WhyUs";
 import { PricingPlans } from "@/components/sections/PricingPlans";
 import { PricingIncludes } from "@/components/sections/PricingIncludes";
 import { FAQ } from "@/components/sections/FAQ";
-import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,7 +41,6 @@ function Index() {
       <PricingIncludes />
       <TrustBar />
       <FAQ />
-      <FinalCTA />
     </>
   );
 }
