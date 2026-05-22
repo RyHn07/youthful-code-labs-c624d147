@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { useServerFn } from "@tanstack/react-start";
-import { submitApplication } from "@/lib/contact.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -11,7 +10,6 @@ export const Route = createFileRoute("/careers")({
 });
 
 function CareersPage() {
-  const apply = useServerFn(submitApplication);
   const [loading, setLoading] = useState(false);
   const cls = "w-full rounded-md border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
   return (
@@ -21,7 +19,18 @@ function CareersPage() {
         const fd = new FormData(e.currentTarget);
         setLoading(true);
         try {
-          await apply({ data: { name: String(fd.get("name")||""), email: String(fd.get("email")||""), university: String(fd.get("university")||""), role: String(fd.get("role")||""), portfolio_url: String(fd.get("portfolio_url")||""), message: String(fd.get("message")||"") } });
+          const university = String(fd.get("university") || "").trim();
+          const portfolio_url = String(fd.get("portfolio_url") || "").trim();
+          const message = String(fd.get("message") || "").trim();
+          const { error } = await supabase.from("applications").insert({
+            name: String(fd.get("name") || "").trim(),
+            email: String(fd.get("email") || "").trim(),
+            university: university || null,
+            role: String(fd.get("role") || "").trim(),
+            portfolio_url: portfolio_url || null,
+            message: message || null,
+          });
+          if (error) throw new Error(error.message);
           toast.success("Application received.");
           (e.target as HTMLFormElement).reset();
         } catch (err: any) { toast.error(err?.message ?? "Something went wrong"); }
