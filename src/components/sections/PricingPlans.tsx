@@ -170,9 +170,9 @@ export function PricingPlans() {
                       style={{
                         fontFamily: mono,
                         fontSize: "14px",
-                        lineHeight: "1.6",
+                        lineHeight: "1.5em",
                         letterSpacing: "-0.01em",
-                        color: "rgba(37,37,37,0.85)",
+                        color: "rgba(37, 37, 37, 0.65)",
                       }}
                     >
                       {t.quote}
