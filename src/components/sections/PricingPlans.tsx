@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 
 const mono =
@@ -66,7 +67,30 @@ const plans = [
   },
 ];
 
+const testimonials = [
+  {
+    quote:
+      "I cannot count now how many times I've worked with Ishan. His work is just incredible and always a go to for my framer development. Highly recommend!",
+    name: "Jack Silver",
+    role: "Founder of Studio Joost",
+  },
+  {
+    quote:
+      "The team delivered a high-quality site in record time. Communication was seamless throughout the entire process.",
+    name: "Sarah Jenkins",
+    role: "Founder, Aura Studio",
+  },
+  {
+    quote:
+      "Pixel-perfect execution and thoughtful collaboration. They felt like an extension of our in-house team from day one.",
+    name: "Marcus Lee",
+    role: "Product Lead, Northwind",
+  },
+];
+
 export function PricingPlans() {
+  const [active, setActive] = useState(0);
+  const t = testimonials[active];
   return (
     <section id="pricing" className="relative">
       <OuterContainer>
