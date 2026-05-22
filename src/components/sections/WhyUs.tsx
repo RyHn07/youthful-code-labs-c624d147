@@ -1,6 +1,7 @@
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import { Heart, Palette, Figma, Framer, Sparkle, CheckCircle2, User, Bot } from "lucide-react";
 import { Globe } from "@/components/ui/globe";
+import { Terminal, TypingAnimation, AnimatedSpan } from "@/components/ui/terminal";
 import founder1 from "@/assets/founder-1.jpg";
 import { animate, motion } from "motion/react";
 import { useEffect } from "react";
@@ -322,8 +323,15 @@ export function WhyUs() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* Card 1 — tall left, dots */}
               <article className={`${cardClass} md:row-span-2 min-h-[460px] flex flex-col`}>
-                <div className="relative flex-1">
-                  <DotsArt />
+                <div className="relative flex-1 flex items-center justify-center">
+                  <Terminal className="bg-white max-w-full w-full">
+                    <TypingAnimation>&gt; pnpm create qodran-app</TypingAnimation>
+                    <AnimatedSpan className="text-green-600">✔ Preflight checks.</AnimatedSpan>
+                    <AnimatedSpan className="text-green-600">✔ Setting up project.</AnimatedSpan>
+                    <AnimatedSpan className="text-green-600">✔ Installing dependencies.</AnimatedSpan>
+                    <AnimatedSpan className="text-neutral-500">Daily updates enabled.</AnimatedSpan>
+                    <TypingAnimation className="text-neutral-700">Success! Shipping fast.</TypingAnimation>
+                  </Terminal>
                 </div>
                 <div className="mt-6">
                   <p style={titleStyle}>
