@@ -111,7 +111,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-[#252525] px-6 py-3 transition-all hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-full bg-dark-gradient px-6 py-3 transition-all hover:opacity-90"
               style={{
                 fontFamily: '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", monospace',
                 fontSize: "14px",
