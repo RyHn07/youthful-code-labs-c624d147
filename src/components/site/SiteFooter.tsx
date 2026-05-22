@@ -35,7 +35,7 @@ export function SiteFooter() {
             Q
           </span>
           <span style={{ fontFamily: display, fontWeight: 700, fontSize: "22px", letterSpacing: "-0.02em" }}>
-            QODRAN
+            ASTRALLABS
           </span>
         </div>
 
@@ -138,7 +138,7 @@ export function SiteFooter() {
           className="relative mt-24 flex flex-col-reverse items-start justify-between gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center"
           style={{ fontFamily: mono, fontSize: "12px", color: "rgba(255,255,255,0.5)" }}
         >
-          <p>© Copyright {new Date().getFullYear()} Qodran Studio. All Rights Reserved.</p>
+          <p>© Copyright {new Date().getFullYear()} Astrallabs. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms & Condition</a>

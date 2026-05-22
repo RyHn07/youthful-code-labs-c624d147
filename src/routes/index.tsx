@@ -12,13 +12,13 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Novara Studio — Affordable, high-quality digital solutions" },
+      { title: "Astrallabs — Affordable, high-quality digital solutions" },
       {
         name: "description",
         content:
           "A talent-network studio: top university students and senior experts shipping design, engineering, and growth work at startup speed.",
       },
-      { property: "og:title", content: "Novara Studio" },
+      { property: "og:title", content: "Astrallabs" },
       {
         property: "og:description",
         content:

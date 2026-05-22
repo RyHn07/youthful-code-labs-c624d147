@@ -6,7 +6,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/careers")({
-  head: () => ({ meta: [{ title: "Careers — Novara Studio" }, { name: "description", content: "Join the talent network." }] }),
+  head: () => ({ meta: [{ title: "Careers — Astrallabs" }, { name: "description", content: "Join the talent network." }] }),
   component: CareersPage,
 });
 

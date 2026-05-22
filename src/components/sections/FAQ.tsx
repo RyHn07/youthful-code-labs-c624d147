@@ -185,7 +185,7 @@ export function FAQ() {
                   }}
                 >
                   Or send us a email{" "}
-                  <span style={{ color: "#252525", fontWeight: 600 }}>Hello@qodran.com</span>
+                  <span style={{ color: "#252525", fontWeight: 600 }}>Hello@astrallabs.com</span>
                 </p>
               </div>
             </div>

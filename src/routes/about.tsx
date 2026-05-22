@@ -7,9 +7,9 @@ import { Workflow } from "@/components/sections/Workflow";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Novara Studio" },
+      { title: "About — Astrallabs" },
       { name: "description", content: "A talent-network studio guided by senior experts." },
-      { property: "og:title", content: "About — Novara Studio" },
+      { property: "og:title", content: "About — Astrallabs" },
       { property: "og:description", content: "How our talent-network model works." },
     ],
   }),
@@ -23,7 +23,7 @@ function AboutPage() {
         className="pt-40"
         eyebrow="About"
         title="Studio-grade work, community-driven."
-        description="Novara is a project-based studio built around a curated network of university talent and senior experts. We assemble the right team for each engagement — and ship like a startup."
+        description="Astrallabs is a project-based studio built around a curated network of university talent and senior experts. We assemble the right team for each engagement — and ship like a startup."
       />
       <AboutTeaser />
       <Workflow />

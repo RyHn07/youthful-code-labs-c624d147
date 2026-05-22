@@ -4,6 +4,6 @@ import { Section } from "@/components/site/Section";
 import { JoinCTA } from "@/components/sections/JoinCTA";
 
 export const Route = createFileRoute("/talent")({
-  head: () => ({ meta: [{ title: "Talent — Novara Studio" }, { name: "description", content: "Meet the talent network." }] }),
+  head: () => ({ meta: [{ title: "Talent — Astrallabs" }, { name: "description", content: "Meet the talent network." }] }),
   component: () => (<><Section className="pt-40" eyebrow="Talent" title="A community of young specialists." description="Vetted students, organized into teams." /><Talent /><JoinCTA /></>),
 });

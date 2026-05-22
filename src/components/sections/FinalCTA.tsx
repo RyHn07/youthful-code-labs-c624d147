@@ -23,10 +23,10 @@ export function FinalCTA() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <a
-                href="mailto:hello@novara.studio"
+                href="mailto:hello@astrallabs.studio"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-6 py-3.5 text-sm font-medium text-background transition-all hover:bg-white/10"
               >
-                hello@novara.studio
+                hello@astrallabs.studio
               </a>
             </div>
           </div>
