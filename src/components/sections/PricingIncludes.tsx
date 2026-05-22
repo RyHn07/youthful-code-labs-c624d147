@@ -45,7 +45,7 @@ export function PricingIncludes() {
       <OuterContainer>
         <InnerContainer borders="x" className="!px-0">
           {/* Grid */}
-          <div className="px-6 md:px-10 py-14 md:py-16">
+          <div className="border-t border-[color:var(--hairline)] px-6 md:px-10 py-14 md:py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-16">
               {items.map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-5">
