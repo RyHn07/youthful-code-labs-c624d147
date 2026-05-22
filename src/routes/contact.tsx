@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/Section";
-import { useServerFn } from "@tanstack/react-start";
-import { submitContact } from "@/lib/contact.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -18,7 +17,6 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const send = useServerFn(submitContact);
   const [loading, setLoading] = useState(false);
 
   return (
@@ -35,14 +33,14 @@ function ContactPage() {
           const fd = new FormData(e.currentTarget);
           setLoading(true);
           try {
-            await send({
-              data: {
-                name: String(fd.get("name") || ""),
-                email: String(fd.get("email") || ""),
-                subject: String(fd.get("subject") || ""),
-                body: String(fd.get("body") || ""),
-              },
+            const subject = String(fd.get("subject") || "").trim();
+            const { error } = await supabase.from("messages").insert({
+              name: String(fd.get("name") || "").trim(),
+              email: String(fd.get("email") || "").trim(),
+              subject: subject || null,
+              body: String(fd.get("body") || "").trim(),
             });
+            if (error) throw new Error(error.message);
             toast.success("Thanks — we'll be in touch shortly.");
             (e.target as HTMLFormElement).reset();
           } catch (err: any) {
