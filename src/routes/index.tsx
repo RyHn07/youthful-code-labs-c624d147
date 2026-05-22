@@ -5,6 +5,7 @@ import { ServicesList } from "@/components/sections/ServicesList";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { PricingPlans } from "@/components/sections/PricingPlans";
+import { PricingIncludes } from "@/components/sections/PricingIncludes";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
@@ -38,6 +39,7 @@ function Index() {
       <WhyUs />
       <TrustBar />
       <PricingPlans />
+      <PricingIncludes />
       <TrustBar />
       <FAQ />
       <FinalCTA />
