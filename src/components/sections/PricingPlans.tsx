@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 
 const mono =
@@ -90,6 +90,28 @@ const testimonials = [
 
 export function PricingPlans() {
   const [active, setActive] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const DURATION = 5000;
+  const startRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    startRef.current = Date.now();
+    setProgress(0);
+    let raf = 0;
+    const tick = () => {
+      const elapsed = Date.now() - startRef.current;
+      const p = Math.min(1, elapsed / DURATION);
+      setProgress(p);
+      if (p >= 1) {
+        setActive((a) => (a + 1) % testimonials.length);
+      } else {
+        raf = requestAnimationFrame(tick);
+      }
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [active]);
+
   const t = testimonials[active];
   return (
     <section id="pricing" className="relative">
@@ -183,12 +205,23 @@ export function PricingPlans() {
                         type="button"
                         aria-label={`Show testimonial ${i + 1}`}
                         onClick={() => setActive(i)}
-                        className="h-[3px] flex-1 rounded-full transition-colors"
-                        style={{
-                          backgroundColor:
-                            i === active ? "#252525" : "rgba(37,37,37,0.18)",
-                        }}
-                      />
+                        className="relative h-[3px] flex-1 overflow-hidden rounded-full"
+                        style={{ backgroundColor: "rgba(37,37,37,0.18)" }}
+                      >
+                        <span
+                          aria-hidden
+                          className="absolute inset-y-0 left-0 rounded-full"
+                          style={{
+                            backgroundColor: "#252525",
+                            width:
+                              i < active
+                                ? "100%"
+                                : i === active
+                                  ? `${progress * 100}%`
+                                  : "0%",
+                          }}
+                        />
+                      </button>
                     ))}
                   </div>
                 </div>
