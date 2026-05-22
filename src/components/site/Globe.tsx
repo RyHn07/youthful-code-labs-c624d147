@@ -87,7 +87,7 @@ export function Globe({
         state.width = width * 2;
         state.height = width * 2;
       },
-    });
+    } as COBEOptions);
 
     setTimeout(() => {
       if (canvasRef.current) canvasRef.current.style.opacity = "1";
