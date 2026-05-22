@@ -16,7 +16,7 @@ const GLOBE_CONFIG: COBEOptions = {
   phi: 0,
   theta: 0.3,
   dark: 0,
-  diffuse: 0.4,
+  diffuse: 0,
   mapSamples: 16000,
   mapBrightness: 1.2,
   baseColor: [1, 1, 1],
