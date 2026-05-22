@@ -372,7 +372,9 @@ export function WhyUs() {
 
               {/* Card 6 — bottom right, avatars */}
               <article className={`${cardClass} min-h-[240px] flex flex-col items-center justify-center text-center`}>
-                <AvatarRow />
+                <div className="relative w-full h-[120px]">
+                  <DotsArt />
+                </div>
                 <p className="mt-6" style={titleStyle}>
                   Talk straight to <span style={softStyle}>the people building your Product</span>
                 </p>
