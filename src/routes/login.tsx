@@ -5,7 +5,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/login")({
-  head: () => ({ meta: [{ title: "Sign in — Novara Studio" }, { name: "description", content: "Admin sign in." }] }),
+  head: () => ({ meta: [{ title: "Sign in — Astrallabs" }, { name: "description", content: "Admin sign in." }] }),
   component: LoginPage,
 });
 

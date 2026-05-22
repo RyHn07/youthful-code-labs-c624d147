@@ -65,7 +65,7 @@
 }
 
 :root {
-  /* Qodran-inspired LIGHT theme — warm off-white, deep ink, hairline borders. */
+  /* Astrallabs-inspired LIGHT theme — warm off-white, deep ink, hairline borders. */
   --radius: 0.75rem;
   --background: oklch(0.97 0.003 90);    /* warm cream #F4F2EE */
   --foreground: oklch(0.18 0.005 270);   /* near-black ink */
@@ -100,7 +100,7 @@
   --sidebar-border: oklch(0.22 0.1 268 / 10%);
   --sidebar-ring: oklch(0.55 0.21 269 / 45%);
 
-  /* Brand-specific tokens — Qodran palette */
+  /* Brand-specific tokens — Astrallabs palette */
   --brand-navy: oklch(0.16 0.005 270);     /* near-black */
   --brand-navy-deep: oklch(0.10 0.004 270);
   --brand-indigo: oklch(0.18 0.005 270);

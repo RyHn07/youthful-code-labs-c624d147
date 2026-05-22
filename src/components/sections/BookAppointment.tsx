@@ -50,10 +50,10 @@ export function BookAppointment() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <a
-              href="mailto:hello@novara.studio"
+              href="mailto:hello@astrallabs.studio"
               className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--hairline-strong)] bg-white px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-[color:var(--brand-lavender)]"
             >
-              hello@novara.studio
+              hello@astrallabs.studio
             </a>
           </div>
         </div>

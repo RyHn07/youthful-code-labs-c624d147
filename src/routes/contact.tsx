@@ -8,9 +8,9 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Novara Studio" },
+      { title: "Contact — Astrallabs" },
       { name: "description", content: "Tell us about your project." },
-      { property: "og:title", content: "Contact — Novara Studio" },
+      { property: "og:title", content: "Contact — Astrallabs" },
       { property: "og:description", content: "Start a conversation with the studio." },
     ],
   }),

@@ -12,7 +12,7 @@ const steps = [
 
 export function Workflow() {
   return (
-    <Section eyebrow="Workflow" title="How a Novara engagement runs.">
+    <Section eyebrow="Workflow" title="How a Astrallabs engagement runs.">
       <ol className="relative ml-3 border-l-2 border-dashed border-[color:var(--brand-indigo)]/30 pl-8">
         {steps.map(([n, t, d], i) => (
           <ScrollReveal key={n} delay={i * 0.05}>

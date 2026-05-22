@@ -29,7 +29,7 @@ export function Logo() {
           color: "#252525",
         }}
       >
-        QODRAN
+        ASTRALLABS
       </span>
     </Link>
   );

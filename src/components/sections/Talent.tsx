@@ -16,7 +16,7 @@ export function Talent() {
     <Section
       eyebrow="Talent network"
       title="Real people. Real portfolios. Real projects."
-      description="A few examples of the kind of talent you'll find on a Novara team."
+      description="A few examples of the kind of talent you'll find on a Astrallabs team."
     >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {talents.map((t, i) => (
