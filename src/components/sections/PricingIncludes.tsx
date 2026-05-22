@@ -6,14 +6,6 @@ const mono =
 const display =
   '"Gordita", "Geist", "Inter", ui-sans-serif, system-ui, sans-serif';
 
-const statusBarStyle = {
-  fontFamily: mono,
-  fontSize: "12px",
-  lineHeight: "16px",
-  textTransform: "uppercase" as const,
-  color: "rgb(22, 22, 18)",
-};
-
 const items = [
   {
     icon: Sparkles,
@@ -52,19 +44,6 @@ export function PricingIncludes() {
     <section id="pricing-includes" className="relative">
       <OuterContainer>
         <InnerContainer borders="x" className="!px-0">
-          {/* Status bar */}
-          <div className="border-t border-b border-[color:var(--hairline)] px-6 md:px-10">
-            <div className="flex items-center justify-between py-3" style={statusBarStyle}>
-              <div className="flex items-center gap-2">
-                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#ff7a1a] text-[10px] font-bold text-white">
-                  ◉
-                </span>
-                What's Included
-              </div>
-              <div className="tabular-nums">04 | 04</div>
-            </div>
-          </div>
-
           {/* Grid */}
           <div className="px-6 md:px-10 py-14 md:py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-16">
