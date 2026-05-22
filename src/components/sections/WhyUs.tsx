@@ -1,6 +1,6 @@
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import { Heart, Palette, Figma, Framer, Sparkle, CheckCircle2, User } from "lucide-react";
-import { Globe } from "@/components/site/Globe";
+import { Globe } from "@/components/ui/globe";
 import founder1 from "@/assets/founder-1.jpg";
 
 const mono =
