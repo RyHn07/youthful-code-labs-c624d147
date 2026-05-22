@@ -222,8 +222,8 @@ export function WhyUs() {
                   Every site built from zero for your brand.{" "}
                   <span style={softStyle}>No templates, no recycled layouts.</span>
                 </p>
-                <div className="relative mt-4 flex-1 min-h-[300px] overflow-hidden">
-                  <Globe className="!relative !inset-auto mx-auto" />
+                <div className="relative mt-4 flex-1 min-h-[260px] overflow-hidden">
+                  <Globe className="top-auto -bottom-[55%] mx-auto max-w-[420px]" />
                 </div>
               </article>
 
