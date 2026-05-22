@@ -1,17 +1,24 @@
 import { Section } from "@/components/site/Section";
 import { CardSwap } from "@/components/site/CardSwap";
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
-import { listProjects } from "@/lib/projects.functions";
+import { supabase } from "@/integrations/supabase/client";
 
 export function Projects() {
-  const fetchProjects = useServerFn(listProjects);
   const { data } = useQuery({
     queryKey: ["projects"],
-    queryFn: () => fetchProjects(),
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("projects")
+        .select("*")
+        .order("sort_order", { ascending: true })
+        .order("created_at", { ascending: false })
+        .limit(50);
+      if (error) return { projects: [] as any[] };
+      return { projects: data ?? [] };
+    },
   });
 
-  const cards = (data?.projects ?? []).map((p) => ({
+  const cards = (data?.projects ?? []).map((p: any) => ({
     id: p.id,
     title: p.title,
     category: p.category,
