@@ -109,6 +109,16 @@ const MetaLogo = ({ className }: { className?: string }) => (
 function Sparkles() {
   const rand = () => Math.random();
   const randMove = () => Math.random() * 2 - 1;
+  const colors = [
+    "#ef4444", // red
+    "#f97316", // orange
+    "#eab308", // yellow
+    "#22c55e", // green
+    "#06b6d4", // cyan
+    "#3b82f6", // blue
+    "#a855f7", // purple
+    "#ec4899", // pink
+  ];
   return (
     <div className="absolute inset-0">
       {[...Array(12)].map((_, i) => (
@@ -129,7 +139,8 @@ function Sparkles() {
             height: "2px",
             borderRadius: "50%",
             zIndex: 1,
-            background: "#252525",
+            background: colors[i % colors.length],
+            boxShadow: `0 0 6px ${colors[i % colors.length]}`,
           }}
         />
       ))}
@@ -172,7 +183,7 @@ function DotsArt() {
         </LogoContainer>
       </div>
 
-      <div className="h-40 w-px absolute top-1/2 -translate-y-1/2 z-40 bg-gradient-to-b from-transparent via-black to-transparent animate-[move_5s_linear_infinite]">
+      <div className="h-40 w-px absolute top-1/2 -translate-y-1/2 z-40 bg-gradient-to-b from-transparent via-neutral-400 to-transparent animate-[move_5s_linear_infinite]">
         <div className="w-10 h-32 top-1/2 -translate-y-1/2 absolute -left-10">
           <Sparkles />
         </div>
