@@ -142,30 +142,54 @@ export function PricingPlans() {
                   </p>
                 </div>
 
-                <div className="mt-10 border-t border-[color:var(--hairline)] pt-6">
-                  <p style={titleStyle}>
-                    "The team delivered a high-quality site in record time.{" "}
-                    <span style={softStyle}>
-                      Communication was seamless throughout the entire process."
-                    </span>
-                  </p>
-                  <div className="mt-5 flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full border border-[color:var(--hairline)] bg-[#F7F7F7]" />
-                    <div>
-                      <p
-                        style={{
-                          fontFamily: display,
-                          fontWeight: 600,
-                          fontSize: "14px",
-                          color: "#252525",
-                        }}
-                      >
-                        Sarah Jenkins
-                      </p>
-                      <p style={{ fontFamily: mono, fontSize: "12px", color: "rgba(37,37,37,0.55)" }}>
-                        Founder, Aura Studio
-                      </p>
+                <div className="mt-10">
+                  <div className="rounded-2xl border border-[color:var(--hairline)] bg-white p-6 md:p-7 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.06)]">
+                    <p
+                      style={{
+                        fontFamily: mono,
+                        fontSize: "14px",
+                        lineHeight: "1.6",
+                        letterSpacing: "-0.01em",
+                        color: "rgba(37,37,37,0.85)",
+                      }}
+                    >
+                      {t.quote}
+                    </p>
+                    <div className="mt-6 flex items-center gap-3">
+                      <div className="h-9 w-9 rounded-full border border-[color:var(--hairline)] bg-[#F2F2F0] grid place-items-center text-[14px]">
+                        <span aria-hidden>🧑🏻</span>
+                      </div>
+                      <div>
+                        <p
+                          style={{
+                            fontFamily: display,
+                            fontWeight: 600,
+                            fontSize: "14px",
+                            color: "#252525",
+                          }}
+                        >
+                          {t.name}
+                        </p>
+                        <p style={{ fontFamily: mono, fontSize: "12px", color: "rgba(37,37,37,0.55)" }}>
+                          {t.role}
+                        </p>
+                      </div>
                     </div>
+                  </div>
+                  <div className="mt-5 flex items-center gap-2">
+                    {testimonials.map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        aria-label={`Show testimonial ${i + 1}`}
+                        onClick={() => setActive(i)}
+                        className="h-[3px] flex-1 rounded-full transition-colors"
+                        style={{
+                          backgroundColor:
+                            i === active ? "#252525" : "rgba(37,37,37,0.18)",
+                        }}
+                      />
+                    ))}
                   </div>
                 </div>
                 </div>
