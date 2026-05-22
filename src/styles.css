@@ -322,3 +322,8 @@
   font-display: swap;
   src: url("/fonts/SaansSemiMono-TRIAL-Regular.otf") format("opentype");
 }
+
+@keyframes move {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(200px); }
+}
