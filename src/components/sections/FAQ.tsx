@@ -50,7 +50,7 @@ export function FAQ() {
   return (
     <section id="faq" className="relative">
       <OuterContainer>
-        <InnerContainer borders="x" className="!px-0">
+        <InnerContainer borders="x" className="!px-0 border-b border-[color:var(--hairline)]">
           {/* Status bar */}
           <div className="border-b border-[color:var(--hairline)] px-6 md:px-10">
             <div className="flex items-center justify-between py-3" style={statusBarStyle}>
