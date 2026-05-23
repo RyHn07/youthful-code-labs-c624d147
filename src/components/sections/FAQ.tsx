@@ -46,7 +46,7 @@ const faqs = [
   },
 ];
 
-export function FAQ() {
+export function FAQ({ showSidebar = true }: { showSidebar?: boolean } = {}) {
   return (
     <section id="faq" className="relative">
       <OuterContainer>
@@ -67,7 +67,7 @@ export function FAQ() {
           {/* Body */}
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-0">
             {/* Left: title + accordion */}
-            <div className="lg:col-span-8 lg:border-r lg:border-[color:var(--hairline)]">
+            <div className={showSidebar ? "lg:col-span-8 lg:border-r lg:border-[color:var(--hairline)]" : "lg:col-span-12"}>
               <div className="px-6 md:px-10 pt-12 pb-14 lg:py-12">
                 <h2
                   style={{
@@ -135,6 +135,7 @@ export function FAQ() {
             </div>
 
             {/* Right: still got questions */}
+            {showSidebar && (
             <div className="lg:col-span-4">
               <div className="px-6 md:px-10 pb-14 lg:py-12 lg:sticky lg:top-12">
                 <h3
@@ -189,6 +190,7 @@ export function FAQ() {
                 </p>
               </div>
             </div>
+            )}
           </div>
         </InnerContainer>
       </OuterContainer>

@@ -145,7 +145,7 @@ function BookPage() {
       </OuterContainer>
 
       <TrustBar />
-      <FAQ />
+      <FAQ showSidebar={false} />
     </div>
   );
 }
