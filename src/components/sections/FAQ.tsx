@@ -70,6 +70,7 @@ export function FAQ({ showSidebar = true }: { showSidebar?: boolean } = {}) {
             <div className={showSidebar ? "lg:col-span-8 lg:border-r lg:border-[color:var(--hairline)]" : "lg:col-span-12"}>
               <div className="px-6 md:px-10 pt-12 pb-14 lg:py-12">
                 <h2
+                  className="text-center"
                   style={{
                     fontFamily: display,
                     fontWeight: 700,
@@ -84,7 +85,7 @@ export function FAQ({ showSidebar = true }: { showSidebar?: boolean } = {}) {
                   Questions
                 </h2>
                 <p
-                  className="mt-5 max-w-md"
+                  className="mt-5 max-w-md text-center mx-auto"
                   style={{
                     fontFamily: mono,
                     fontSize: "14px",
