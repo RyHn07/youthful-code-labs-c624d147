@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import DecryptedText from "@/components/site/DecryptedTextRB.jsx";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -90,7 +91,14 @@ export function Hero() {
               color: "#252525",
             }}
           >
-            The Future of Digital Services Starts Here
+            <DecryptedText
+              text="The Future of Digital Services Starts Here"
+              animateOn="view"
+              sequential
+              revealDirection="start"
+              speed={45}
+              useOriginalCharsOnly={false}
+            />
           </h1>
 
           <p
