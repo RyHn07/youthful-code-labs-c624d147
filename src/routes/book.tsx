@@ -122,7 +122,7 @@ function BookPage() {
       {/* Embed */}
       <OuterContainer>
         <InnerContainer borders="xb" className="py-10 md:py-14">
-          <div className="overflow-hidden rounded-2xl border border-[color:var(--hairline)] bg-white">
+          <div className="overflow-hidden rounded-2xl bg-white">
             <Cal
               namespace="15min"
               calLink="raihan-reaz-uyxafc/15min"
