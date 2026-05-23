@@ -44,6 +44,8 @@ export function SiteFooter() {
                 fontSize: "clamp(36px, 4.4vw, 56px)",
                 lineHeight: 1.05,
                 letterSpacing: "-0.03em",
+                textAlign: "left",
+                color: "rgb(255, 255, 255)",
               }}
             >
               Let's Build Something
