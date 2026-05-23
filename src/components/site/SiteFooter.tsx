@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import footerLogo from "@/assets/footer-logo.png";
+import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -21,7 +22,8 @@ export function SiteFooter() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1320px] px-6 md:px-10 pt-16 pb-8">
+      <OuterContainer>
+        <InnerContainer className="relative pt-16 pb-8">
         {/* Top brand row */}
         <div className="flex items-center gap-3">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#0e0e0d]" style={{ fontFamily: display, fontWeight: 800 }}>
@@ -168,7 +170,8 @@ export function SiteFooter() {
             <a href="#" className="hover:text-white">Terms & Condition</a>
           </div>
         </div>
-      </div>
+        </InnerContainer>
+      </OuterContainer>
     </footer>
   );
 }
