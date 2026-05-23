@@ -41,7 +41,7 @@ export function SiteFooter() {
               style={{
                 fontFamily: display,
                 fontWeight: 700,
-                fontSize: "clamp(36px, 4.4vw, 56px)",
+                fontSize: "clamp(28px, 3.2vw, 42px)",
                 lineHeight: 1.05,
                 letterSpacing: "-0.03em",
                 textAlign: "left",
