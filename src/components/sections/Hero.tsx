@@ -77,7 +77,13 @@ export function Hero() {
               color: "#252525",
             }}
           >
-            Design &amp; Dev Studio for Startups
+            <DecryptedText
+              text="Design & Dev Studio for Startups"
+              animateOn="view"
+              sequential
+              revealDirection="start"
+              speed={45}
+            />
           </span>
 
           <h1
@@ -91,14 +97,7 @@ export function Hero() {
               color: "#252525",
             }}
           >
-            <DecryptedText
-              text="The Future of Digital Services Starts Here"
-              animateOn="view"
-              sequential
-              revealDirection="start"
-              speed={45}
-              useOriginalCharsOnly={false}
-            />
+            The Future of Digital Services Starts Here
           </h1>
 
           <p
