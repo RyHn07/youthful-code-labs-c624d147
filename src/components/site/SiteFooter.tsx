@@ -193,7 +193,7 @@ function FooterCol({
       >
         {title}
       </div>
-      <ul className="space-y-3" style={{ fontFamily: mono, fontSize: "13px" }}>
+      <ul className="space-y-3" style={{ fontFamily: display, fontSize: "14px" }}>
         {links.map(([to, label]) =>
           external ? (
             <li key={label}>
