@@ -85,37 +85,43 @@ function BookPage() {
 
       {/* Headline */}
       <OuterContainer>
-        <InnerContainer borders="x" className="py-20 text-center md:py-28">
-          <h1
-            style={{
-              fontFamily: display,
-              fontWeight: 700,
-              fontSize: "clamp(40px, 5.6vw, 72px)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              color: "#252525",
-            }}
-          >
-            Book A 20-Min Call
-          </h1>
-          <p
-            className="mx-auto mt-6 max-w-xl"
-            style={{
-              fontFamily: mono,
-              fontSize: "15px",
-              lineHeight: 1.6,
-              color: "rgba(37,37,37,0.55)",
-            }}
-          >
-            If any of the times don't work for you, just shoot us a message on{" "}
-            <a
-              href="mailto:hello@astrallabs.studio"
-              className="font-medium text-[#252525] underline-offset-4 hover:underline"
+        <InnerContainer
+          borders="x"
+          className="flex items-center justify-center text-center"
+          style={{ height: "186px" }}
+        >
+          <div>
+            <h1
+              style={{
+                fontFamily: display,
+                fontWeight: 700,
+                fontSize: "44px",
+                lineHeight: 1.1,
+                letterSpacing: "-0.03em",
+                color: "#252525",
+              }}
             >
-              email
-            </a>
-            .
-          </p>
+              Book A 20-Min Call
+            </h1>
+            <p
+              className="mx-auto mt-3 max-w-xl"
+              style={{
+                fontFamily: mono,
+                fontSize: "14px",
+                lineHeight: 1.6,
+                color: "rgba(37,37,37,0.55)",
+              }}
+            >
+              If any of the times don't work for you, just shoot us a message on{" "}
+              <a
+                href="mailto:hello@astrallabs.studio"
+                className="font-medium text-[#252525] underline-offset-4 hover:underline"
+              >
+                email
+              </a>
+              .
+            </p>
+          </div>
         </InnerContainer>
       </OuterContainer>
 
