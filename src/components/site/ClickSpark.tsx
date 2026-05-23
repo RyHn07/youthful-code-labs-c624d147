@@ -8,13 +8,15 @@ export function ClickSpark() {
         const s = document.createElement("span");
         const angle = (i / sparkles) * Math.PI * 2;
         const distance = 36 + Math.random() * 14;
+        const hue = (i / sparkles) * 360;
+        const color = `hsl(${hue}, 100%, 60%)`;
         s.style.cssText = `
           position:fixed;left:${e.clientX}px;top:${e.clientY}px;
-          width:4px;height:4px;border-radius:9999px;background:rgba(255,255,255,0.9);
+          width:4px;height:4px;border-radius:9999px;background:${color};
           pointer-events:none;z-index:9999;
           transform:translate(-50%,-50%);
           transition:transform 600ms cubic-bezier(.2,.7,.2,1),opacity 600ms ease;
-          box-shadow:0 0 8px rgba(255,255,255,0.6);
+          box-shadow:0 0 8px ${color};
         `;
         document.body.appendChild(s);
         requestAnimationFrame(() => {
