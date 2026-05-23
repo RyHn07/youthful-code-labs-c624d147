@@ -121,7 +121,7 @@ function BookPage() {
 
       {/* Embed */}
       <OuterContainer>
-        <div className="border-x border-b border-[color:var(--hairline)] py-10 md:py-14">
+        <InnerContainer borders="xb" className="px-0 py-10 md:px-0 md:py-14">
           <div className="overflow-hidden bg-white">
             <Cal
               namespace="15min"
@@ -133,7 +133,7 @@ function BookPage() {
               }}
             />
           </div>
-        </div>
+        </InnerContainer>
       </OuterContainer>
     </div>
   );
