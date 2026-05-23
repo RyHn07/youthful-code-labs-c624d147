@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import footerLogo from "@/assets/footer-logo.png";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -8,41 +9,32 @@ const display =
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-[#0e0e0d] text-white">
-      {/* Giant background logo mark */}
+      {/* Top vertical light beams */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 select-none"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[340px] opacity-70"
         style={{
-          fontFamily: display,
-          fontWeight: 900,
-          fontSize: "clamp(280px, 38vw, 560px)",
-          lineHeight: 1,
-          letterSpacing: "-0.08em",
           background:
-            "linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.04) 70%, rgba(255,255,255,0) 100%)",
-          WebkitBackgroundClip: "text",
-          backgroundClip: "text",
-          color: "transparent",
+            "radial-gradient(60% 100% at 35% 0%, rgba(255,255,255,0.10), transparent 60%), radial-gradient(60% 100% at 50% 0%, rgba(255,255,255,0.12), transparent 60%), radial-gradient(60% 100% at 65% 0%, rgba(255,255,255,0.10), transparent 60%)",
+          maskImage:
+            "linear-gradient(180deg, black 0%, black 60%, transparent 100%)",
         }}
-      >
-        Q
-      </div>
+      />
 
-      <div className="relative mx-auto w-full max-w-[1320px] px-6 md:px-10 pt-20 pb-8">
-        {/* Top: logo */}
+      <div className="relative mx-auto w-full max-w-[1320px] px-6 md:px-10 pt-16 pb-8">
+        {/* Top brand row */}
         <div className="flex items-center gap-3">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#0e0e0d]" style={{ fontFamily: display, fontWeight: 800 }}>
-            Q
+            A
           </span>
-          <span style={{ fontFamily: display, fontWeight: 700, fontSize: "22px", letterSpacing: "-0.02em" }}>
+          <span style={{ fontFamily: display, fontWeight: 700, fontSize: "22px", letterSpacing: "0.02em" }}>
             ASTRALLABS
           </span>
         </div>
 
-        {/* Main grid */}
-        <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-12">
-          {/* Left: headline + schedule */}
-          <div className="lg:col-span-7">
+        {/* Main row: headline left, link columns right */}
+        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-6">
             <h2
               style={{
                 fontFamily: display,
@@ -59,7 +51,7 @@ export function SiteFooter() {
               Actually Remember.
             </h2>
 
-            <div className="mt-14">
+            <div className="mt-12">
               <p
                 className="mb-3"
                 style={{ fontFamily: mono, fontSize: "13px", color: "rgba(255,255,255,0.55)" }}
@@ -89,8 +81,8 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Right: link columns */}
-          <div className="lg:col-span-5">
+          {/* Right: link columns + tools, pushed right */}
+          <div className="lg:col-span-6 lg:pl-12">
             <div className="grid grid-cols-3 gap-8">
               <FooterCol
                 title="Sections"
@@ -133,9 +125,27 @@ export function SiteFooter() {
           </div>
         </div>
 
+        {/* Centered chrome logo */}
+        <div className="relative mt-20 flex justify-center">
+          <img
+            src={footerLogo}
+            alt="Astrallabs mark"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="w-[clamp(220px,28vw,420px)] h-auto select-none drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+            style={{
+              maskImage:
+                "linear-gradient(180deg, black 0%, black 70%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(180deg, black 0%, black 70%, transparent 100%)",
+            }}
+          />
+        </div>
+
         {/* Bottom bar */}
         <div
-          className="relative mt-24 flex flex-col-reverse items-start justify-between gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center"
+          className="relative mt-8 flex flex-col-reverse items-start justify-between gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center"
           style={{ fontFamily: mono, fontSize: "12px", color: "rgba(255,255,255,0.5)" }}
         >
           <p>© Copyright {new Date().getFullYear()} Astrallabs. All Rights Reserved.</p>
