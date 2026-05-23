@@ -227,7 +227,7 @@ function FooterCol({
 function ToolBadge({ label, icon }: { label: string; icon: React.ReactNode }) {
   return (
     <span
-      className="inline-flex items-center gap-2"
+      className="inline-flex items-center gap-2 text-white/65"
       style={{ fontFamily: display, fontSize: "13px", fontWeight: 500 }}
     >
       <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-white text-[#0e0e0d]">
