@@ -83,7 +83,7 @@ export function SiteFooter() {
 
           {/* Right: link columns + tools, pushed right */}
           <div className="lg:col-span-6 lg:pl-12">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-16">
               <FooterCol
                 title="Sections"
                 links={[
@@ -117,7 +117,7 @@ export function SiteFooter() {
               >
                 Expert Tools
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-8">
                 <ToolBadge
                   label="Framer Expert"
                   icon={
