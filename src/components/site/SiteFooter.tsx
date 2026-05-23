@@ -75,7 +75,7 @@ export function SiteFooter() {
                   </div>
                 </div>
                 <Link
-                  to="/contact"
+                  to="/book"
                   className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2.5 text-[#0e0e0d] transition hover:bg-white/90"
                   style={{ fontFamily: display, fontWeight: 600, fontSize: "13px" }}
                 >
