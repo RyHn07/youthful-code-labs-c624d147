@@ -67,7 +67,7 @@ export function SiteFooter() {
                   <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[#f0b27a] to-[#8b5a2b]" />
                   <div>
                     <div style={{ fontFamily: display, fontWeight: 600, fontSize: "14px" }}>
-                      Ihshan Zaad
+                      RAIHAN REAZ
                     </div>
                     <div style={{ fontFamily: mono, fontSize: "12px", color: "rgba(255,255,255,0.55)" }}>
                       Product Designer
