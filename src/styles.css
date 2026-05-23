@@ -67,7 +67,7 @@
 :root {
   /* Astrallabs-inspired LIGHT theme — warm off-white, deep ink, hairline borders. */
   --radius: 0.75rem;
-  --background: oklch(0.97 0.003 90);    /* warm cream #F4F2EE */
+  --background: oklch(0.955 0.003 270); /* cool off-white #EEEFF2 */
   --foreground: oklch(0.18 0.005 270);   /* near-black ink */
   --card: oklch(0.99 0.002 90);
   --card-foreground: oklch(0.18 0.005 270);
