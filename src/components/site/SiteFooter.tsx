@@ -118,8 +118,22 @@ export function SiteFooter() {
                 Expert Tools
               </div>
               <div className="flex flex-wrap gap-3">
-                <ToolBadge label="Framer Expert" mark="F" />
-                <ToolBadge label="Webflow Expert" mark="W" />
+                <ToolBadge
+                  label="Framer Expert"
+                  icon={
+                    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor" aria-hidden>
+                      <path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z" />
+                    </svg>
+                  }
+                />
+                <ToolBadge
+                  label="Webflow Expert"
+                  icon={
+                    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor" aria-hidden>
+                      <path d="M24 4.515l-7.658 14.97h-7.514l3.205-6.227h-.144C9.245 17.694 5.293 19.41 0 19.485v-6.142s3.387-.2 5.377-2.294H0V4.515h6.498v5.345l.144-.002 2.654-5.343h4.914v5.31l.144-.001 2.754-5.309H24z" />
+                    </svg>
+                  }
+                />
               </div>
             </div>
           </div>
@@ -205,14 +219,14 @@ function FooterCol({
   );
 }
 
-function ToolBadge({ label, mark }: { label: string; mark: string }) {
+function ToolBadge({ label, icon }: { label: string; icon: React.ReactNode }) {
   return (
     <span
       className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5"
       style={{ fontFamily: display, fontSize: "13px", fontWeight: 500 }}
     >
-      <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-white text-[10px] font-bold text-[#0e0e0d]">
-        {mark}
+      <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-white text-[#0e0e0d]">
+        {icon}
       </span>
       {label}
     </span>
