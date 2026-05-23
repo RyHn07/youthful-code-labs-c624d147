@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import { TrustBar } from "@/components/sections/TrustBar";
+import { FAQ } from "@/components/sections/FAQ";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -141,6 +143,9 @@ function BookPage() {
           </div>
         </InnerContainer>
       </OuterContainer>
+
+      <TrustBar />
+      <FAQ />
     </div>
   );
 }
