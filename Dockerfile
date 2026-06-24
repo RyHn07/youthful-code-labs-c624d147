@@ -2,12 +2,12 @@
 FROM node:22-alpine AS builder
 WORKDIR /app
 
-# Install bun (project uses bun.lockb if present; npm also works)
-COPY package.json package-lock.json* bun.lockb* ./
-RUN npm install --legacy-peer-deps
+# Use Bun lockfile for faster, reproducible installs on Coolify
+COPY package.json bun.lock ./
+RUN npm install -g bun && bun install --frozen-lockfile
 
 COPY . .
-RUN npm run vercel-build
+RUN bun run vercel-build
 
 # ---- Runtime stage ----
 FROM nginx:alpine
