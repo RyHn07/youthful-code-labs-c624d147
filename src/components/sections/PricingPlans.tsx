@@ -250,40 +250,40 @@ export function PricingPlans() {
                         {p.tier}
                       </span>
                       <div
-                        className="flex items-center gap-3 select-none"
+                        role="tablist"
+                        className="relative inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-[#F2F2F0] p-1 select-none"
                         style={{
                           fontFamily: mono,
-                          fontSize: "13px",
+                          fontSize: "12px",
                           letterSpacing: "-0.01em",
-                          color: "#252525",
                         }}
                       >
-                        <button
-                          type="button"
-                          onClick={() => setMode("dev")}
-                          style={{ color: mode === "dev" ? "#252525" : "rgba(37,37,37,0.55)" }}
-                        >
-                          Design &amp; Dev
-                        </button>
-                        <button
-                          type="button"
-                          role="switch"
-                          aria-checked={mode === "design"}
-                          onClick={() => setMode((m) => (m === "dev" ? "design" : "dev"))}
-                          className="relative inline-flex h-5 w-9 items-center rounded-full bg-[#252525]"
-                        >
-                          <span
-                            className="absolute h-4 w-4 rounded-full bg-[#ff7a1a] transition-all"
-                            style={{ left: mode === "dev" ? "2px" : "calc(100% - 18px)" }}
-                          />
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setMode("design")}
-                          style={{ color: mode === "design" ? "#252525" : "rgba(37,37,37,0.55)" }}
-                        >
-                          Design only
-                        </button>
+                        <span
+                          aria-hidden
+                          className="absolute top-1 bottom-1 rounded-full bg-dark-gradient transition-all duration-300 ease-out"
+                          style={{
+                            width: "calc(50% - 4px)",
+                            left: mode === "dev" ? "4px" : "calc(50%)",
+                          }}
+                        />
+                        {([
+                          ["dev", "Design & Dev"],
+                          ["design", "Design only"],
+                        ] as const).map(([key, label]) => (
+                          <button
+                            key={key}
+                            type="button"
+                            role="tab"
+                            aria-selected={mode === key}
+                            onClick={() => setMode(key)}
+                            className="relative z-10 px-4 py-1.5 rounded-full transition-colors"
+                            style={{
+                              color: mode === key ? "#fff" : "rgba(37,37,37,0.65)",
+                            }}
+                          >
+                            {label}
+                          </button>
+                        ))}
                       </div>
                     </div>
 
