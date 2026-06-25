@@ -33,6 +33,16 @@ function CareersPage() {
           const university = String(fd.get("university") || "").trim();
           const portfolio_url = String(fd.get("portfolio_url") || "").trim();
           const message = String(fd.get("message") || "").trim();
+          let cv_url: string | null = null;
+          const cvFile = fd.get("cv") as File | null;
+          if (cvFile && cvFile.size > 0) {
+            if (cvFile.size > 10 * 1024 * 1024) throw new Error("CV must be under 10MB");
+            const ext = cvFile.name.split(".").pop() || "pdf";
+            const path = `${Date.now()}-${crypto.randomUUID()}.${ext}`;
+            const { error: upErr } = await supabase.storage.from("resumes").upload(path, cvFile, { contentType: cvFile.type });
+            if (upErr) throw new Error(upErr.message);
+            cv_url = path;
+          }
           const { error } = await supabase.from("applications").insert({
             name: String(fd.get("name") || "").trim(),
             email: String(fd.get("email") || "").trim(),
@@ -40,6 +50,7 @@ function CareersPage() {
             role: String(fd.get("role") || "").trim(),
             portfolio_url: portfolio_url || null,
             message: message || null,
+            cv_url,
           });
           if (error) throw new Error(error.message);
           toast.success("Application received.");
