@@ -56,6 +56,7 @@ function CareersPage() {
           <label className="grid gap-2"><span style={fieldLabel}>Role</span><input name="role" required placeholder="UI/UX Designer" maxLength={200} className={underlineInput} /></label>
         </div>
         <label className="grid gap-2"><span style={fieldLabel}>Portfolio URL</span><input name="portfolio_url" type="url" placeholder="https://" maxLength={500} className={underlineInput} /></label>
+        <label className="grid gap-2"><span style={fieldLabel}>CV / Resume (PDF, DOC)</span><input name="cv" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" className={underlineInput + " file:mr-3 file:rounded-md file:border-0 file:bg-[#252525] file:px-3 file:py-1.5 file:text-white file:text-[12px]"} /></label>
         <label className="grid gap-2"><span style={fieldLabel}>A few lines about you</span><textarea name="message" rows={3} placeholder="What you'd like to work on…" maxLength={4000} className={underlineInput + " resize-none"} /></label>
         <div className="flex justify-end pt-2">
         <button
