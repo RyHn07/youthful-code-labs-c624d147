@@ -27,6 +27,7 @@ export function JoinCTA() {
             </Link>
           </div>
           </div>
+          </div>
         </div>
       </InnerContainer>
     </OuterContainer>
