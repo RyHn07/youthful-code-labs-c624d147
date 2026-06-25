@@ -251,39 +251,55 @@ export function PricingPlans() {
                       </span>
                       <div
                         role="tablist"
-                        className="relative inline-flex items-center rounded-full border border-[color:var(--hairline)] bg-[#F2F2F0] p-1 select-none"
+                        className="inline-flex items-center gap-3 select-none"
                         style={{
                           fontFamily: mono,
                           fontSize: "12px",
                           letterSpacing: "-0.01em",
+                          color: "rgba(37,37,37,0.85)",
                         }}
                       >
-                        <span
-                          aria-hidden
-                          className="absolute top-1 bottom-1 rounded-full bg-dark-gradient transition-all duration-300 ease-out"
-                          style={{
-                            width: "calc(50% - 4px)",
-                            left: mode === "dev" ? "4px" : "calc(50%)",
-                          }}
-                        />
-                        {([
-                          ["dev", "Design & Dev"],
-                          ["design", "Design only"],
-                        ] as const).map(([key, label]) => (
-                          <button
-                            key={key}
-                            type="button"
-                            role="tab"
-                            aria-selected={mode === key}
-                            onClick={() => setMode(key)}
-                            className="relative z-10 px-4 py-1.5 rounded-full transition-colors"
+                        <button
+                          type="button"
+                          onClick={() => setMode("dev")}
+                          style={{ opacity: mode === "dev" ? 1 : 0.55 }}
+                          className="transition-opacity"
+                        >
+                          Design & Dev
+                        </button>
+                        <button
+                          type="button"
+                          role="switch"
+                          aria-checked={mode === "design"}
+                          onClick={() => setMode(mode === "dev" ? "design" : "dev")}
+                          className="relative h-5 w-9 rounded-full bg-[#E6E5E1] border border-[color:var(--hairline)] p-0"
+                        >
+                          {/* Layer 2: orange ring */}
+                          <span
+                            aria-hidden
+                            className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full transition-all duration-300 ease-out"
                             style={{
-                              color: mode === key ? "#fff" : "rgba(37,37,37,0.65)",
+                              left: mode === "dev" ? "2px" : "calc(100% - 18px)",
+                              background: "#FF7A00",
                             }}
-                          >
-                            {label}
-                          </button>
-                        ))}
+                          />
+                          {/* Layer 3: inner dark knob */}
+                          <span
+                            aria-hidden
+                            className="absolute top-1/2 -translate-y-1/2 h-[10px] w-[10px] rounded-full transition-all duration-300 ease-out bg-dark-gradient"
+                            style={{
+                              left: mode === "dev" ? "5px" : "calc(100% - 15px)",
+                            }}
+                          />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setMode("design")}
+                          style={{ opacity: mode === "design" ? 1 : 0.55 }}
+                          className="transition-opacity"
+                        >
+                          Design only
+                        </button>
                       </div>
                     </div>
 
