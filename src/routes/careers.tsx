@@ -4,6 +4,14 @@ import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 import { toast } from "sonner";
+import {
+  FormShell,
+  underlineInput,
+  fieldLabel,
+  MailIcon,
+  PhoneIcon,
+  PinIcon,
+} from "@/components/site/FormShell";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({ meta: [{ title: "Careers — Astrallabs" }, { name: "description", content: "Join the talent network." }] }),
@@ -12,14 +20,6 @@ export const Route = createFileRoute("/careers")({
 
 function CareersPage() {
   const [loading, setLoading] = useState(false);
-  const cls = "w-full rounded-md border border-[color:var(--hairline)] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[color:var(--hairline-strong)]";
-  const labelStyle = {
-    fontFamily: mono,
-    fontSize: "12px",
-    letterSpacing: "0.04em",
-    textTransform: "uppercase" as const,
-    color: "rgba(37, 37, 37, 0.6)",
-  };
   return (
     <>
       <PageHero
@@ -31,7 +31,16 @@ function CareersPage() {
       <OuterContainer borders="x">
         <InnerContainer borders="xb" className="!px-0">
           <div className="px-6 md:px-10 py-16 md:py-20">
-            <form className="mx-auto grid max-w-xl gap-5" onSubmit={async (e) => {
+            <FormShell
+              title="Apply to the studio"
+              blurb="Share a bit about yourself. Senior mentors review every application."
+              contacts={[
+                { icon: <MailIcon />, label: "careers@astrallabs.com" },
+                { icon: <PhoneIcon />, label: "+0123 4567 8910" },
+                { icon: <PinIcon />, label: "Remote — Worldwide" },
+              ]}
+            >
+            <form className="grid gap-7" onSubmit={async (e) => {
         e.preventDefault();
         const fd = new FormData(e.currentTarget);
         setLoading(true);
@@ -53,12 +62,17 @@ function CareersPage() {
         } catch (err: any) { toast.error(err?.message ?? "Something went wrong"); }
         finally { setLoading(false); }
       }}>
-        <label className="grid gap-2"><span style={labelStyle}>Full name</span><input name="name" required maxLength={200} className={cls} /></label>
-        <label className="grid gap-2"><span style={labelStyle}>Email</span><input name="email" type="email" required maxLength={320} className={cls} /></label>
-        <label className="grid gap-2"><span style={labelStyle}>University</span><input name="university" maxLength={200} className={cls} /></label>
-        <label className="grid gap-2"><span style={labelStyle}>Role (e.g. UI/UX Designer)</span><input name="role" required maxLength={200} className={cls} /></label>
-        <label className="grid gap-2"><span style={labelStyle}>Portfolio URL (optional)</span><input name="portfolio_url" type="url" maxLength={500} className={cls} /></label>
-        <label className="grid gap-2"><span style={labelStyle}>A few lines about you</span><textarea name="message" rows={5} maxLength={4000} className={cls} /></label>
+        <div className="grid gap-7 sm:grid-cols-2">
+          <label className="grid gap-2"><span style={fieldLabel}>Full name</span><input name="name" required placeholder="Jane Doe" maxLength={200} className={underlineInput} /></label>
+          <label className="grid gap-2"><span style={fieldLabel}>Email</span><input name="email" type="email" required placeholder="you@studio.com" maxLength={320} className={underlineInput} /></label>
+        </div>
+        <div className="grid gap-7 sm:grid-cols-2">
+          <label className="grid gap-2"><span style={fieldLabel}>University</span><input name="university" placeholder="Optional" maxLength={200} className={underlineInput} /></label>
+          <label className="grid gap-2"><span style={fieldLabel}>Role</span><input name="role" required placeholder="UI/UX Designer" maxLength={200} className={underlineInput} /></label>
+        </div>
+        <label className="grid gap-2"><span style={fieldLabel}>Portfolio URL</span><input name="portfolio_url" type="url" placeholder="https://" maxLength={500} className={underlineInput} /></label>
+        <label className="grid gap-2"><span style={fieldLabel}>A few lines about you</span><textarea name="message" rows={3} placeholder="What you'd like to work on…" maxLength={4000} className={underlineInput + " resize-none"} /></label>
+        <div className="flex justify-end pt-2">
         <button
           type="submit"
           disabled={loading}
@@ -67,7 +81,9 @@ function CareersPage() {
         >
           {loading ? "Submitting…" : "Submit application"}
         </button>
+        </div>
       </form>
+            </FormShell>
           </div>
         </InnerContainer>
       </OuterContainer>
