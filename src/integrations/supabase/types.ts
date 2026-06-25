@@ -17,6 +17,7 @@ export type Database = {
       applications: {
         Row: {
           created_at: string
+          cv_url: string | null
           email: string
           id: string
           message: string | null
@@ -28,6 +29,7 @@ export type Database = {
         }
         Insert: {
           created_at?: string
+          cv_url?: string | null
           email: string
           id?: string
           message?: string | null
@@ -39,6 +41,7 @@ export type Database = {
         }
         Update: {
           created_at?: string
+          cv_url?: string | null
           email?: string
           id?: string
           message?: string | null
