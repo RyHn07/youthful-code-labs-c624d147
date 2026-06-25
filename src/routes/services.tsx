@@ -122,7 +122,7 @@ function ServicesPage() {
               return (
                 <div
                   key={s.title}
-                  className="group relative p-8 md:p-10 border-b border-r border-[color:var(--hairline)] last:border-r-0 [&:nth-child(2n)]:sm:border-r-0 [&:nth-child(2n)]:lg:border-r [&:nth-child(3n)]:lg:border-r-0 transition-colors hover:bg-black/[0.02]"
+                  className="group relative p-8 md:p-10 border-b border-r border-[color:var(--hairline)] last:border-r-0 [&:nth-child(2n)]:sm:border-r-0 [&:nth-child(2n)]:lg:border-r [&:nth-child(3n)]:lg:border-r-0 [&:nth-last-child(-n+3)]:lg:border-b-0 [&:nth-last-child(-n+2)]:sm:border-b-0 last:border-b-0 transition-colors hover:bg-black/[0.02]"
                 >
                   <span
                     className="absolute right-6 top-6"
