@@ -1,5 +1,5 @@
 # ---- Build stage ----
-FROM node:22-alpine AS builder
+FROM oven/bun:1-alpine AS builder
 WORKDIR /app
 
 # Vite inlines VITE_* env vars at build time. Coolify passes them via --build-arg.
@@ -12,7 +12,7 @@ ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL \
 
 # Use Bun lockfile for faster, reproducible installs on Coolify
 COPY package.json bun.lock ./
-RUN npm install -g bun && bun install --frozen-lockfile
+RUN bun install
 
 COPY . .
 RUN bun run vercel-build
