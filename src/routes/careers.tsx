@@ -23,7 +23,7 @@ function CareersPage() {
       />
       <OuterContainer borders="x">
         <InnerContainer borders="xb" className="!px-0">
-          <div className="px-6 md:px-10 py-8 md:py-10">
+          <div className="px-6 md:px-10 pt-2 md:pt-3 pb-8 md:pb-10">
             <div className="mx-auto max-w-3xl rounded-2xl border border-[color:var(--hairline)] bg-white px-8 py-10 md:px-12 md:py-14 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)]">
             <form className="grid gap-7" onSubmit={async (e) => {
         e.preventDefault();
