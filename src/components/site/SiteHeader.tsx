@@ -9,7 +9,7 @@ const saansSans =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
 
 const nav = [
-  { href: "#work", label: "Work" },
+  { href: "/work", label: "Work" },
   { href: "/services", label: "Services" },
   { href: "#pricing", label: "Pricing" },
   { href: "/talent", label: "Talent" },
