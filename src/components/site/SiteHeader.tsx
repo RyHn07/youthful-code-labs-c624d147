@@ -13,6 +13,7 @@ const nav = [
   { href: "#our-services", label: "Services" },
   { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
+  { href: "/careers", label: "Careers" },
 ] as const;
 
 export function SiteHeader() {
