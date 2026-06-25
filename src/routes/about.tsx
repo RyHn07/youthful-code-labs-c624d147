@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section } from "@/components/site/Section";
+import { PageHero } from "@/components/site/PageHero";
 import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { Stats } from "@/components/sections/Stats";
 import { Workflow } from "@/components/sections/Workflow";
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <>
-      <Section
-        className="pt-40"
+      <PageHero
         eyebrow="About"
+        meta="Who we are"
         title="Studio-grade work, community-driven."
         description="Astrallabs is a project-based studio built around a curated network of university talent and senior experts. We assemble the right team for each engagement — and ship like a startup."
       />
