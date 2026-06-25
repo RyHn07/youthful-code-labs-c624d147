@@ -34,7 +34,7 @@ export function PageHero({ index = "01", eyebrow, meta, title, description, chil
           >
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#FF6B2C]" />
-              <span>{index} — {eyebrow}</span>
+              <span>{eyebrow}</span>
             </div>
             {meta && <span>{meta}</span>}
           </div>

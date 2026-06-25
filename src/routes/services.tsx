@@ -76,7 +76,7 @@ function ServicesPage() {
             >
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#FF6B2C]" />
-                <span>01 — Services</span>
+                <span>Services</span>
               </div>
               <span>What we build</span>
             </div>
