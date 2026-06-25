@@ -135,35 +135,31 @@ export function WorkGrid() {
                 </div>
               </div>
 
-              <div className="mt-5 flex items-start justify-between gap-4">
-                <div className="min-w-0">
-                  <div
-                    style={{
-                      fontFamily: mono,
-                      fontSize: "12px",
-                      letterSpacing: "0.02em",
-                      textTransform: "uppercase",
-                      color: "rgba(37,37,37,0.55)",
-                    }}
-                  >
-                    {p.category} · {p.year}
-                  </div>
-                  <h3
-                    className="mt-1"
-                    style={{
-                      fontFamily: display,
-                      fontWeight: 500,
-                      fontSize: "24px",
-                      lineHeight: "1.15",
-                      letterSpacing: "-0.02em",
-                      color: "#252525",
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                </div>
-                <ArrowUpRight className="mt-1 h-5 w-5 text-[#252525] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <div
+                className="mt-5"
+                style={{
+                  fontFamily: mono,
+                  fontSize: "12px",
+                  letterSpacing: "0.02em",
+                  textTransform: "uppercase",
+                  color: "rgba(37,37,37,0.55)",
+                }}
+              >
+                {p.category} · {p.year}
               </div>
+              <h3
+                className="mt-1"
+                style={{
+                  fontFamily: display,
+                  fontWeight: 500,
+                  fontSize: "24px",
+                  lineHeight: "1.15",
+                  letterSpacing: "-0.02em",
+                  color: "#252525",
+                }}
+              >
+                {p.title}
+              </h3>
 
               <p
                 className="mt-3"
@@ -178,18 +174,20 @@ export function WorkGrid() {
                 {p.summary}
               </p>
 
-              <div
-                className="mt-5 border-t border-[color:var(--hairline)] pt-4"
-                style={{
-                  fontFamily: mono,
-                  fontSize: "12px",
-                  letterSpacing: "0.02em",
-                  textTransform: "uppercase",
-                  color: "rgba(37,37,37,0.55)",
-                }}
-              >
-                Project done by{" "}
-                <span style={{ color: "#252525" }}>{p.talent}</span>
+              <div className="mt-5 flex items-center justify-between gap-4 border-t border-[color:var(--hairline)] pt-4">
+                <div
+                  style={{
+                    fontFamily: mono,
+                    fontSize: "12px",
+                    letterSpacing: "0.02em",
+                    textTransform: "uppercase",
+                    color: "rgba(37,37,37,0.55)",
+                  }}
+                >
+                  Project done by{" "}
+                  <span style={{ color: "#252525" }}>{p.talent}</span>
+                </div>
+                <ArrowUpRight className="h-5 w-5 text-[#252525] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
             </a>
           ))}
