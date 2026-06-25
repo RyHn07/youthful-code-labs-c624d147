@@ -118,11 +118,7 @@ export function WorkGrid() {
             <a
               key={p.title}
               href={p.href}
-              className={`group relative block p-6 md:p-8 border-b border-[color:var(--hairline)] transition-colors hover:bg-black/[0.02] sm:border-r [&:nth-child(2n)]:sm:border-r-0 ${
-                i >= filtered.length - (filtered.length % 2 === 0 ? 2 : 1)
-                  ? "sm:last:border-b-0"
-                  : ""
-              }`}
+              className="group relative block p-6 md:p-8 border-b border-[color:var(--hairline)] transition-colors hover:bg-black/[0.02] sm:border-r [&:nth-child(2n)]:sm:border-r-0 last:border-b-0 [&:nth-last-child(-n+2)]:sm:border-b-0"
             >
               <div className="overflow-hidden rounded-lg border border-[color:var(--hairline)] bg-[#f5f3ee]">
                 <div className="aspect-[16/10] overflow-hidden">
