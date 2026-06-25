@@ -77,7 +77,7 @@ export function FormShell({ title, blurb, contacts, children }: FormShellProps) 
       </div>
 
       {/* Right form area */}
-      <div className="flex flex-col justify-center px-8 py-4 md:px-12 md:py-5">{children}</div>
+      <div className="flex flex-col justify-center px-8 py-10 md:px-12 md:py-14">{children}</div>
     </div>
   );
 }
