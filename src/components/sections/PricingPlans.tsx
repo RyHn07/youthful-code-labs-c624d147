@@ -31,7 +31,8 @@ const cardClass =
 const plans = [
   {
     tier: "Landing page",
-    price: "$3000",
+    priceDev: "$3000",
+    priceDesign: "$2000",
     priceMeta: "Fixed",
     features: [
       "Design + Dev in 2 weeks or less",
@@ -43,7 +44,8 @@ const plans = [
   },
   {
     tier: "Multipage website",
-    price: "$4000",
+    priceDev: "$4000",
+    priceDesign: "$2800",
     priceMeta: "Fixed",
     features: [
       "Design + Dev in 3 weeks or less",
@@ -55,7 +57,8 @@ const plans = [
   },
   {
     tier: "Retainer",
-    price: "Custom",
+    priceDev: "Custom",
+    priceDesign: "Custom",
     priceMeta: "Per Month",
     features: [
       "Ongoing design & dev support",
