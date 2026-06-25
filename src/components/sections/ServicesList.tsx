@@ -11,28 +11,28 @@ const display =
 const services = [
   {
     n: "001",
-    title: "Responsive Website",
-    desc: "Pixel-perfect on every screen — desktop, tablet, and phone.",
+    title: "Website Design",
+    desc: "Conversion-aware layouts, wireframes, and high-fidelity UI.",
   },
   {
     n: "002",
-    title: "Figma to Code",
-    desc: "We'll rebuild your design into production code, pixel-perfect.",
+    title: "UI/UX Design",
+    desc: "User flows, prototypes, and accessible interface design.",
   },
   {
     n: "003",
-    title: "Website Migration",
-    desc: "Move your site from WordPress, Webflow, or Wix to a modern stack — fast.",
+    title: "Design Systems",
+    desc: "Reusable component libraries, tokens, and brand guidelines.",
   },
   {
     n: "004",
-    title: "Custom Animations",
-    desc: "Lightweight motion that loads fast and brings your site to life.",
+    title: "React Development",
+    desc: "Modern React, Next.js, and Vite apps with TypeScript.",
   },
   {
     n: "005",
-    title: "Site Audit",
-    desc: "Already live? We'll review your site and fix what's slowing it down.",
+    title: "Webflow Development",
+    desc: "CMS-driven Webflow sites with custom interactions.",
   },
 ];
 
