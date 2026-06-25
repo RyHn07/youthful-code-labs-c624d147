@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  PenTool,
-  Code2,
   Layout,
-  Image as ImageIcon,
-  Tag,
-  Film,
-  Megaphone,
-  PencilLine,
+  Code2,
+  PenTool,
+  ShoppingCart,
+  Globe,
+  Layers,
+  Component,
+  Gauge,
+  Search,
+  Wrench,
   Smartphone,
-  Bot,
-  Share2,
+  ShieldCheck,
   ArrowRight,
   ArrowUpRight,
 } from "lucide-react";
@@ -22,17 +23,18 @@ const display =
   '"Graphik Trial Medium", "Graphik Trial Medium Placeholder", sans-serif';
 
 const services = [
-  { icon: Layout, title: "Website Design", desc: "Considered, conversion-aware design systems." },
-  { icon: Code2, title: "Website Development", desc: "Fast, SEO-ready sites built with modern stacks." },
-  { icon: PenTool, title: "UI/UX Design", desc: "Product flows, design systems, and prototypes." },
-  { icon: ImageIcon, title: "Graphic Design", desc: "Editorial, decks, packaging, and social assets." },
-  { icon: Tag, title: "Branding", desc: "Identity systems with voice, motion, and rules." },
-  { icon: Film, title: "Video Editing", desc: "Reels, ads, and brand films with rhythm." },
-  { icon: Megaphone, title: "Digital Marketing", desc: "Performance, organic, and lifecycle programs." },
-  { icon: PencilLine, title: "Content Creation", desc: "Thoughtful copy, articles, and brand voice." },
-  { icon: Share2, title: "Social Media", desc: "Calendars, formats, and community ops." },
-  { icon: Smartphone, title: "App Development", desc: "Cross-platform mobile and web apps." },
-  { icon: Bot, title: "Automation & AI", desc: "Workflows, agents, and internal tooling." },
+  { icon: Layout, title: "Website Design", desc: "Conversion-aware layouts, wireframes, and high-fidelity UI." },
+  { icon: PenTool, title: "UI/UX Design", desc: "User flows, prototypes, and accessible interface design." },
+  { icon: Component, title: "Design Systems", desc: "Reusable component libraries, tokens, and brand guidelines." },
+  { icon: Code2, title: "React Development", desc: "Modern React, Next.js, and Vite apps with TypeScript." },
+  { icon: Globe, title: "Webflow Development", desc: "CMS-driven Webflow sites with custom interactions." },
+  { icon: Layers, title: "Framer Development", desc: "Framer sites with motion, CMS, and responsive layouts." },
+  { icon: Wrench, title: "WordPress Development", desc: "Custom themes, headless WP, and Elementor builds." },
+  { icon: ShoppingCart, title: "E-commerce", desc: "Shopify, WooCommerce, and headless storefronts." },
+  { icon: Smartphone, title: "Responsive & Mobile", desc: "Pixel-perfect responsive builds across every device." },
+  { icon: Gauge, title: "Performance & Core Web Vitals", desc: "Speed audits, optimization, and Lighthouse 95+ scores." },
+  { icon: Search, title: "Technical SEO", desc: "Schema, sitemaps, metadata, and search-ready markup." },
+  { icon: ShieldCheck, title: "Maintenance & Support", desc: "Ongoing updates, monitoring, security, and care plans." },
 ];
 
 export const Route = createFileRoute("/services")({
