@@ -33,6 +33,16 @@ function CareersPage() {
           const university = String(fd.get("university") || "").trim();
           const portfolio_url = String(fd.get("portfolio_url") || "").trim();
           const message = String(fd.get("message") || "").trim();
+          let cv_url: string | null = null;
+          const cvFile = fd.get("cv") as File | null;
+          if (cvFile && cvFile.size > 0) {
+            if (cvFile.size > 10 * 1024 * 1024) throw new Error("CV must be under 10MB");
+            const ext = cvFile.name.split(".").pop() || "pdf";
+            const path = `${Date.now()}-${crypto.randomUUID()}.${ext}`;
+            const { error: upErr } = await supabase.storage.from("resumes").upload(path, cvFile, { contentType: cvFile.type });
+            if (upErr) throw new Error(upErr.message);
+            cv_url = path;
+          }
           const { error } = await supabase.from("applications").insert({
             name: String(fd.get("name") || "").trim(),
             email: String(fd.get("email") || "").trim(),
@@ -40,6 +50,7 @@ function CareersPage() {
             role: String(fd.get("role") || "").trim(),
             portfolio_url: portfolio_url || null,
             message: message || null,
+            cv_url,
           });
           if (error) throw new Error(error.message);
           toast.success("Application received.");
@@ -56,6 +67,7 @@ function CareersPage() {
           <label className="grid gap-2"><span style={fieldLabel}>Role</span><input name="role" required placeholder="UI/UX Designer" maxLength={200} className={underlineInput} /></label>
         </div>
         <label className="grid gap-2"><span style={fieldLabel}>Portfolio URL</span><input name="portfolio_url" type="url" placeholder="https://" maxLength={500} className={underlineInput} /></label>
+        <label className="grid gap-2"><span style={fieldLabel}>CV / Resume (PDF, DOC)</span><input name="cv" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" className={underlineInput + " file:mr-3 file:rounded-md file:border-0 file:bg-[#252525] file:px-3 file:py-1.5 file:text-white file:text-[12px]"} /></label>
         <label className="grid gap-2"><span style={fieldLabel}>A few lines about you</span><textarea name="message" rows={3} placeholder="What you'd like to work on…" maxLength={4000} className={underlineInput + " resize-none"} /></label>
         <div className="flex justify-end pt-2">
         <button
