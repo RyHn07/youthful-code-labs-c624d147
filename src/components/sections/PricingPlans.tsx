@@ -94,7 +94,10 @@ const testimonials = [
 export function PricingPlans() {
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [mode, setMode] = useState<"dev" | "design">("dev");
+  const [modes, setModes] = useState<Record<string, "dev" | "design">>({});
+  const getMode = (tier: string) => modes[tier] ?? "dev";
+  const setMode = (tier: string, m: "dev" | "design") =>
+    setModes((prev) => ({ ...prev, [tier]: m }));
   const DURATION = 5000;
   const startRef = useRef<number>(Date.now());
 
