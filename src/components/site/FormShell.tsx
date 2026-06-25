@@ -83,14 +83,16 @@ export function FormShell({ title, blurb, contacts, children }: FormShellProps) 
 }
 
 export const underlineInput =
-  "w-full border-0 border-b border-[color:var(--hairline)] bg-transparent px-0 py-2 text-[15px] text-[#252525] placeholder:text-[#25252566] outline-none transition-colors focus:border-[#252525]";
+  "w-full border-0 border-b border-[color:var(--hairline)] bg-transparent px-0 py-2 text-[14px] leading-[20px] text-[#252525] placeholder:text-[#25252566] outline-none transition-colors focus:border-[#252525] font-[var(--font-mono,'Saans_SemiMono-TRIAL_Regular')]";
 
 export const fieldLabel = {
   fontFamily:
-    '"Graphik Trial Medium", "Graphik Trial Medium Placeholder", sans-serif',
-  fontSize: "13px",
-  fontWeight: 500,
-  color: "#252525",
+    '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", monospace',
+  fontSize: "11px",
+  lineHeight: "16px",
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
+  color: "rgba(37,37,37,0.65)",
 } as const;
 
 export function MailIcon() {
