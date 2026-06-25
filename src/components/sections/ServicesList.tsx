@@ -82,7 +82,7 @@ export function ServicesList() {
                   {sectors.map((s) => (
                     <span
                       key={s}
-                      className="inline-flex items-center rounded-lg border border-[color:var(--hairline-strong)] bg-transparent h-[44px] px-5"
+                      className="inline-flex items-center rounded-full border border-[color:var(--hairline-strong)] bg-transparent h-[44px] px-5 cursor-pointer transition-colors hover:bg-[#252525] hover:text-white hover:border-[#252525]"
                       style={{
                         fontFamily: display,
                         fontSize: "14px",
