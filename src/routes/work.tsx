@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { WorkGrid } from "@/components/sections/WorkGrid";
 import { PageHero } from "@/components/site/PageHero";
-import { Logos } from "@/components/sections/Logos";
 import { JoinCTA } from "@/components/sections/JoinCTA";
+import { TrustBar } from "@/components/sections/TrustBar";
 
 export const Route = createFileRoute("/work")({
   head: () => ({ meta: [{ title: "Work — Astrallabs" }, { name: "description", content: "Selected projects." }] }),
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/work")({
         description="A growing catalog of work shipped with founders and teams around the world."
       />
       <WorkGrid />
-      <Logos />
+      <TrustBar />
       <JoinCTA />
     </>
   ),
