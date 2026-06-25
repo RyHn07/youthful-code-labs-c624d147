@@ -10,7 +10,7 @@ const display =
 export function JoinCTA() {
   return (
     <OuterContainer borders="x">
-      <InnerContainer borders="x" className="!px-0">
+      <InnerContainer borders="xt" className="!px-0">
         <div className="px-6 md:px-10 py-20 md:py-28 text-center">
           <h2
             style={{
