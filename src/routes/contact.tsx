@@ -39,7 +39,7 @@ function ContactPage() {
       />
       <OuterContainer borders="x">
         <InnerContainer borders="xb" className="!px-0">
-          <div className="px-6 md:px-10 py-8 md:py-10">
+          <div className="px-6 md:px-10 py-16 md:py-24">
             <FormShell
               title="Contact Information"
               blurb="Fill up the form and our team will get back to you within 24 hours."
