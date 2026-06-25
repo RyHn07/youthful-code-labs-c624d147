@@ -77,14 +77,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Astrallabs — Affordable, high-quality digital solutions" },
+      {
+        name: "description",
+        content:
+          "A talent-network studio: top university students and senior experts shipping design, engineering, and growth work at startup speed.",
+      },
+      { name: "author", content: "Astrallabs" },
+      { property: "og:title", content: "Astrallabs" },
+      {
+        property: "og:description",
+        content:
+          "Design, engineering, and growth work at startup speed from a curated talent network.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
