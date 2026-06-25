@@ -30,7 +30,7 @@ function CareersPage() {
       />
       <OuterContainer borders="x">
         <InnerContainer borders="xb" className="!px-0">
-          <div className="px-6 md:px-10 py-16 md:py-24">
+          <div className="px-6 md:px-10 py-8 md:py-10">
             <FormShell
               title="Apply to the studio"
               blurb="Share a bit about yourself. Senior mentors review every application."
