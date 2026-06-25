@@ -10,7 +10,7 @@ const saansSans =
 
 const nav = [
   { href: "#work", label: "Work" },
-  { href: "#our-services", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "#pricing", label: "Pricing" },
   { href: "/talent", label: "Talent" },
   { href: "/careers", label: "Careers" },
