@@ -184,7 +184,7 @@ function ServicesPage() {
           </div>
 
           {/* CTA */}
-          <div className="px-6 md:px-10 py-20 md:py-28 text-center border-t border-[color:var(--hairline)]">
+          <div className="px-6 md:px-10 py-20 md:py-28 text-center">
             <h2
               style={{
                 fontFamily: display,
