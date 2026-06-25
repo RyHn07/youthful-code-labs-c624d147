@@ -41,7 +41,7 @@ export function PageHero({ index = "01", eyebrow, meta, title, description, chil
         </div>
 
         {/* Hero content */}
-        <div className="px-6 md:px-10 py-20 md:py-28">
+        <div className="px-6 md:px-10 py-10 md:py-14">
           <div className="mx-auto max-w-3xl text-center">
             <h1
               className="text-balance"
