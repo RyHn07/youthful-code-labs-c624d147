@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section } from "@/components/site/Section";
+import { PageHero, pageMono as mono } from "@/components/site/PageHero";
+import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -20,14 +21,18 @@ function ContactPage() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <Section
-      className="pt-40"
-      eyebrow="Contact"
-      title="Tell us about your project."
-      description="We typically reply within one business day."
-    >
-      <form
-        className="mx-auto grid max-w-xl gap-4"
+    <>
+      <PageHero
+        eyebrow="Contact"
+        meta="Say hello"
+        title="Tell us about your project."
+        description="We typically reply within one business day."
+      />
+      <OuterContainer borders="x">
+        <InnerContainer borders="xb" className="!px-0">
+          <div className="px-6 md:px-10 py-16 md:py-20">
+            <form
+              className="mx-auto grid max-w-xl gap-5"
         onSubmit={async (e) => {
           e.preventDefault();
           const fd = new FormData(e.currentTarget);
@@ -57,20 +62,38 @@ function ContactPage() {
         <button
           type="submit"
           disabled={loading}
-          className="mt-2 inline-flex items-center justify-center rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background disabled:opacity-60"
+          className="mt-2 inline-flex items-center justify-center rounded-lg bg-dark-gradient px-6 py-3 text-white transition-all hover:opacity-90 disabled:opacity-60"
+          style={{
+            fontFamily: mono,
+            fontSize: "14px",
+            letterSpacing: "-0.03em",
+          }}
         >
           {loading ? "Sending…" : "Send message"}
         </button>
-      </form>
-    </Section>
+            </form>
+          </div>
+        </InnerContainer>
+      </OuterContainer>
+    </>
   );
 }
 
 function Field({ name, label, type = "text", textarea = false, required = true }: { name: string; label: string; type?: string; textarea?: boolean; required?: boolean }) {
-  const cls = "w-full rounded-md border border-[color:var(--hairline)] bg-black/[0.03] px-4 py-3 text-sm outline-none focus:border-[color:var(--hairline-strong)]";
+  const cls = "w-full rounded-md border border-[color:var(--hairline)] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[color:var(--hairline-strong)]";
   return (
-    <label className="grid gap-2 text-sm">
-      <span className="text-[color:var(--text-mute)]">{label}</span>
+    <label className="grid gap-2">
+      <span
+        style={{
+          fontFamily: mono,
+          fontSize: "12px",
+          letterSpacing: "0.04em",
+          textTransform: "uppercase",
+          color: "rgba(37, 37, 37, 0.6)",
+        }}
+      >
+        {label}
+      </span>
       {textarea ? (
         <textarea name={name} required={required} rows={5} className={cls} maxLength={4000} />
       ) : (
