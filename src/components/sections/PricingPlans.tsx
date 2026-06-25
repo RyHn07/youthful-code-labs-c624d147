@@ -272,25 +272,45 @@ export function PricingPlans() {
                           role="switch"
                           aria-checked={mode === "design"}
                           onClick={() => setMode(mode === "dev" ? "design" : "dev")}
-                          className="relative h-5 w-9 rounded-full bg-[#E6E5E1] border border-[color:var(--hairline)] p-0"
+                          className="relative h-[22px] w-[40px] rounded-full p-0"
+                          style={{
+                            background: "rgba(37, 37, 37, 0.1)",
+                            boxShadow: "rgba(0, 0, 0, 0.04) 0px 0px 4px 0.5px inset",
+                          }}
                         >
-                          {/* Layer 2: orange ring */}
+                          {/* Layer 2: orange pill */}
                           <span
                             aria-hidden
-                            className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full transition-all duration-300 ease-out"
+                            className="absolute top-[3px] bottom-[3px] transition-all duration-300 ease-out"
                             style={{
-                              left: mode === "dev" ? "2px" : "calc(100% - 18px)",
-                              background: "#FF7A00",
+                              left: mode === "design" ? "3px" : "16px",
+                              right: mode === "design" ? "16px" : "3px",
+                              background: "rgb(255, 140, 0)",
+                              borderRadius: "11px",
                             }}
                           />
-                          {/* Layer 3: inner dark knob */}
+                          {/* Layer 3: dark knob */}
                           <span
                             aria-hidden
-                            className="absolute top-1/2 -translate-y-1/2 h-[10px] w-[10px] rounded-full transition-all duration-300 ease-out bg-dark-gradient"
+                            className="absolute top-1/2 -translate-y-1/2 h-[18px] w-[18px] transition-all duration-300 ease-out"
                             style={{
-                              left: mode === "dev" ? "5px" : "calc(100% - 15px)",
+                              left: mode === "design" ? "2px" : "calc(100% - 20px)",
+                              background: "linear-gradient(201deg, rgb(76,76,76) 0%, rgb(38,38,38) 100%)",
+                              borderRadius: "28px",
+                              boxShadow:
+                                "rgba(0, 0, 0, 0.4) 2px 2px 6px 0px, rgba(0, 0, 0, 0.25) 0px 5px 4.8px -2px, rgba(0, 0, 0, 0.4) 0px 2px 5px -3px",
                             }}
-                          />
+                          >
+                            {/* Inner highlight ellipse */}
+                            <span
+                              aria-hidden
+                              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[12px] w-[12px] rounded-full"
+                              style={{
+                                background:
+                                  "linear-gradient(203deg, rgb(81,81,81) 0%, rgb(15,15,15) 100%)",
+                              }}
+                            />
+                          </span>
                         </button>
                         <button
                           type="button"
