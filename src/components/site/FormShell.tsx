@@ -88,11 +88,11 @@ export const underlineInput =
 export const fieldLabel = {
   fontFamily:
     '"Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", monospace',
-  fontSize: "11px",
-  lineHeight: "16px",
+  fontSize: "13px",
+  lineHeight: "18px",
   letterSpacing: "0.08em",
   textTransform: "uppercase",
-  color: "rgba(37,37,37,0.65)",
+  color: "rgba(37,37,37,0.85)",
 } as const;
 
 export function MailIcon() {
