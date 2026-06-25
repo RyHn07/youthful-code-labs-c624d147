@@ -94,7 +94,10 @@ const testimonials = [
 export function PricingPlans() {
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [mode, setMode] = useState<"dev" | "design">("dev");
+  const [modes, setModes] = useState<Record<string, "dev" | "design">>({});
+  const getMode = (tier: string) => modes[tier] ?? "dev";
+  const setMode = (tier: string, m: "dev" | "design") =>
+    setModes((prev) => ({ ...prev, [tier]: m }));
   const DURATION = 5000;
   const startRef = useRef<number>(Date.now());
 
@@ -249,7 +252,8 @@ export function PricingPlans() {
                       >
                         {p.tier}
                       </span>
-                      <div
+                       {(() => { const mode = getMode(p.tier); return (
+                       <div
                         role="tablist"
                         className="inline-flex items-center gap-3 select-none"
                         style={{
@@ -261,7 +265,7 @@ export function PricingPlans() {
                       >
                         <button
                           type="button"
-                          onClick={() => setMode("dev")}
+                          onClick={() => setMode(p.tier, "dev")}
                           style={{ opacity: mode === "dev" ? 1 : 0.55 }}
                           className="transition-opacity"
                         >
@@ -271,7 +275,7 @@ export function PricingPlans() {
                           type="button"
                           role="switch"
                           aria-checked={mode === "design"}
-                          onClick={() => setMode(mode === "dev" ? "design" : "dev")}
+                          onClick={() => setMode(p.tier, mode === "dev" ? "design" : "dev")}
                           className="relative h-[22px] w-[40px] rounded-full p-0"
                           style={{
                             background: "rgba(37, 37, 37, 0.1)",
@@ -314,13 +318,14 @@ export function PricingPlans() {
                         </button>
                         <button
                           type="button"
-                          onClick={() => setMode("design")}
+                          onClick={() => setMode(p.tier, "design")}
                           style={{ opacity: mode === "design" ? 1 : 0.55 }}
                           className="transition-opacity"
                         >
                           Design only
                         </button>
                       </div>
+                      ); })()}
                     </div>
 
                     {/* Price */}
@@ -335,7 +340,7 @@ export function PricingPlans() {
                           color: "#252525",
                         }}
                       >
-                        {mode === "dev" ? p.priceDev : p.priceDesign}
+                        {getMode(p.tier) === "dev" ? p.priceDev : p.priceDesign}
                       </span>
                       <span
                         style={{
