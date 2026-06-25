@@ -31,7 +31,8 @@ const cardClass =
 const plans = [
   {
     tier: "Landing page",
-    price: "$3000",
+    priceDev: "$3000",
+    priceDesign: "$2000",
     priceMeta: "Fixed",
     features: [
       "Design + Dev in 2 weeks or less",
@@ -43,7 +44,8 @@ const plans = [
   },
   {
     tier: "Multipage website",
-    price: "$4000",
+    priceDev: "$4000",
+    priceDesign: "$2800",
     priceMeta: "Fixed",
     features: [
       "Design + Dev in 3 weeks or less",
@@ -55,7 +57,8 @@ const plans = [
   },
   {
     tier: "Retainer",
-    price: "Custom",
+    priceDev: "Custom",
+    priceDesign: "Custom",
     priceMeta: "Per Month",
     features: [
       "Ongoing design & dev support",
@@ -91,6 +94,7 @@ const testimonials = [
 export function PricingPlans() {
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [mode, setMode] = useState<"dev" | "design">("dev");
   const DURATION = 5000;
   const startRef = useRef<number>(Date.now());
 
@@ -246,7 +250,7 @@ export function PricingPlans() {
                         {p.tier}
                       </span>
                       <div
-                        className="flex items-center gap-3"
+                        className="flex items-center gap-3 select-none"
                         style={{
                           fontFamily: mono,
                           fontSize: "13px",
@@ -254,15 +258,32 @@ export function PricingPlans() {
                           color: "#252525",
                         }}
                       >
-                        <span>Design &amp; Dev</span>
-                        <span
+                        <button
+                          type="button"
+                          onClick={() => setMode("dev")}
+                          style={{ color: mode === "dev" ? "#252525" : "rgba(37,37,37,0.55)" }}
+                        >
+                          Design &amp; Dev
+                        </button>
+                        <button
+                          type="button"
                           role="switch"
-                          aria-checked="true"
+                          aria-checked={mode === "design"}
+                          onClick={() => setMode((m) => (m === "dev" ? "design" : "dev"))}
                           className="relative inline-flex h-5 w-9 items-center rounded-full bg-[#252525]"
                         >
-                          <span className="absolute left-0.5 h-4 w-4 rounded-full bg-[#ff7a1a]" />
-                        </span>
-                        <span style={{ color: "rgba(37,37,37,0.55)" }}>Design only</span>
+                          <span
+                            className="absolute h-4 w-4 rounded-full bg-[#ff7a1a] transition-all"
+                            style={{ left: mode === "dev" ? "2px" : "calc(100% - 18px)" }}
+                          />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setMode("design")}
+                          style={{ color: mode === "design" ? "#252525" : "rgba(37,37,37,0.55)" }}
+                        >
+                          Design only
+                        </button>
                       </div>
                     </div>
 
@@ -278,7 +299,7 @@ export function PricingPlans() {
                           color: "#252525",
                         }}
                       >
-                        {p.price}
+                        {mode === "dev" ? p.priceDev : p.priceDesign}
                       </span>
                       <span
                         style={{
