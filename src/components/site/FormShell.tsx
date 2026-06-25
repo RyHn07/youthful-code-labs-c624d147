@@ -10,9 +10,9 @@ interface FormShellProps {
 
 export function FormShell({ title, blurb, contacts, children }: FormShellProps) {
   return (
-    <div className="grid gap-0 overflow-hidden rounded-2xl border border-[color:var(--hairline)] bg-white shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+    <div className="grid gap-0 overflow-hidden rounded-2xl border border-[color:var(--hairline)] bg-white shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)] md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] items-stretch">
       {/* Left dark panel */}
-      <div className="relative overflow-hidden bg-dark-gradient p-8 md:p-10 text-white">
+      <div className="relative flex flex-col justify-center overflow-hidden bg-dark-gradient px-8 py-6 md:px-10 md:py-8 text-white">
         <h3
           style={{
             fontFamily: '"Graphik Trial Medium", "Graphik Trial Medium Placeholder", sans-serif',
@@ -30,7 +30,7 @@ export function FormShell({ title, blurb, contacts, children }: FormShellProps) 
           {blurb}
         </p>
 
-        <ul className="mt-10 space-y-5">
+        <ul className="mt-6 space-y-4">
           {contacts.map((c, i) => (
             <li key={i} className="flex items-center gap-3">
               <span className="grid h-9 w-9 place-items-center rounded-full border border-white/15 bg-white/5 text-white/80">
@@ -50,7 +50,7 @@ export function FormShell({ title, blurb, contacts, children }: FormShellProps) 
         <div className="pointer-events-none absolute -right-10 -bottom-10 h-44 w-44 rounded-full bg-[#FF6B2C]/60 blur-2xl" />
         <div className="pointer-events-none absolute right-16 bottom-16 h-28 w-28 rounded-full bg-white/10 backdrop-blur" />
 
-        <div className="relative mt-12 flex items-center gap-3 text-white/70">
+        <div className="relative mt-8 flex items-center gap-3 text-white/70">
           <span
             className="mr-2"
             style={{ fontFamily: mono, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase" }}
@@ -77,7 +77,7 @@ export function FormShell({ title, blurb, contacts, children }: FormShellProps) 
       </div>
 
       {/* Right form area */}
-      <div className="p-8 md:p-12">{children}</div>
+      <div className="flex flex-col justify-center px-8 py-6 md:px-12 md:py-8">{children}</div>
     </div>
   );
 }
