@@ -16,6 +16,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { OuterContainer, InnerContainer } from "@/components/site/Containers";
+import { TrustBar } from "@/components/sections/TrustBar";
 
 const mono =
   '"Saans SemiMono TRIAL", "Saans SemiMono-TRIAL Regular", "Saans SemiMono-TRIAL Regular Placeholder", ui-monospace, SFMono-Regular, Menlo, monospace';
@@ -182,6 +183,8 @@ function ServicesPage() {
               );
             })}
           </div>
+
+          <TrustBar />
 
           {/* CTA */}
           <div className="px-6 md:px-10 py-20 md:py-28 text-center">
