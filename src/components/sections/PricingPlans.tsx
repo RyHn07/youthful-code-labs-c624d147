@@ -283,8 +283,8 @@ export function PricingPlans() {
                             aria-hidden
                             className="absolute top-[3px] bottom-[3px] transition-all duration-300 ease-out"
                             style={{
-                              left: mode === "design" ? "3px" : "16px",
-                              right: mode === "design" ? "16px" : "3px",
+                              left: mode === "dev" ? "3px" : "16px",
+                              right: mode === "dev" ? "16px" : "3px",
                               background: "rgb(255, 140, 0)",
                               borderRadius: "11px",
                             }}
@@ -294,7 +294,7 @@ export function PricingPlans() {
                             aria-hidden
                             className="absolute top-1/2 -translate-y-1/2 h-[18px] w-[18px] transition-all duration-300 ease-out"
                             style={{
-                              left: mode === "design" ? "2px" : "calc(100% - 20px)",
+                              left: mode === "dev" ? "2px" : "calc(100% - 20px)",
                               background: "linear-gradient(201deg, rgb(76,76,76) 0%, rgb(38,38,38) 100%)",
                               borderRadius: "28px",
                               boxShadow:
