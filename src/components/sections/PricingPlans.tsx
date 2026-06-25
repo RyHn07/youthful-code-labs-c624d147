@@ -299,7 +299,7 @@ export function PricingPlans() {
                           color: "#252525",
                         }}
                       >
-                        {p.price}
+                        {mode === "dev" ? p.priceDev : p.priceDesign}
                       </span>
                       <span
                         style={{
