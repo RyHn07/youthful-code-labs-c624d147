@@ -188,7 +188,7 @@ function ServicesPage() {
 
       <TrustBar />
 
-      <OuterContainer borders="x">
+      <OuterContainer>
         <InnerContainer borders="x" className="!px-0">
           {/* CTA */}
           <div className="px-6 md:px-10 py-20 md:py-28 text-center">
