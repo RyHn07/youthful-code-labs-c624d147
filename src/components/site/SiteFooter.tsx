@@ -143,24 +143,6 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Centered chrome logo */}
-        <div className="relative mt-20 flex justify-center">
-          <img
-            src={footerLogo}
-            alt="Astrallabs mark"
-            width={1024}
-            height={1024}
-            loading="lazy"
-            className="w-[clamp(220px,28vw,420px)] h-auto select-none drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-            style={{
-              maskImage:
-                "linear-gradient(180deg, black 0%, black 70%, transparent 100%)",
-              WebkitMaskImage:
-                "linear-gradient(180deg, black 0%, black 70%, transparent 100%)",
-            }}
-          />
-        </div>
-
         {/* Bottom bar */}
         <div
           className="relative mt-8 flex flex-col-reverse items-start justify-between gap-3 border-t border-white/10 pt-6 md:flex-row md:items-center"
