@@ -4,14 +4,7 @@ import { OuterContainer, InnerContainer } from "@/components/site/Containers";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 import { toast } from "sonner";
-import {
-  FormShell,
-  underlineInput,
-  fieldLabel,
-  MailIcon,
-  PhoneIcon,
-  PinIcon,
-} from "@/components/site/FormShell";
+import { underlineInput, fieldLabel } from "@/components/site/FormShell";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({ meta: [{ title: "Careers — Astrallabs" }, { name: "description", content: "Join the talent network." }] }),
@@ -31,15 +24,7 @@ function CareersPage() {
       <OuterContainer borders="x">
         <InnerContainer borders="xb" className="!px-0">
           <div className="px-6 md:px-10 py-8 md:py-10">
-            <FormShell
-              title="Apply to the studio"
-              blurb="Share a bit about yourself. Senior mentors review every application."
-              contacts={[
-                { icon: <MailIcon />, label: "careers@astrallabs.com" },
-                { icon: <PhoneIcon />, label: "+0123 4567 8910" },
-                { icon: <PinIcon />, label: "Remote — Worldwide" },
-              ]}
-            >
+            <div className="mx-auto max-w-3xl rounded-2xl border border-[color:var(--hairline)] bg-white px-8 py-10 md:px-12 md:py-14 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.18)]">
             <form className="grid gap-7" onSubmit={async (e) => {
         e.preventDefault();
         const fd = new FormData(e.currentTarget);
@@ -83,7 +68,7 @@ function CareersPage() {
         </button>
         </div>
       </form>
-            </FormShell>
+            </div>
           </div>
         </InnerContainer>
       </OuterContainer>
